@@ -4,6 +4,7 @@ import HomeView from '../views/HomeView.vue'
 import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import ApplicationView from '../views/ApplicationView.vue'
+import Portfolio from '../views/Portfolio.vue'
 
 Vue.use(VueRouter)
 
@@ -27,6 +28,11 @@ const routes = [
     path: '/application',
     name: 'application',
     component: ApplicationView
+  },
+  {
+    path: '/portfolio',
+    name: 'portfolio',
+    component: Portfolio
   }
 ]
 
