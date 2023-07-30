@@ -1,0 +1,31 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@font-face {
+    font-family: 'YekanBakhL';
+    src: url('../font/YekanBakhFaNum03Light.ttf');
+}
+@font-face {
+    font-family: 'YekanBakhM';
+    src: url('../font/YekanBakhFaNum05Medium.ttf');
+}
+@font-face {
+    font-family: 'YekanBakhB';
+    src: url('../font/YekanBakhFaNum06Bold.ttf');
+}
+
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+  
+/* Track */
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+  
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #FF6300;
+}
