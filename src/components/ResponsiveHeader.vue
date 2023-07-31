@@ -26,7 +26,7 @@
                             <div class="h-72 py-5 overflow-y-scroll">
                                 <ul class="sidemenu__list space-y-5">
                                     <li class="pr-11">
-                                        <router-link to="/" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+                                        <router-link @click="isNavOpen = false" to="/" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
                                             <div class="flex items-center gap-x-4">
                                                 <div>
                                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -40,7 +40,7 @@
                                         </router-link>
                                     </li>
                                     <li class="pr-11">
-                                        <router-link to="/about" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+                                        <router-link @click="isNavOpen = false" to="/about" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
                                             <div class="flex gap-x-4">
                                                 <div>
                                                     <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -120,7 +120,7 @@
                                         </router-link>
                                     </li>
                                     <li class="pr-11">
-                                        <router-link to="/contact" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+                                        <router-link @click="isNavOpen = false" to="/contact" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
                                             <div class="flex gap-x-4">
                                                 <div>
                                                     <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -189,11 +189,10 @@
         },
         watch: {
             isNavOpen(newVal) {
-                console.log("isNavOpen");
                 if (newVal == true) {
-                    document.body.classList.add('over')
+                    document.body.classList.add('over');
                 } else {
-                    document.body.classList.remove('over')
+                    document.body.classList.remove('over');
                 }
             }
         },
@@ -310,19 +309,16 @@
             }
         }
     }
-
     .translateX-enter{
         transform:translateX(200px);
         opacity: 0;
     }
-
     .translateX-enter-active,.translateX-leave-active{
         transform-origin: top left 0;
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
         transition-duration: 500ms;
     }
-
     .translateX-leave-to{
         transform: translateX(200px);
         opacity: 0;

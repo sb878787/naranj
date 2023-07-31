@@ -5,7 +5,6 @@
         {'headroom--unpinned': scrolled},
         background ? 'blue-theme' : ''
       ]"
-      v-on="handleScroll"
       class="headroom text-white p-12 w-full fixed text-lg font-YekanM font-semibold z-50 px-40 hidden xl:block transition-all"
       dir="rtl"
     >

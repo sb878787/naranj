@@ -75,24 +75,30 @@
                 <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
             </div>
         </div>
-        <div class="xl:mt-24 mt-12 mb-20 xl:mb-0 xl:px-44" dir="rtl">
-            <div class="flex flex-wrap w-full gap-8 justify-center items-center">
-                <div v-for="event in filteredPeople" class="flex flex-col px-6">
-                    <div class="relative xl:w-[432px] h-[539px] rounded-lg group">
-                        <img :src="event.img" class="absolute object-cover -z-20 w-[432px] h-[539px] object-center rounded-lg transition-all grayscale group-hover:grayscale-0" :alt="event.alt"/>
+        <div class="xl:mt-0 mt-12 mb-20 xl:mb-0 xl:px-44" dir="rtl">
+            <div class="grid grid-cols-1 xl:grid-cols-3 gap-y-32 gap-x-8 justify-center items-center">
+                <div v-for="event, index in filteredPeople" class="grid px-6 xl:px-0">
+                    <!-- :class="(index == 1) ? 'mt-40' : ''" -->
+                    <div class="relative xl:w-full h-auto rounded-lg group">
+                        <img :src="event.img" class="absolute object-cover -z-20 w-full h-auto object-center rounded-lg transition-all grayscale group-hover:grayscale-0" :alt="event.alt"/>
                         <img :src="event.logo" class="xl:mr-9 mr-2 mt-24" :alt="event.altLogo"/>
                         <p class="text-white font-YekanM text-3xl xl:mr-14 mr-7 mt-8">{{ event.title }}</p>
-                        <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 mt-2 w-1/2">{{ event.text }}</p>
+                        <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 mt-2 w-3/4 xl:w-1/2">{{ event.text }}</p>
                         <div class="flex justify-center items-center">
-                            <button type="button" class="font-YekanM text-center py-4 px-10 mt-36 rounded-md bg-white invisible group-hover:visible group-hover:duration-300 group-hover:-translate-y-28">
+                            <button type="button" class="font-YekanM text-center py-4 px-10 mt-36 rounded-md bg-white invisible group-hover:visible group-hover:duration-300 group-hover:-translate-y-16">
                                 مشاهده پروژه
                             </button>
                         </div>
-                        <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 absolute bottom-12">{{ event.type }}</p>
+                        <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 absolute -bottom-14">{{ event.type }}</p>
                     </div>
                 </div>
             </div>
         </div>
+
+
+        
+
+
         <DivBlue></DivBlue>
         <Footer></Footer>
     </div>
