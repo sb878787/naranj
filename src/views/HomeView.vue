@@ -58,7 +58,7 @@
       <p class="text-white text-2xl font-YekanL absolute top-[395px] right-44">
         هر ایده جدید فقط یک اشتباه است
       </p>
-      <ul class="pl-9 pt-[34%] space-y-8">
+      <ul class="pl-9 pt-[32%] space-y-8">
         <li>
           <svg width="18" height="27" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M9.00963 3.32002H11V0.14003C10.0363 0.0453769 9.06802 -0.00135428 8.09913 2.98641e-05C5.21944 2.98641e-05 3.25024 1.66003 3.25024 4.70002V7.32002H0V10.88H3.25024V20H7.14629V10.88H10.3859L10.873 7.32002H7.14629V5.05002C7.14629 4.00002 7.44273 3.32002 9.00963 3.32002Z" fill="white"/>
