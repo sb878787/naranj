@@ -105,7 +105,7 @@
       <ResponsiveHeader></ResponsiveHeader>
       <p dir="ltr" class="text-white font-light text-5xl ml-4 pb-16 absolute bottom-0">Every new <br> idea is <br> just a <br> mashup</p>
     </div>
-    <div dir="rtl" class="flex flex-row block xl:hidden">
+    <div dir="rtl" class="flex flex-row xl:hidden">
       <div class="flex-1 relative">
         <div class="flex items-end w-11/12 h-32 bg-[#C9C9C9] absolute -top-5 pb-7 gap-x-5">
           <p class="text-white font-YekanM pr-5">برخی از <br> مشتریان نارنج</p>

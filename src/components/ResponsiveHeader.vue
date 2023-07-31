@@ -4,7 +4,7 @@
             {'headroom--unpinned': scrolled},
             background ? 'blue-theme' : ''
         ]"
-        class="flex justify-between items-center w-full fixed z-50 block xl:hidden transition-all"
+        class="flex justify-between items-center w-full fixed z-50 xl:hidden transition-all"
     >
         <div class="z-[100] pl-4">
             <svg width="55" height="55" viewBox="0 0 631 631" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -192,10 +192,7 @@
                 console.log("isNavOpen");
                 if (newVal == true) {
                     document.body.classList.add('over')
-                }
-            },
-            isNavOpen(newVal) {
-                if (newVal == false) {
+                } else {
                     document.body.classList.remove('over')
                 }
             }

@@ -17,7 +17,7 @@
                     <p class="font-YekanB text-3xl text-[#4D4D4D] pt-4 leading-relaxed hidden xl:block">پذیرای صدای گرم شما هستیم. <br> برای ارتباط و مشاوره ، با ما در تماس باشید:</p>
                 </div>
                 <div class="flex-1">
-                    <div class="xl:flex xl:items-center hidden xl:block">
+                    <div class="xl:flex xl:items-center hidden">
                         <input class="font-YekanM placeholder-[#767676] text-[#767676] text-xl h-20 pr-6 bg-[#F8F8F8] rounded-r-md outline-0 w-full" name="email" type="email" placeholder="لطفا ایمیل خود را وارد کنید ..." />
                         <button class="bg-[#F8F8F8] rounded-l-md h-20 outline-0 px-9">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,9 +28,9 @@
                     </div>
                 </div>
             </div>
-            <div class="xl:flex xl:flex-row flex flex-col flex-col-reverse" dir="rtl">
+            <div class="xl:flex xl:flex-row flex flex-col-reverse" dir="rtl">
                 <div class="flex-1">
-                    <div class="flex items-center block xl:hidden">
+                    <div class="flex items-center xl:hidden">
                         <input class="font-YekanM placeholder-[#767676] text-[#767676] xl:text-xl text-md h-20 pr-6 bg-[#F8F8F8] rounded-r-md outline-0 w-full" name="email" type="email" placeholder="لطفا ایمیل خود را وارد کنید ..." />
                         <button class="bg-[#F8F8F8] rounded-l-md h-20 outline-0 px-9">
                             <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </div>
-            <div class="flex flex-col flex-col-reverse xl:flex-row xl:justify-between justify-normal xl:items-center items-baseline xl:mt-12 mt-8">
+            <div class="flex flex-col-reverse xl:flex-row xl:justify-between justify-normal xl:items-center items-baseline xl:mt-12 mt-8">
                 <p class="text-[#767676] font-YekanM xl:text-lg text-md xl:mt-0 mt-7">تمامی حقوق مادی و معنوی برای گروه طراحی و فن آوری نارنج محفوظ است.</p>
                 <div class="flex items-center xl:gap-12 gap-6 self-end" dir="ltr">
                     <svg class="xl:w-[58px] xl:h-[58px] w-[50px] h-[50px]" viewBox="0 0 631 631" fill="none" xmlns="http://www.w3.org/2000/svg">
