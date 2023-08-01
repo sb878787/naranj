@@ -75,9 +75,9 @@
                 <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
             </div>
         </div>
-        <div class="xl:mt-0 mt-12 container mx-auto px-6 md:px-12" dir="rtl">
-            <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 pt-20">
-                <div v-for="event, index in filteredPeople" class="aspect-video rounded-3xl" :class="[(index == 2) ? 'pt-32' : '' , (index == 4) ? 'pt-12' : '']">
+        <div class="container mx-auto px-6 md:px-12" dir="rtl">
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 pt-24">
+                <div v-for="event, index in filteredPeople" class="aspect-video rounded-3xl" :class="(index == 2) ? 'pt-32' : ''">
                     <div class="relative w-full h-[532px] rounded-lg group">
                         <img :src="event.img" class="absolute object-cover -z-20 w-full h-[532px] object-center rounded-lg transition-all grayscale group-hover:grayscale-0" :alt="event.alt"/>
                         <img :src="event.logo" class="xl:mr-9 mr-2 pt-24" :alt="event.altLogo"/>
