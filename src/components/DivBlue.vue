@@ -1,5 +1,5 @@
 <template>
-    <div dir="rtl" class="xl:px-44 px-0 xl:mt-36">
+    <div dir="rtl" class="xl:px-44 px-0 xl:mt-32">
         <div class="flex xl:flex-row flex-col bg-[#2C56CF] xl:rounded-xl rounded-none w-full p-8 xl:p-16 pt-11 xl:py-20 justify-between">
             <div class="flex xl:flex-row flex-col gap-x-20">
                 <div>

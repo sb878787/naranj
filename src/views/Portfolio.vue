@@ -36,7 +36,7 @@
 
         <swiper :options="swiperOptions" class="xl:hidden px-8 border-b-2 border-[#F2F2F2] mt-12" dir="rtl">
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] group flex space-x-4 items-stretch justify-stretch hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="All" />
+                <label class="font-YekanM text-lg text-[#4C4C4C] group flex space-x-4 items-stretch justify-stretch hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="All" />
                     <svg width="17" height="17" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 1.55556V12.4444C0 13.3 0.7 14 1.55556 14H12.4444C13.3 14 14 13.3 14 12.4444V1.55556C14 0.7 13.3 0 12.4444 0H1.55556C0.7 0 0 0.7 0 1.55556ZM6.22222 12.4444H2.33333C1.90556 12.4444 1.55556 12.0944 1.55556 11.6667V7.77778H5.44444C5.87222 7.77778 6.22222 8.12778 6.22222 8.55556V12.4444ZM5.44444 6.22222H1.55556V2.33333C1.55556 1.90556 1.90556 1.55556 2.33333 1.55556H6.22222V5.44444C6.22222 5.87222 5.87222 6.22222 5.44444 6.22222ZM11.6667 12.4444H7.77778V8.55556C7.77778 8.12778 8.12778 7.77778 8.55556 7.77778H12.4444V11.6667C12.4444 12.0944 12.0944 12.4444 11.6667 12.4444ZM12.4444 6.22222H8.55556C8.12778 6.22222 7.77778 5.87222 7.77778 5.44444V1.55556H11.6667C12.0944 1.55556 12.4444 1.90556 12.4444 2.33333V6.22222Z" class="fill-[#767676] group-hover:fill-[#FF8030] duration-75"/>
                     </svg>
@@ -44,61 +44,131 @@
                 </label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="Site" /> طراحی سایت</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Site" /> طراحی سایت</label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="App" /> طراحی اپلیکیشن</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="App" /> طراحی اپلیکیشن</label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="Graphics" /> طراحی گرافیک</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Graphics" /> طراحی گرافیک</label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="Digital" /> بازاریابی دیجیتال</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Digital" /> بازاریابی دیجیتال</label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
             </swiper-slide>
         </swiper>
 
         <div class="border-b-2 border-[#F2F2F2] hidden xl:block">
             <div class="flex flex-col xl:flex-row xl:justify-center xl:items-center justify-start items-start gap-x-11 px-8 xl:px-0 xl:mt-20 mt-14" dir="rtl">
-                <label class="font-YekanM text-lg text-[#4C4C4C] group flex space-x-4 items-stretch justify-stretch hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="All" />
+                <label class="font-YekanM text-lg text-[#4C4C4C] group flex space-x-4 items-stretch justify-stretch hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="All" />
                     <svg width="17" height="17" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 1.55556V12.4444C0 13.3 0.7 14 1.55556 14H12.4444C13.3 14 14 13.3 14 12.4444V1.55556C14 0.7 13.3 0 12.4444 0H1.55556C0.7 0 0 0.7 0 1.55556ZM6.22222 12.4444H2.33333C1.90556 12.4444 1.55556 12.0944 1.55556 11.6667V7.77778H5.44444C5.87222 7.77778 6.22222 8.12778 6.22222 8.55556V12.4444ZM5.44444 6.22222H1.55556V2.33333C1.55556 1.90556 1.90556 1.55556 2.33333 1.55556H6.22222V5.44444C6.22222 5.87222 5.87222 6.22222 5.44444 6.22222ZM11.6667 12.4444H7.77778V8.55556C7.77778 8.12778 8.12778 7.77778 8.55556 7.77778H12.4444V11.6667C12.4444 12.0944 12.0944 12.4444 11.6667 12.4444ZM12.4444 6.22222H8.55556C8.12778 6.22222 7.77778 5.87222 7.77778 5.44444V1.55556H11.6667C12.0944 1.55556 12.4444 1.90556 12.4444 2.33333V6.22222Z" class="fill-[#767676] group-hover:fill-[#FF8030] duration-75"/>
                     </svg>
                     همه کار ها
                 </label>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="Site" /> طراحی سایت</label>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="App" /> طراحی اپلیکیشن</label>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="Graphics" /> طراحی گرافیک</label>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="Digital" /> بازاریابی دیجیتال</label>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="tab" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Site" /> طراحی سایت</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="App" /> طراحی اپلیکیشن</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Graphics" /> طراحی گرافیک</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Digital" /> بازاریابی دیجیتال</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
             </div>
         </div>
-        <div class="xl:mt-0 mt-12 mb-20 xl:mb-0 xl:px-44" dir="rtl">
-            <div class="grid grid-cols-1 xl:grid-cols-3 gap-y-32 gap-x-8 justify-center items-center">
-                <div v-for="event, index in filteredPeople" class="grid px-6 xl:px-0">
-                    <!-- :class="(index == 1) ? 'mt-40' : ''" -->
-                    <div class="relative xl:w-full h-auto rounded-lg group">
-                        <img :src="event.img" class="absolute object-cover -z-20 w-full h-auto object-center rounded-lg transition-all grayscale group-hover:grayscale-0" :alt="event.alt"/>
-                        <img :src="event.logo" class="xl:mr-9 mr-2 mt-24" :alt="event.altLogo"/>
+        <div class="xl:mt-0 mt-12 container mx-auto px-6 md:px-12" dir="rtl">
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 pt-20">
+                <div v-for="event, index in filteredPeople" class="aspect-video rounded-3xl" :class="[(index == 2) ? 'pt-32' : '' , (index == 4) ? 'pt-12' : '']">
+                    <div class="relative w-full h-[532px] rounded-lg group">
+                        <img :src="event.img" class="absolute object-cover -z-20 w-full h-[532px] object-center rounded-lg transition-all grayscale group-hover:grayscale-0" :alt="event.alt"/>
+                        <img :src="event.logo" class="xl:mr-9 mr-2 pt-24" :alt="event.altLogo"/>
                         <p class="text-white font-YekanM text-3xl xl:mr-14 mr-7 mt-8">{{ event.title }}</p>
                         <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 mt-2 w-3/4 xl:w-1/2">{{ event.text }}</p>
                         <div class="flex justify-center items-center">
-                            <button type="button" class="font-YekanM text-center py-4 px-10 mt-36 rounded-md bg-white invisible group-hover:visible group-hover:duration-300 group-hover:-translate-y-16">
+                            <button type="button" class="font-YekanM text-center py-4 px-10 mt-36 rounded-md bg-white invisible group-hover:visible group-hover:duration-300 group-hover:-translate-y-24">
                                 مشاهده پروژه
                             </button>
                         </div>
-                        <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 absolute -bottom-14">{{ event.type }}</p>
+                        <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 absolute bottom-8">{{ event.type }}</p>
                     </div>
                 </div>
             </div>
         </div>
-
-
-        
-
-
+        <!-- <div class="container mx-auto px-6 md:px-12">
+            <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6">
+                <div class="aspect-video p-8 rounded-3xl border border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img src="../assets/Group 228.png" alt="" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-700 dark:text-white">Mohammad Ali</h4>
+                            <span class="text-gray-600 dark:text-gray-400">Web dev</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus vitae iste earum rem, iusto, omnis dolorem aut reprehenderit doloremque assumenda consectetur soluta quae hic veritatis mollitia, suscipit impedit perspiciatis laborum?
+                    </p>
+                </div>
+                <div class="aspect-video p-8 rounded-3xl border border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img src="../assets/Group 228.png" alt="" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-700 dark:text-white">Mohammad Ali</h4>
+                            <span class="text-gray-600 dark:text-gray-400">Web dev</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum odit architecto est perspiciatis atque illo dolore, saepe cupiditate odio pariatur aut eos labore quisquam sunt voluptate ad at ex cum.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus vitae iste earum rem, iusto, omnis dolorem aut reprehenderit doloremque assumenda consectetur soluta quae hic veritatis mollitia, suscipit impedit perspiciatis laborum?
+                    </p>
+                </div>
+                <div class="aspect-video p-8 rounded-3xl border border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img src="../assets/Group 228.png" alt="" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-700 dark:text-white">Mohammad Ali</h4>
+                            <span class="text-gray-600 dark:text-gray-400">Web dev</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum odit architecto est perspiciatis atque illo dolore, saepe cupiditate odio pariatur aut eos labore quisquam sunt voluptate ad at ex cum.
+                    </p>
+                </div>
+                <div class="aspect-video p-8 rounded-3xl border border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img src="../assets/Group 228.png" alt="" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-700 dark:text-white">Mohammad Ali</h4>
+                            <span class="text-gray-600 dark:text-gray-400">Web dev</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus vitae iste earum rem, iusto, omnis dolorem aut reprehenderit doloremque assumenda consectetur soluta quae hic veritatis mollitia, suscipit impedit perspiciatis laborum?
+                    </p>
+                </div>
+                <div class="aspect-video p-8 rounded-3xl border border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img src="../assets/Group 228.png" alt="" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-700 dark:text-white">Mohammad Ali</h4>
+                            <span class="text-gray-600 dark:text-gray-400">Web dev</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum odit architecto est perspiciatis atque illo dolore, saepe cupiditate odio pariatur aut eos labore quisquam sunt voluptate ad at ex cum.
+                        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Voluptatibus vitae iste earum rem, iusto, omnis dolorem aut reprehenderit doloremque assumenda consectetur soluta quae hic veritatis mollitia, suscipit impedit perspiciatis laborum?
+                    </p>
+                </div>
+                <div class="aspect-video p-8 rounded-3xl border border-gray-100 bg-white dark:border-gray-700 dark:bg-gray-800">
+                    <div class="mb-8 flex items-center gap-4">
+                        <img src="../assets/Group 228.png" alt="" class="w-12 h-12 rounded-full object-cover">
+                        <div>
+                            <h4 class="text-lg font-semibold text-gray-700 dark:text-white">Mohammad Ali</h4>
+                            <span class="text-gray-600 dark:text-gray-400">Web dev</span>
+                        </div>
+                    </div>
+                    <p class="text-gray-600 dark:text-gray-300">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Eum odit architecto est perspiciatis atque illo dolore, saepe cupiditate odio pariatur aut eos labore quisquam sunt voluptate ad at ex cum.
+                    </p>
+                </div>
+            </div>
+        </div> -->
         <DivBlue></DivBlue>
         <Footer></Footer>
     </div>
@@ -213,9 +283,3 @@
         }
     }
 </script>
-
-<style>
-    .tab {
-        visibility:hidden;
-    }
-</style>
