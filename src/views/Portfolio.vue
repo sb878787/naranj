@@ -34,7 +34,7 @@
             </p>
         </div>
 
-        <swiper :options="swiperOptions" class="xl:hidden px-8 border-b-2 border-[#F2F2F2] mt-12" dir="rtl">
+        <swiper :options="swiperOptions" class="xl:hidden px-8 border-b-2 border-[#F2F2F2] mt-12 flex justify-center items-center" dir="rtl">
             <swiper-slide>
                 <label class="font-YekanM text-lg text-[#4C4C4C] group flex space-x-4 items-stretch justify-stretch hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="All" />
                     <svg width="17" height="17" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -44,19 +44,19 @@
                 </label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Site" /> طراحی سایت</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] flex items-center justify-center hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Site" />طراحی سایت</label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="App" /> طراحی اپلیکیشن</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] flex items-center justify-center hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="App" />طراحی اپلیکیشن</label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Graphics" /> طراحی گرافیک</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] flex items-center justify-center hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Graphics" />طراحی گرافیک</label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Digital" /> بازاریابی دیجیتال</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] flex items-center justify-center hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Digital" />بازاریابی دیجیتال</label>
             </swiper-slide>
             <swiper-slide>
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
+                <label class="font-YekanM text-lg text-[#4C4C4C] flex items-center justify-center hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" />نرم افزار نارنج</label>
             </swiper-slide>
         </swiper>
 
@@ -75,9 +75,15 @@
                 <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
             </div>
         </div>
-        <div class="container mx-auto px-6 md:px-12" dir="rtl">
-            <div class="columns-1 sm:columns-2 lg:columns-3 gap-6 space-y-6 pt-24">
-                <div v-for="event, index in filteredPeople" class="aspect-video rounded-3xl" :class="(index == 2) ? 'pt-32' : ''">
+        <div class="container mx-auto px-6 md:px-12 xl:mb-52 mb-20" dir="rtl">
+            <div class="grid grid-cols-12 items-start gap-7 xl:pt-24 pt-16">
+                <div
+                v-for="event, index in filteredPeople"
+                :key="index"
+                :class="[
+                    `xl:col-span-4 col-span-12 acpect-[1/1.2]`,
+                    '[&:nth-of-type(3n-1)]:xl:translate-y-24'
+                ]">
                     <div class="relative w-full h-[532px] rounded-lg group">
                         <img :src="event.img" class="absolute object-cover -z-20 w-full h-[532px] object-center rounded-lg transition-all grayscale group-hover:grayscale-0" :alt="event.alt"/>
                         <img :src="event.logo" class="xl:mr-9 mr-2 pt-24" :alt="event.altLogo"/>
@@ -244,6 +250,36 @@
                         text : 'شرکت طراحی و ساخت خانه های لوکس و مبلمان شده با لوکس ترین اکسسوری ها',
                         type : 'طراحی سایت / طراحی کاتالوگ',
                         category : 'App'
+                    },
+                    {
+                        img : img2,
+                        alt : 'image',
+                        logo : logo,
+                        altLogo : 'logo',
+                        title : 'توس راوین سازه',
+                        text : 'شرکت طراحی و ساخت خانه های لوکس و مبلمان شده با لوکس ترین اکسسوری ها',
+                        type : 'طراحی سایت / بازاریابی دیجیتال',
+                        category : 'Digital'
+                    },
+                    {
+                        img : img2,
+                        alt : 'image',
+                        logo : logo,
+                        altLogo : 'logo',
+                        title : 'توس راوین سازه',
+                        text : 'شرکت طراحی و ساخت خانه های لوکس و مبلمان شده با لوکس ترین اکسسوری ها',
+                        type : 'طراحی سایت / بازاریابی دیجیتال',
+                        category : 'software'
+                    },
+                    {
+                        img : img,
+                        alt : 'image',
+                        logo : logo,
+                        altLogo : 'logo',
+                        title : 'بنای آرمانی',
+                        text : 'شرکت طراحی و ساخت خانه های لوکس و مبلمان شده با لوکس ترین اکسسوری ها',
+                        type : 'طراحی سایت / طراحی کاتالوگ',
+                        category : 'software'
                     },
                     {
                         img : img2,
