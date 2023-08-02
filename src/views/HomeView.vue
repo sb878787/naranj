@@ -106,8 +106,8 @@
     </div>
     <div dir="rtl" class="flex flex-row xl:hidden">
       <div class="flex-1 relative">
-        <div class="flex items-end w-11/12 h-32 bg-[#C9C9C9] absolute -top-5 pb-7 gap-x-5">
-          <p class="text-white font-YekanM pr-5">برخی از <br> مشتریان نارنج</p>
+        <div class="flex items-end justify-end pl-5 w-11/12 h-32 bg-[#C9C9C9] absolute -top-5 pb-7 gap-x-5">
+          <p class="text-white font-YekanM">برخی از <br> مشتریان نارنج</p>
           <svg width="20" height="20" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path d="M15 8H1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
             <path d="M8 15L1 8L8 1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -115,7 +115,7 @@
         </div>
       </div>
       <div class="flex-1">
-        <swiper :options="swiperOptions3" class="w-44 ml-5" dir="rtl">
+        <swiper :options="swiperOptions3" class="w-44 sm:w-96 ml-5" dir="rtl">
           <swiper-slide>
             <div class="mt-10">
               <svg width="102" height="58" viewBox="0 0 122 78" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -254,8 +254,7 @@
         </svg>
       </div>
     </div>
-    <div class="absolute left-28 hidden xl:block -
-    ">
+    <div class="absolute left-28 hidden xl:block">
       <svg width="420" height="538" viewBox="0 0 420 538" fill="none" xmlns="http://www.w3.org/2000/svg">
         <path d="M419.234 33.3708C352.407 -2.13919 274.21 -9.64768 201.846 12.4971C129.483 34.6419 68.8802 84.626 33.3702 151.453C-2.1398 218.281 -9.64829 296.477 12.4965 368.841C34.6413 441.204 84.6253 501.807 151.453 537.317L216.947 414.062C182.808 395.922 157.275 364.964 145.962 327.998C134.65 291.031 138.485 251.085 156.625 216.947C174.765 182.809 205.724 157.275 242.69 145.963C279.656 134.65 319.602 138.486 353.74 156.626L419.234 33.3708Z" fill="#F2F2F2"/>
       </svg>
@@ -411,7 +410,7 @@
         </p>
       </div>
       <div class="xl:flex-1 flex items-center justify-center my-2 xl:my-0">
-        <svg class="xl:w-[602px] xl:h-[562px] w-[300px] h-[410px]" viewBox="0 0 522 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <svg class="xl:w-[602px] xl:h-[562px] w-[300px] h-[240px] sm:w-[500px] sm:h-[440px]" viewBox="0 0 522 482" fill="none" xmlns="http://www.w3.org/2000/svg">
           <circle cx="288" cy="346" r="136" fill="#E5E5E5"/>
           <circle cx="131" cy="184" r="112" fill="#0A3BC9" fill-opacity="0.56"/>
           <circle cx="424" cy="198" r="98" fill="#FF8030" fill-opacity="0.71"/>
@@ -481,25 +480,25 @@
     	    <swiper-slide v-for="slide in slides">
             <div class="pb-14 xl:pb-0">
               <div class="bg-white rounded-xl p-7 pb-0 xl:ml-0 ml-8" dir="rtl">
-                <img :src="slide.svg" class="hidden xl:block" :alt="slide.alt2" />
-                <p class="text-[#4C4C4C] font-YekanM text-sm xl:text-xl pt-0 xl:pt-5">
+                <img :src="slide.svg" class="hidden sm:block" :alt="slide.alt2" />
+                <p class="text-[#4C4C4C] font-YekanM text-sm xl:text-xl pt-0 sm:pt-5">
                   {{ slide.title }}
                 </p>
                 <div class="flex xl:mt-12 mt-5">
                   <div class="xl:border-b-8 xl:border-[#FF7E30] border-0 pb-7">
-                    <img :src="slide.img" :alt="slide.alt" class="rounded-full w-[70px] xl:static absolute top-36"/>
+                    <img :src="slide.img" :alt="slide.alt" class="rounded-full w-[65px] h-[65px] object-cover sm:static absolute top-36"/>
                   </div>
-                  <div class="flex mr-24 mb-6 xl:mr-0 xl:mb-0">
-                    <div class="block xl:hidden pt-[6px]">
+                  <div class="flex mr-24 mb-6 sm:mr-0 sm:mb-0">
+                    <div class="block sm:hidden pt-[6px]">
                       <svg width="15" height="10" viewBox="0 0 11 2" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M0 1H11" stroke="black"/>
                       </svg>
                     </div>
-                    <div class="flex flex-col items-start">
-                      <p class="text-[#4D4D4D] font-YekanM xl:text-xl text-sm text-right font-semibold pr-4">
+                    <div class="flex flex-col items-start sm:pt-2 xl:pt-1">
+                      <p class="text-[#4D4D4D] font-YekanM xl:text-xl sm:text-lg text-sm text-right font-semibold pr-4">
                         {{ slide.name }}
                       </p>
-                      <p class="text-[#767676] font-YekanM text-right pt-2 xl:text-lg text-[10px] pr-4">
+                      <p class="text-[#767676] font-YekanM text-right pt-2 xl:text-lg sm:text-md text-[10px] pr-4">
                         {{ slide.text }}
                       </p>
                     </div>
@@ -540,7 +539,7 @@
   import Footer from "@/components/HomeFooter.vue";
   import Footer2 from "@/components/FooterView.vue";
   import ResponsiveHeader from "@/components/ResponsiveHeader.vue";
-  import ProfileUser from '@/assets/Safeimagekit-resized-img.png';
+  import ProfileUser from '@/assets/Man3.jpg';
   import logoSlider from '@/assets/logo-slider.png';
   
   export default {
@@ -563,6 +562,10 @@
               slidesPerView: 1,
               spaceBetween: 20
             },
+            700: {
+              slidesPerView: 1.7,
+              spaceBetween: 20
+            },
           },
           pagination: {
             el: '.swiper-pagination',
@@ -574,6 +577,10 @@
           breakpoints: {
             150: {
               slidesPerView: 1.1,
+              spaceBetween: 10
+            },
+            700: {
+              slidesPerView: 2.1,
               spaceBetween: 10
             }
           },
@@ -587,6 +594,9 @@
           breakpoints: {
             150: {
               slidesPerView: 2
+            },
+            650: {
+              slidesPerView: 3
             }
           },
           loop: true

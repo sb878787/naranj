@@ -33,7 +33,7 @@
             <div v-for="system in systems" class="flex flex-col items-center justify-center xl:space-y-9 space-y-6">
                 <img :src="system.img" :alt="system.alt" />
                 <p class="text-xl text-center font-bold">{{ system.title }}</p>
-                <p class="font-YekanM xl:text-xl text-lg text-[#4D4D4D] text-center xl:leading-9">{{ system.text }}</p>
+                <p class="font-YekanM xl:text-xl text-lg text-[#4D4D4D] text-center xl:leading-9 sm:px-52 lg:px-0">{{ system.text }}</p>
             </div>
         </div>
         <div dir="rtl" class="flex xl:px-44 px-8 xl:mt-36 mt-5 items-center">
@@ -534,6 +534,10 @@
                         150: {
                             slidesPerView: 2.5,
                             spaceBetween: 20
+                        },
+                        700: {
+                            slidesPerView: 3.5,
+                            spaceBetween: 20
                         }
                     },
                     loop: true
@@ -542,6 +546,9 @@
                     breakpoints: {
                         150: {
                             slidesPerView: 1.5,
+                        },
+                        700: {
+                            slidesPerView: 2.5,
                         }
                     },
                     loop: true

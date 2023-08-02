@@ -142,8 +142,8 @@
     </div>
     <div class="flex xl:flex-row flex-col xl:px-44 px-8 justify-between gap-10 mt-10" dir="rtl">
       <div v-for="partner in partners" class="flex-1">
-        <div class="relative overflow-hidden w-full xl:h-[400px] h-80">
-          <img :src="partner.img" class="absolute object-cover object-center w-full xl:h-[400px] h-80 rounded-md" :alt="partner.alt"/>
+        <div class="relative overflow-hidden w-full xl:h-[400px] h-80 sm:h-[500px]">
+          <img :src="partner.img" class="absolute object-cover object-center w-full xl:h-[400px] h-80 sm:h-[500px] rounded-md" :alt="partner.alt"/>
         </div>
         <p class="font-YekanM xl:text-2xl text-xl pt-8 text-[#383838]">{{ partner.name }}</p>
         <p class="text-[#767676] pt-2">{{ partner.text }}</p>
@@ -151,8 +151,8 @@
     </div>
     <div class="flex xl:flex-row flex-col xl:px-44 px-8 justify-between gap-10 mt-16" dir="rtl">
       <div v-for="partner2 in partners2" class="flex-1">
-        <div class="relative overflow-hidden w-full xl:h-[400px] h-80">
-          <img :src="partner2.img" class="absolute object-cover object-center w-full xl:h-[400px] h-80 rounded-md" :alt="partner2.alt"/>
+        <div class="relative overflow-hidden w-full xl:h-[400px] h-80 sm:h-[500px]">
+          <img :src="partner2.img" class="absolute object-cover object-center w-full xl:h-[400px] h-80 sm:h-[500px] rounded-md" :alt="partner2.alt"/>
         </div>
         <p class="font-YekanM xl:text-2xl text-xl pt-8 text-[#383838]">{{ partner2.name }}</p>
         <p class="text-[#767676] pt-2">{{ partner2.text }}</p>

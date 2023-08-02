@@ -23,7 +23,7 @@
                 <transition name="translateX">
                     <nav v-show="isNavOpen" class="min-h-full relative">
                         <div class="sidemenu__wrapper">
-                            <div class="h-72 py-5 overflow-y-scroll">
+                            <div class="h-72 sm:h-96 py-5 overflow-y-scroll">
                                 <ul class="sidemenu__list space-y-5">
                                     <li class="pr-11">
                                         <router-link @click="isNavOpen = false" to="/" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">

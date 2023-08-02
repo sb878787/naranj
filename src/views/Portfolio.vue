@@ -88,7 +88,7 @@
                         <img :src="event.img" class="absolute object-cover -z-20 w-full h-[532px] object-center rounded-lg transition-all grayscale group-hover:grayscale-0" :alt="event.alt"/>
                         <img :src="event.logo" class="xl:mr-9 mr-2 pt-24" :alt="event.altLogo"/>
                         <p class="text-white font-YekanM text-3xl xl:mr-14 mr-7 mt-8">{{ event.title }}</p>
-                        <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 mt-2 w-3/4 xl:w-1/2">{{ event.text }}</p>
+                        <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 mt-2 w-3/4 sm:w-1/2">{{ event.text }}</p>
                         <div class="flex justify-center items-center">
                             <button type="button" class="font-YekanM text-center py-4 px-10 mt-36 rounded-md bg-white invisible group-hover:visible group-hover:duration-300 group-hover:-translate-y-24">
                                 مشاهده پروژه
@@ -212,7 +212,7 @@
                         category : 'Site'
                     },
                     {
-                        img : img2,
+                        img : 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-1.jpg',
                         alt : 'image',
                         logo : logo,
                         altLogo : 'logo',
@@ -222,7 +222,7 @@
                         category : 'Digital'
                     },
                     {
-                        img : img,
+                        img : 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image.jpg',
                         alt : 'image',
                         logo : logo,
                         altLogo : 'logo',
@@ -242,7 +242,7 @@
                         category : 'Digital'
                     },
                     {
-                        img : img,
+                        img : 'https://flowbite.s3.amazonaws.com/docs/gallery/square/image-2.jpg',
                         alt : 'image',
                         logo : logo,
                         altLogo : 'logo',
@@ -262,7 +262,7 @@
                         category : 'Digital'
                     },
                     {
-                        img : img2,
+                        img : 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-6.jpg',
                         alt : 'image',
                         logo : logo,
                         altLogo : 'logo',
@@ -282,7 +282,7 @@
                         category : 'software'
                     },
                     {
-                        img : img2,
+                        img : 'https://flowbite.s3.amazonaws.com/docs/gallery/masonry/image-10.jpg',
                         alt : 'image',
                         logo : logo,
                         altLogo : 'logo',
@@ -297,6 +297,9 @@
                     breakpoints: {
                         150: {
                             slidesPerView: 2.2
+                        },
+                        700: {
+                            slidesPerView: 4.2
                         }
                     },
                     loop: false
