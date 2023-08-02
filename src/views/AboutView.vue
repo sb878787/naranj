@@ -35,7 +35,7 @@
         <path d="M237.128 0.156766C206.009 0.156774 175.194 6.28621 146.443 18.1951C117.693 30.104 91.569 47.5592 69.5642 69.564C47.5594 91.5688 30.1042 117.692 18.1953 146.443C6.28638 175.194 0.156962 206.008 0.156959 237.128L116.074 237.128C116.074 221.231 119.205 205.489 125.288 190.802C131.372 176.115 140.289 162.77 151.53 151.529C162.771 140.289 176.116 131.372 190.803 125.288C205.49 119.205 221.231 116.073 237.128 116.073L237.128 0.156766Z" fill="#F2F2F2" fill-opacity="0.49"/>
       </svg>
     </div>
-    <div class="flex xl:flex-row-reverse flex-col justify-between xl:pr-44 xl:pl-96 px-8 xl:mt-6 mt-3 relative">
+    <div class="flex xl:flex-row-reverse flex-col justify-between xl:pr-44 -z-10 xl:pl-96 px-8 xl:mt-6 mt-3 relative">
       <div>
         <p dir="rtl" class="font-YekanB xl:text-5xl text-2xl text-[#4D4D4D] xl:text-black xl:leading-tight leading-snug">ما یک تیم دیجیتالی و <br class="hidden xl:block"> آژانس نرم افزاری در ایران هستیم. <br> استراتژی طراحی و توسعه در <br class="hidden xl:block"> تمام سیستم عامل ها.</p>
         <div class="absolute bottom-0 hidden xl:flex flex-col">

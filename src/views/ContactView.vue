@@ -83,35 +83,35 @@
                 <form>
                     <label class="block">
                         <input type="text" placeholder="نام و نام خانوادگی" class="w-full bg-[#F8F8F8] rounded-md border-none outline-none font-YekanM placeholder-[#767676] text-[#767676] xl:p-5 p-4 xl:pr-8 pr-6 xl:text-lg text-md shadow-sm
-                            focus:outline-none focus:border-[#FF6300] focus:bg-[#FBF4F0] focus:ring-2 focus:ring-[#FF6300]
+                            focus:outline-none focus:border-[#FF6300] focus:bg-[#fffaf7] focus:ring-2 focus:ring-[#FF6300]
                             invalid:border-red-500 invalid:text-red-600
                             focus:invalid:border-red-500 focus:invalid:ring-red-500
                         "/>
                     </label>
                     <label class="block">
                         <input type="number" placeholder="شماره تماس *" class="w-full bg-[#F8F8F8] rounded-md border-none outline-none font-YekanM placeholder-[#767676] text-[#767676] xl:p-5 p-4 xl:pr-8 pr-6 xl:text-lg text-md shadow-sm mt-5
-                            focus:outline-none focus:border-[#FF6300] focus:bg-[#FBF4F0] focus:ring-2 focus:ring-[#FF6300]
+                            focus:outline-none focus:border-[#FF6300] focus:bg-[#fffaf7] focus:ring-2 focus:ring-[#FF6300]
                             invalid:border-red-500 invalid:text-red-600
                             focus:invalid:border-red-500 focus:invalid:ring-red-500
                         "/>
                     </label>
                     <label class="block">
                         <input type="email" placeholder="ایمیل *" class="w-full bg-[#F8F8F8] rounded-md border-none outline-none font-YekanM placeholder-[#767676] text-[#767676] xl:p-5 p-4 xl:pr-8 pr-6 xl:text-lg text-md shadow-sm mt-5
-                            focus:outline-none focus:border-[#FF6300] focus:bg-[#FBF4F0] focus:ring-2 focus:ring-[#FF6300]
+                            focus:outline-none focus:border-[#FF6300] focus:bg-[#fffaf7] focus:ring-2 focus:ring-[#FF6300]
                             invalid:border-red-500 invalid:text-red-600
                             focus:invalid:border-red-500 focus:invalid:ring-red-500
                         "/>
                     </label>
                     <label class="block">
                         <input type="text" placeholder="موضوع مشاوره" class="w-full bg-[#F8F8F8] rounded-md border-none outline-none font-YekanM placeholder-[#767676] text-[#767676] xl:p-5 p-4 xl:pr-8 pr-6 xl:text-lg text-md shadow-sm mt-5
-                            focus:outline-none focus:border-[#FF6300] focus:bg-[#FBF4F0] focus:ring-2 focus:ring-[#FF6300]
+                            focus:outline-none focus:border-[#FF6300] focus:bg-[#fffaf7] focus:ring-2 focus:ring-[#FF6300]
                             invalid:border-red-500 invalid:text-red-600
                             focus:invalid:border-red-500 focus:invalid:ring-red-500
                         "/>
                     </label>
                     <label class="block">
                         <textarea rows="8" placeholder="توضیحات خود را ارائه کنید..." class="w-full bg-[#F8F8F8] rounded-md border-none outline-none font-YekanM placeholder-[#767676] text-[#767676] xl:p-5 p-4 xl:pr-8 pr-6 xl:text-lg text-md shadow-sm mt-5
-                            focus:outline-none focus:border-[#FF6300] focus:bg-[#FBF4F0] focus:ring-2 focus:ring-[#FF6300]
+                            focus:outline-none focus:border-[#FF6300] focus:bg-[#fffaf7] focus:ring-2 focus:ring-[#FF6300]
                             invalid:border-red-500 invalid:text-red-600
                             focus:invalid:border-red-500 focus:invalid:ring-red-500
                         "></textarea>
