@@ -5,6 +5,7 @@ import AboutView from '../views/AboutView.vue'
 import ContactView from '../views/ContactView.vue'
 import ApplicationView from '../views/ApplicationView.vue'
 import Portfolio from '../views/Portfolio.vue'
+import AppmAll from '../views/AppmAll.vue'
 
 Vue.use(VueRouter)
 
@@ -33,6 +34,11 @@ const routes = [
     path: '/portfolio',
     name: 'portfolio',
     component: Portfolio
+  },
+  {
+    path: '/app-mall',
+    name: 'app-mall',
+    component: AppmAll
   }
 ]
 

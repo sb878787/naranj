@@ -33,7 +33,6 @@
                 ما با جدیدترین الگو های طراحی و بکار گیری جدیدترین ابزار ها <br class="hidden xl:block"> وب سایتهایی را طراحی کرده ایم که به آنها افتخار می کنیم. <br class="hidden xl:block"> برخی از آنها را در اینجا ببینید.
             </p>
         </div>
-
         <swiper :options="swiperOptions" class="xl:hidden px-8 border-b-2 border-[#F2F2F2] mt-12 flex justify-center items-center" dir="rtl">
             <swiper-slide>
                 <label class="font-YekanM text-lg text-[#4C4C4C] group flex space-x-4 items-stretch justify-stretch hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="All" />
@@ -59,7 +58,6 @@
                 <label class="font-YekanM text-lg text-[#4C4C4C] flex items-center justify-center hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" />نرم افزار نارنج</label>
             </swiper-slide>
         </swiper>
-
         <div class="border-b-2 border-[#F2F2F2] hidden xl:block">
             <div class="flex flex-col xl:flex-row xl:justify-center xl:items-center justify-start items-start gap-x-11 px-8 xl:px-0 xl:mt-20 mt-14" dir="rtl">
                 <label class="font-YekanM text-lg text-[#4C4C4C] group flex space-x-4 items-stretch justify-stretch hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="All" />
