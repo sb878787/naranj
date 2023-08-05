@@ -7,8 +7,10 @@
     "build": "vue-cli-service build"
   },
   "dependencies": {
+    "@burhanahmeed/vue-modal-2": "^1.1.11",
     "@fortawesome/fontawesome-svg-core": "^6.4.0",
     "@fortawesome/free-solid-svg-icons": "^6.4.0",
+    "axios": "^1.4.0",
     "core-js": "^3.8.3",
     "lodash.debounce": "^4.0.8",
     "mosha-vue-toastify": "^1.0.23",
