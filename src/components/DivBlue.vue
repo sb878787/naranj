@@ -10,7 +10,7 @@
                 </div>
             </div>
             <div class="relative mt-24 xl:mt-0">
-                <button type="button" class="bg-[#FF6300] rounded-md xl:w-48 w-44 absolute bottom-0 left-0">
+                <button type="button" class="bg-[#FF6300] rounded-md xl:w-48 w-44 absolute bottom-0 left-0 hover:bg-[#ff5100] transition-all">
                     <div class="flex justify-between items-center">
                         <div>
                             <p class="text-white font-YekanM text-center px-5 text-base">ثبت سفارش</p>
