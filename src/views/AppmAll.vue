@@ -6,7 +6,7 @@
             <img class="absolute object-cover -z-20 xl:w-[650px] xl:h-[92vh] h-screen w-full object-center" src="../assets/image 67.png" alt="logo"/>
 
             <button type="button" @click="openModal">
-                <div class="absolute bottom-36 -right-[152px] z-30 hover:rotate-[360deg] transition-all duration-1000 origin-center">
+                <div class="absolute xl:bottom-36 xl:-right-[152px] bottom-80 right-12 z-30 hover:rotate-[360deg] transition-all duration-1000 origin-center">
                     <svg width="304" height="325" viewBox="0 0 304 325" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <path d="M227.358 96.4803C207.096 76.4617 179.712 65.3119 151.229 65.4839L151.878 172.877L227.358 96.4803Z" fill="#7A74FC" fill-opacity="0.56"/>
                         <circle cx="152.329" cy="171.329" r="76.4131" transform="rotate(24.101 152.329 171.329)" stroke="#F2F2F2"/>
@@ -35,11 +35,11 @@
             <p dir="ltr" class="text-white font-light text-5xl ml-8 pb-8 absolute bottom-0 z-40 block xl:hidden">Every new <br> idea is <br> just a <br> mashup</p>
         </div>
 
-        <transition name="translateX">
-            <div v-show="inModalOpen" class="absolute top-0 z-50 w-full h-screen bg-black bg-opacity-[0.5] flex items-center justify-center">
-                <button type="button" @click="closeModal" class="text-white bg-[#FF6300] rounded-lg p-5 px-6 absolute top-24 right-96 text-xl">&#10005;</button>
+        <transition name="translateY">
+            <div v-show="inModalOpen" @click="closeModal" class="fixed top-0 z-50 w-full h-screen bg-black bg-opacity-[0.5] flex items-center justify-center">
+                <button type="button" @click="closeModal" class="text-white bg-[#FF6300] rounded-lg p-5 px-6 absolute xl:top-24 xl:right-96 top-44 right-8 text-xl">&#10005;</button>
                 <div>
-                    <video id="videoElement" class="w-full" controls>
+                    <video id="videoElement" controls>
                         <source src="../assets/video/047f812ca27807257a076707913a5fc938923532-480p.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -51,62 +51,70 @@
 
         <div dir="rtl" class="xl:absolute xl:top-[25%] xl:right-0 xl:px-44 static px-8 mt-8 xl:mt-0">
             <p class="font-YekanM text-[#FF6300] xl:text-xl text-lg">نرم افزار کاربردی ریتیل</p>
-            <p class="font-YekanB xl:text-4xl text-2xl xl:pt-6 pt-3 xl:text-[#000] text-[#4D4D4D]">اپلیکیشن مراکز خرید نارنج</p>
-            <p class="font-YekanM text-[#4D4D4D] xl:text-xl xl:pt-12 pt-7 xl:leading-loose">شرکت نارنج این افتخار را دارد که طی چند سال تحقیق و بررسی بر روی تمام نرم افزار های <br> مراکز خرید دنیا محصولی فراهم کند که به سیستم پاخور مراکز خرید و ریتیل کشور <br> همچنین به حفظ و وفادار سازی مشتری کمک می کند که شامل ویژگی هایی می باشد <br> که در اینجا به آن اشاره کرده ایم.</p>
+            <p class="font-YekanB xl:text-4xl text-3xl xl:pt-6 pt-3 xl:text-[#000] text-[#4D4D4D]">اپلیکیشن مراکز خرید نارنج</p>
+            <p class="font-YekanM text-[#4D4D4D] xl:text-xl xl:pt-12 pt-7 xl:leading-loose">شرکت نارنج این افتخار را دارد که طی چند سال تحقیق و بررسی بر روی تمام نرم افزار های <br class="hidden xl:block"> مراکز خرید دنیا محصولی فراهم کند که به سیستم پاخور مراکز خرید و ریتیل کشور <br class="hidden xl:block"> همچنین به حفظ و وفادار سازی مشتری کمک می کند که شامل ویژگی هایی می باشد <br class="hidden xl:block"> که در اینجا به آن اشاره کرده ایم.</p>
             
-            <div class="absolute top-32 -left-56">
+            <div class="absolute top-32 -left-56 hidden xl:block">
                 <svg width="25" height="25" viewBox="0 0 25 25" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M21.2956 21.1898C16.4936 26.05 8.66081 26.0973 3.80053 21.2954C-1.05976 16.4934 -1.10703 8.6606 3.69493 3.80032C8.49689 -1.05996 16.3297 -1.10724 21.19 3.69472C26.0502 8.49668 26.0975 16.3295 21.2956 21.1898ZM8.6023 8.64881C6.47809 10.7988 6.499 14.2638 8.64902 16.388C10.799 18.5122 14.264 18.4913 16.3882 16.3413C18.5124 14.1913 18.4915 10.7263 16.3415 8.6021C14.1915 6.47788 10.7265 6.4988 8.6023 8.64881Z" fill="#F2F2F2"/>
                 </svg>
             </div>
         </div>
 
-        <div class="flex flex-col gap-3 xl:absolute xl:top-[69%] xl:right-0 xl:px-44 static px-8">
-            <div class="flex gap-7 items-center relative border-2 border-dotted w-[650px] p-5 rounded-xl" dir="rtl">
-                <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M8.53453 25.3601C8.16653 25.3601 7.91853 25.3961 7.79053 25.4321V27.7881C7.94253 27.8241 8.13253 27.8341 8.39453 27.8341C9.35253 27.8341 9.94253 27.3501 9.94253 26.5321C9.94253 25.8001 9.43453 25.3601 8.53453 25.3601ZM15.5085 25.3841C15.1085 25.3841 14.8485 25.4201 14.6945 25.4561V30.6761C14.8485 30.7121 15.0965 30.7121 15.3205 30.7121C16.9545 30.7241 18.0185 29.8241 18.0185 27.9201C18.0305 26.2601 17.0605 25.3841 15.5085 25.3841Z" fill="#BBBBBB"/>
-                    <path d="M20 0H4C2.93913 0 1.92172 0.421427 1.17157 1.17157C0.421427 1.92172 0 2.93913 0 4V36C0 37.0609 0.421427 38.0783 1.17157 38.8284C1.92172 39.5786 2.93913 40 4 40H28C29.0609 40 30.0783 39.5786 30.8284 38.8284C31.5786 38.0783 32 37.0609 32 36V12L20 0ZM10.996 28.38C10.378 28.96 9.466 29.22 8.404 29.22C8.19808 29.2222 7.99226 29.2102 7.788 29.184V32.036H6V24.164C6.80691 24.0436 7.62224 23.9888 8.438 24C9.552 24 10.344 24.212 10.878 24.638C11.386 25.042 11.73 25.704 11.73 26.484C11.728 27.268 11.468 27.93 10.996 28.38ZM18.61 31.09C17.77 31.788 16.492 32.12 14.93 32.12C13.994 32.12 13.332 32.06 12.882 32V24.166C13.6892 24.0482 14.5043 23.9927 15.32 24C16.834 24 17.818 24.272 18.586 24.852C19.416 25.468 19.936 26.45 19.936 27.86C19.936 29.386 19.378 30.44 18.61 31.09ZM26 25.54H22.936V27.362H25.8V28.83H22.936V32.038H21.124V24.06H26V25.54ZM20 14H18V4L28 14H20Z" fill="#BBBBBB"/>
-                </svg>
+        <div class="flex flex-col gap-3 xl:absolute xl:top-[69%] xl:right-0 xl:px-44 static px-8 mt-12 xl:mt-0">
+            <div class="flex flex-col xl:flex-row gap-7 xl:items-center xl:justify-between relative border-2 border-dotted xl:w-[650px] p-5 rounded-xl" dir="rtl">
+                <div class="flex gap-7 items-center justify-start">
+                    <svg width="32" height="40" viewBox="0 0 32 40" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M8.53453 25.3601C8.16653 25.3601 7.91853 25.3961 7.79053 25.4321V27.7881C7.94253 27.8241 8.13253 27.8341 8.39453 27.8341C9.35253 27.8341 9.94253 27.3501 9.94253 26.5321C9.94253 25.8001 9.43453 25.3601 8.53453 25.3601ZM15.5085 25.3841C15.1085 25.3841 14.8485 25.4201 14.6945 25.4561V30.6761C14.8485 30.7121 15.0965 30.7121 15.3205 30.7121C16.9545 30.7241 18.0185 29.8241 18.0185 27.9201C18.0305 26.2601 17.0605 25.3841 15.5085 25.3841Z" fill="#BBBBBB"/>
+                        <path d="M20 0H4C2.93913 0 1.92172 0.421427 1.17157 1.17157C0.421427 1.92172 0 2.93913 0 4V36C0 37.0609 0.421427 38.0783 1.17157 38.8284C1.92172 39.5786 2.93913 40 4 40H28C29.0609 40 30.0783 39.5786 30.8284 38.8284C31.5786 38.0783 32 37.0609 32 36V12L20 0ZM10.996 28.38C10.378 28.96 9.466 29.22 8.404 29.22C8.19808 29.2222 7.99226 29.2102 7.788 29.184V32.036H6V24.164C6.80691 24.0436 7.62224 23.9888 8.438 24C9.552 24 10.344 24.212 10.878 24.638C11.386 25.042 11.73 25.704 11.73 26.484C11.728 27.268 11.468 27.93 10.996 28.38ZM18.61 31.09C17.77 31.788 16.492 32.12 14.93 32.12C13.994 32.12 13.332 32.06 12.882 32V24.166C13.6892 24.0482 14.5043 23.9927 15.32 24C16.834 24 17.818 24.272 18.586 24.852C19.416 25.468 19.936 26.45 19.936 27.86C19.936 29.386 19.378 30.44 18.61 31.09ZM26 25.54H22.936V27.362H25.8V28.83H22.936V32.038H21.124V24.06H26V25.54ZM20 14H18V4L28 14H20Z" fill="#BBBBBB"/>
+                    </svg>
 
-                <p class="font-YekanB text-xl">دریافت کاتالوگ اپلیکیشن <br> مراکز خرید نارنج</p>
+                    <p class="font-YekanB text-xl">دریافت کاتالوگ اپلیکیشن <br> مراکز خرید نارنج</p>
+                </div>
 
-                <a href="/930947611amozesh ghoran-nohom.pdf" download class="flex gap-5 items-center p-3 px-11 rounded-xl bg-[#FF8030] hover:bg-[#ff6d1f] text-white font-YekanM absolute left-5 transition-all">
-                    <div>
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 8.30125L11.4013 6.90125C11.6368 6.67338 11.9525 6.54716 12.2803 6.54977C12.608 6.55239 12.9216 6.68363 13.1535 6.91523C13.3855 7.14682 13.5172 7.46025 13.5202 7.788C13.5233 8.11574 13.3975 8.43159 13.17 8.6675L9.63375 12.2037C9.51793 12.3202 9.38023 12.4127 9.22857 12.4757C9.0769 12.5388 8.91426 12.5713 8.75 12.5713C8.58574 12.5713 8.4231 12.5388 8.27143 12.4757C8.11977 12.4127 7.98207 12.3202 7.86625 12.2037L4.33 8.6675C4.21394 8.55128 4.12192 8.41334 4.05917 8.26155C3.99642 8.10977 3.96419 7.94711 3.9643 7.78287C3.96454 7.45116 4.09653 7.13314 4.33125 6.89875C4.56597 6.66436 4.88418 6.53282 5.21588 6.53306C5.54759 6.53329 5.86561 6.66528 6.1 6.9L7.5 8.30125V1.25C7.5 0.918479 7.6317 0.600537 7.86612 0.366117C8.10054 0.131696 8.41848 0 8.75 0C9.08152 0 9.39946 0.131696 9.63388 0.366117C9.8683 0.600537 10 0.918479 10 1.25V8.30125ZM1.25 15H16.25C16.5815 15 16.8995 15.1317 17.1339 15.3661C17.3683 15.6005 17.5 15.9185 17.5 16.25C17.5 16.5815 17.3683 16.8995 17.1339 17.1339C16.8995 17.3683 16.5815 17.5 16.25 17.5H1.25C0.918479 17.5 0.600537 17.3683 0.366117 17.1339C0.131696 16.8995 0 16.5815 0 16.25C0 15.9185 0.131696 15.6005 0.366117 15.3661C0.600537 15.1317 0.918479 15 1.25 15Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div><p>دانلود کاتالوگ</p></div>
-                </a>
+                <div class="flex justify-center items-center">
+                    <a href="/930947611amozesh ghoran-nohom.pdf" download class="flex gap-5 items-center justify-center p-3 w-52 rounded-xl bg-[#FF8030] hover:bg-[#ff6d1f] text-white font-YekanM transition-all">
+                        <div>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 8.30125L11.4013 6.90125C11.6368 6.67338 11.9525 6.54716 12.2803 6.54977C12.608 6.55239 12.9216 6.68363 13.1535 6.91523C13.3855 7.14682 13.5172 7.46025 13.5202 7.788C13.5233 8.11574 13.3975 8.43159 13.17 8.6675L9.63375 12.2037C9.51793 12.3202 9.38023 12.4127 9.22857 12.4757C9.0769 12.5388 8.91426 12.5713 8.75 12.5713C8.58574 12.5713 8.4231 12.5388 8.27143 12.4757C8.11977 12.4127 7.98207 12.3202 7.86625 12.2037L4.33 8.6675C4.21394 8.55128 4.12192 8.41334 4.05917 8.26155C3.99642 8.10977 3.96419 7.94711 3.9643 7.78287C3.96454 7.45116 4.09653 7.13314 4.33125 6.89875C4.56597 6.66436 4.88418 6.53282 5.21588 6.53306C5.54759 6.53329 5.86561 6.66528 6.1 6.9L7.5 8.30125V1.25C7.5 0.918479 7.6317 0.600537 7.86612 0.366117C8.10054 0.131696 8.41848 0 8.75 0C9.08152 0 9.39946 0.131696 9.63388 0.366117C9.8683 0.600537 10 0.918479 10 1.25V8.30125ZM1.25 15H16.25C16.5815 15 16.8995 15.1317 17.1339 15.3661C17.3683 15.6005 17.5 15.9185 17.5 16.25C17.5 16.5815 17.3683 16.8995 17.1339 17.1339C16.8995 17.3683 16.5815 17.5 16.25 17.5H1.25C0.918479 17.5 0.600537 17.3683 0.366117 17.1339C0.131696 16.8995 0 16.5815 0 16.25C0 15.9185 0.131696 15.6005 0.366117 15.3661C0.600537 15.1317 0.918479 15 1.25 15Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div><p>دانلود کاتالوگ</p></div>
+                    </a>
+                </div>
             </div>
 
-            <div class="flex gap-7 items-center relative border-2 border-dotted w-[650px] p-7 rounded-xl" dir="rtl">
-                <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M21.4054 0H2.59459C1.16351 0 0 1.15313 0 2.57143V33.4286C0 34.8469 1.16351 36 2.59459 36H21.4054C22.8365 36 24 34.8469 24 33.4286V2.57143C24 1.15313 22.8365 0 21.4054 0ZM21.0811 33.1071H2.91892V2.89286H21.0811V33.1071ZM10.3784 29.0089C10.3784 29.4352 10.5492 29.844 10.8533 30.1454C11.1575 30.4467 11.5699 30.6161 12 30.6161C12.4301 30.6161 12.8425 30.4467 13.1467 30.1454C13.4508 29.844 13.6216 29.4352 13.6216 29.0089C13.6216 28.5827 13.4508 28.1739 13.1467 27.8725C12.8425 27.5711 12.4301 27.4018 12 27.4018C11.5699 27.4018 11.1575 27.5711 10.8533 27.8725C10.5492 28.1739 10.3784 28.5827 10.3784 29.0089Z" fill="#BBBBBB"/>
-                </svg>
+            <div class="flex flex-col xl:flex-row gap-7 xl:items-center xl:justify-between relative border-2 border-dotted xl:w-[650px] p-5 rounded-xl" dir="rtl">
+                <div class="flex gap-7 items-center justify-start">
+                    <svg width="24" height="36" viewBox="0 0 24 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M21.4054 0H2.59459C1.16351 0 0 1.15313 0 2.57143V33.4286C0 34.8469 1.16351 36 2.59459 36H21.4054C22.8365 36 24 34.8469 24 33.4286V2.57143C24 1.15313 22.8365 0 21.4054 0ZM21.0811 33.1071H2.91892V2.89286H21.0811V33.1071ZM10.3784 29.0089C10.3784 29.4352 10.5492 29.844 10.8533 30.1454C11.1575 30.4467 11.5699 30.6161 12 30.6161C12.4301 30.6161 12.8425 30.4467 13.1467 30.1454C13.4508 29.844 13.6216 29.4352 13.6216 29.0089C13.6216 28.5827 13.4508 28.1739 13.1467 27.8725C12.8425 27.5711 12.4301 27.4018 12 27.4018C11.5699 27.4018 11.1575 27.5711 10.8533 27.8725C10.5492 28.1739 10.3784 28.5827 10.3784 29.0089Z" fill="#BBBBBB"/>
+                    </svg>
 
-                <p class="font-YekanB text-xl">دریافت نسخه بتا اپلیکیشن</p>
+                    <p class="font-YekanB text-xl">دریافت نسخه بتا اپلیکیشن</p>
+                </div>
 
-                <a href="/930947611amozesh ghoran-nohom.pdf" download class="flex gap-5 items-center p-3 px-11 rounded-xl bg-[#FF8030] hover:bg-[#ff6d1f] text-white font-YekanM absolute left-5 transition-all">
-                    <div>
-                        <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
-                            <path d="M10 8.30125L11.4013 6.90125C11.6368 6.67338 11.9525 6.54716 12.2803 6.54977C12.608 6.55239 12.9216 6.68363 13.1535 6.91523C13.3855 7.14682 13.5172 7.46025 13.5202 7.788C13.5233 8.11574 13.3975 8.43159 13.17 8.6675L9.63375 12.2037C9.51793 12.3202 9.38023 12.4127 9.22857 12.4757C9.0769 12.5388 8.91426 12.5713 8.75 12.5713C8.58574 12.5713 8.4231 12.5388 8.27143 12.4757C8.11977 12.4127 7.98207 12.3202 7.86625 12.2037L4.33 8.6675C4.21394 8.55128 4.12192 8.41334 4.05917 8.26155C3.99642 8.10977 3.96419 7.94711 3.9643 7.78287C3.96454 7.45116 4.09653 7.13314 4.33125 6.89875C4.56597 6.66436 4.88418 6.53282 5.21588 6.53306C5.54759 6.53329 5.86561 6.66528 6.1 6.9L7.5 8.30125V1.25C7.5 0.918479 7.6317 0.600537 7.86612 0.366117C8.10054 0.131696 8.41848 0 8.75 0C9.08152 0 9.39946 0.131696 9.63388 0.366117C9.8683 0.600537 10 0.918479 10 1.25V8.30125ZM1.25 15H16.25C16.5815 15 16.8995 15.1317 17.1339 15.3661C17.3683 15.6005 17.5 15.9185 17.5 16.25C17.5 16.5815 17.3683 16.8995 17.1339 17.1339C16.8995 17.3683 16.5815 17.5 16.25 17.5H1.25C0.918479 17.5 0.600537 17.3683 0.366117 17.1339C0.131696 16.8995 0 16.5815 0 16.25C0 15.9185 0.131696 15.6005 0.366117 15.3661C0.600537 15.1317 0.918479 15 1.25 15Z" fill="white"/>
-                        </svg>
-                    </div>
-                    <div><p>دانلود نسخه بتا</p></div>
-                </a>
+                <div class="flex justify-center items-center">
+                    <a href="/930947611amozesh ghoran-nohom.pdf" download class="flex gap-5 items-center justify-center p-3 w-52 rounded-xl bg-[#FF8030] hover:bg-[#ff6d1f] text-white font-YekanM transition-all">
+                        <div>
+                            <svg width="18" height="18" viewBox="0 0 18 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M10 8.30125L11.4013 6.90125C11.6368 6.67338 11.9525 6.54716 12.2803 6.54977C12.608 6.55239 12.9216 6.68363 13.1535 6.91523C13.3855 7.14682 13.5172 7.46025 13.5202 7.788C13.5233 8.11574 13.3975 8.43159 13.17 8.6675L9.63375 12.2037C9.51793 12.3202 9.38023 12.4127 9.22857 12.4757C9.0769 12.5388 8.91426 12.5713 8.75 12.5713C8.58574 12.5713 8.4231 12.5388 8.27143 12.4757C8.11977 12.4127 7.98207 12.3202 7.86625 12.2037L4.33 8.6675C4.21394 8.55128 4.12192 8.41334 4.05917 8.26155C3.99642 8.10977 3.96419 7.94711 3.9643 7.78287C3.96454 7.45116 4.09653 7.13314 4.33125 6.89875C4.56597 6.66436 4.88418 6.53282 5.21588 6.53306C5.54759 6.53329 5.86561 6.66528 6.1 6.9L7.5 8.30125V1.25C7.5 0.918479 7.6317 0.600537 7.86612 0.366117C8.10054 0.131696 8.41848 0 8.75 0C9.08152 0 9.39946 0.131696 9.63388 0.366117C9.8683 0.600537 10 0.918479 10 1.25V8.30125ZM1.25 15H16.25C16.5815 15 16.8995 15.1317 17.1339 15.3661C17.3683 15.6005 17.5 15.9185 17.5 16.25C17.5 16.5815 17.3683 16.8995 17.1339 17.1339C16.8995 17.3683 16.5815 17.5 16.25 17.5H1.25C0.918479 17.5 0.600537 17.3683 0.366117 17.1339C0.131696 16.8995 0 16.5815 0 16.25C0 15.9185 0.131696 15.6005 0.366117 15.3661C0.600537 15.1317 0.918479 15 1.25 15Z" fill="white"/>
+                            </svg>
+                        </div>
+                        <div><p>دانلود نسخه بتا</p></div>
+                    </a>
+                </div>
             </div>
         </div>
 
-        <p class="font-YekanB xl:text-4xl text-2xl xl:text-[#000] text-[#4D4D4D] text-right pr-44 mt-28">کاربرد اپلیکیشن</p>
+        <p class="font-YekanB xl:text-4xl text-3xl xl:text-[#000] text-[#4D4D4D] text-right xl:pr-44 pr-8 xl:mt-28 mt-16">کاربرد اپلیکیشن</p>
 
-        <div class="absolute left-[31%]">
+        <div class="absolute left-[31%] hidden xl:block">
             <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36.4048 36.2245C28.3425 44.3848 15.1342 44.4076 6.90329 36.2755C-1.32761 28.1433 -1.46424 14.9357 6.59811 6.77548C14.6605 -1.38479 27.8687 -1.40761 36.0996 6.72452C44.3305 14.8567 44.4672 28.0643 36.4048 36.2245ZM14.9088 14.9864C11.3423 18.5962 11.4027 24.4388 15.0438 28.0361C18.6848 31.6335 24.5277 31.6234 28.0942 28.0136C31.6607 24.4038 31.6002 18.5612 27.9592 14.9639C24.3181 11.3665 18.4753 11.3766 14.9088 14.9864Z" fill="#F2F2F2"/>
             </svg>
         </div>
 
-        <div dir="rtl" class="flex justify-between px-44 -mt-12">
+        <div dir="rtl" class="flex flex-col xl:flex-row items-center xl:justify-between xl:px-44 pr-8 -mt-12">
             <div class="flex flex-col gap-y-12 items-center">
                 <img src="../assets/Group 234.png" alt="image">
                 <p class="text-[#4D4D4D] font-YekanB text-xl pl-10 text-center">مراکز خرید سراسر ایران</p>
@@ -123,8 +131,8 @@
             </div>
         </div>
 
-        <div class="flex gap-x-24 mt-44" dir="rtl">
-            <div class="relative w-1/2">
+        <div class="flex flex-col xl:flex-row gap-x-24 xl:mt-44 mt-24" dir="rtl">
+            <div class="relative xl:w-1/2 hidden xl:block">
                 <div class="absolute z-30 -top-20 right-32">
                     <svg width="153" height="153" viewBox="0 0 153 153" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="3.04839" cy="3.04839" r="3.04839" transform="matrix(-0.707107 -0.707107 -0.707107 0.707107 152.735 76.3676)" fill="#CFCFCF"/>
@@ -265,224 +273,240 @@
                 </div>
             </div>
 
-            <div class="h-screen pb-8 overflow-y-scroll">
-                <p class="font-YekanB text-4xl leading-tight">ویژگی های <br> اپلیکیشن مراکز خرید</p>
+            <div class="xl:h-screen h-[75vh] pb-8 overflow-y-scroll overflow-x-hidden">
+                <p class="font-YekanB text-4xl xl:text-3xl px-8 xl:px-0 xl:text-[#000] text-[#4D4D4D] leading-tight">ویژگی های <br> اپلیکیشن مراکز خرید</p>
                 
-                <div class="flex flex-col gap-y-4 mt-12">
-                    <div class="flex items-center gap-x-9 group cursor-pointer">
-                        <p @click="none = !none" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="{title:ff8030}">1</p>
-                        <p @click="[none = !none , ff8030 = !ff8030]" class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="{title:ff8030}">فروشگاه اینترنتی</p>
+                <div class="flex flex-col gap-y-4 mt-12 px-8 xl:px-0">
+                    <div class="flex items-center xl:gap-x-9 gap-x-6 group cursor-pointer">
+                        <p @click="[ability = !ability , isActive = !isActive]" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="isActive ? 'text-[#FF8030]' : ''">1</p>
+                        <p @click="[ability = !ability , isActive = !isActive]" class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="isActive ? 'text-[#FF8030]' : ''">فروشگاه اینترنتی</p>
                     </div>
 
-                    <div class="flex flex-col gap-y-4 mt-7 mr-20 pb-8 border-b border-[#E5E5E5] w-[500px] transition-all" :class="{ability:none}">
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان خرید با امتیاز های باشگاه</p>
+                    <transition name="translateY2">
+                        <div v-show="ability" class="flex flex-col gap-y-4 xl:mt-7 mt-2 mr-16 xl:pb-8 pb-5 border-b border-[#E5E5E5] xl:w-[500px] w-full transition-all">
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان خرید با امتیاز های باشگاه</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">خرید مستقیم با کارت بانکی</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">خرید مستقیم با کارت بانکی</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
-                        </div>
+                    </transition>
+
+                    <div class="flex items-center xl:gap-x-9 gap-x-6 group cursor-pointer">
+                        <p @click="[ability2 = !ability2 , isActive2 = !isActive2]" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="isActive2 ? 'text-[#FF8030]' : ''">2</p>
+                        <p @click="[ability2 = !ability2 , isActive2 = !isActive2]" class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="isActive2 ? 'text-[#FF8030]' : ''">رزرواسیون</p>
                     </div>
 
-                    <div class="flex items-center gap-x-9 group cursor-pointer">
-                        <p @click="none2 = !none2" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="{title2:ff80302}">2</p>
-                        <p @click="[none2 = !none2 , ff80302 = !ff80302]" class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="{title2:ff80302}">رزرواسیون</p>
+                    <transition name="translateY2">
+                        <div v-show="ability2" class="flex flex-col gap-y-4 xl:mt-7 mt-2 mr-16 xl:pb-8 pb-5 border-b border-[#E5E5E5] xl:w-[500px] w-full transition-all">
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان خرید با امتیاز های باشگاه</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">خرید مستقیم با کارت بانکی</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
+                            </div>
+                        </div>
+                    </transition>
+
+                    <div class="flex items-center xl:gap-x-9 gap-x-6 group cursor-pointer">
+                        <p @click="[ability3 = !ability3 , isActive3 = !isActive3]" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="isActive3 ? 'text-[#FF8030]' : ''">3</p>
+                        <p @click="[ability3 = !ability3 , isActive3 = !isActive3]" class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="isActive3 ? 'text-[#FF8030]' : ''">قرعه کشی های فصلی یا مناسبتی</p>
                     </div>
 
-                    <div class="flex flex-col gap-y-4 mt-7 mr-20 pb-8 border-b border-[#E5E5E5] w-[500px] transition-all" :class="{ability2:none2}">
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان خرید با امتیاز های باشگاه</p>
+                    <transition name="translateY2">
+                        <div v-show="ability3" class="flex flex-col gap-y-4 xl:mt-7 mt-2 mr-16 xl:pb-8 pb-5 border-b border-[#E5E5E5] xl:w-[500px] w-full transition-all">
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان خرید با امتیاز های باشگاه</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">خرید مستقیم با کارت بانکی</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">خرید مستقیم با کارت بانکی</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
-                        </div>
+                    </transition>
+
+                    <div class="flex items-center xl:gap-x-9 gap-x-6 group cursor-pointer">
+                        <p @click="[ability4 = !ability4 , isActive4 = !isActive4]" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="isActive4 ? 'text-[#FF8030]' : ''">4</p>
+                        <p @click="[ability4 = !ability4 , isActive4 = !isActive4]" class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="isActive4 ? 'text-[#FF8030]' : ''">پلان طبقاتی به صورت سه بعدی 3D</p>
                     </div>
 
-                    <div class="flex items-center gap-x-9 group cursor-pointer">
-                        <p @click="none3 = !none3" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="{title3:ff80303}">3</p>
-                        <p @click="[none3 = !none3 , ff80303 = !ff80303]" class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="{title3:ff80303}">قرعه کشی های فصلی یا مناسبتی</p>
+                    <transition name="translateY2">
+                        <div v-show="ability4" class="flex flex-col gap-y-4 xl:mt-7 mt-2 mr-16 xl:pb-8 pb-5 border-b border-[#E5E5E5] xl:w-[500px] w-full transition-all">
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان خرید با امتیاز های باشگاه</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">خرید مستقیم با کارت بانکی</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
+                            </div>
+                        </div>
+                    </transition>
+
+                    <div class="flex items-center xl:gap-x-9 gap-x-6 group cursor-pointer">
+                        <p @click="[ability5 = !ability5 , isActive5 = !isActive5]" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="isActive5 ? 'text-[#FF8030]' : ''">5</p>
+                        <p @click="[ability5 = !ability5 , isActive5 = !isActive5]"  class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="isActive5 ? 'text-[#FF8030]' : ''">ارسال نوتیفیکیشن فردی و گروهی</p>
                     </div>
 
-                    <div class="flex flex-col gap-y-4 mt-7 mr-20 pb-8 border-b border-[#E5E5E5] w-[500px] transition-all" :class="{ability3:none3}">
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان خرید با امتیاز های باشگاه</p>
+                    <transition name="translateY2">
+                        <div v-show="ability5" class="flex flex-col gap-y-4 xl:mt-7 mt-2 mr-16 xl:pb-8 pb-5 border-b border-[#E5E5E5] xl:w-[500px] w-full transition-all">
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان خرید با امتیاز های باشگاه</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">خرید مستقیم با کارت بانکی</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">خرید مستقیم با کارت بانکی</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
-                        </div>
+                    </transition>
+
+                    <div class="flex items-center xl:gap-x-9 gap-x-6 group cursor-pointer">
+                        <p @click="[ability6 = !ability6 , isActive6 = !isActive6]" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="isActive6 ? 'text-[#FF8030]' : ''">6</p>
+                        <p @click="[ability6 = !ability6 , isActive6 = !isActive6]"  class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="isActive6 ? 'text-[#FF8030]' : ''">راحت خرید کنید Hands - Free</p>
                     </div>
 
-                    <div class="flex items-center gap-x-9 group cursor-pointer">
-                        <p @click="none4 = !none4" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="{title4:ff80304}">4</p>
-                        <p @click="[none4 = !none4 , ff80304 = !ff80304]" class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="{title4:ff80304}">پلان طبقاتی به صورت سه بعدی 3D</p>
+                    <transition name="translateY2">
+                        <div v-show="ability6" class="flex flex-col gap-y-4 xl:mt-7 mt-2 mr-16 xl:pb-8 pb-5 border-b border-[#E5E5E5] xl:w-[500px] w-full transition-all">
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان خرید با امتیاز های باشگاه</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">خرید مستقیم با کارت بانکی</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
+                            </div>
+                        </div>
+                    </transition>
+
+                    <div class="flex items-center xl:gap-x-9 gap-x-6 group cursor-pointer">
+                        <p @click="[ability7 = !ability7 , isActive7 = !isActive7]" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="isActive7 ? 'text-[#FF8030]' : ''">7</p>
+                        <p @click="[ability7 = !ability7 , isActive7 = !isActive7]"  class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="isActive7 ? 'text-[#FF8030]' : ''">مقیاس پذیر</p>
                     </div>
 
-                    <div class="flex flex-col gap-y-4 mt-7 mr-20 pb-8 border-b border-[#E5E5E5] w-[500px] transition-all" :class="{ability4:none4}">
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان خرید با امتیاز های باشگاه</p>
+                    <transition name="translateY2">
+                        <div v-show="ability7" class="flex flex-col gap-y-4 xl:mt-7 mt-2 mr-16 xl:pb-8 pb-5 border-b border-[#E5E5E5] xl:w-[500px] w-full transition-all">
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان خرید با امتیاز های باشگاه</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">خرید مستقیم با کارت بانکی</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">خرید مستقیم با کارت بانکی</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
-                        </div>
-                    </div>
+                    </transition>
 
-                    <div class="flex items-center gap-x-9 group cursor-pointer">
-                        <p @click="none5 = !none5" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="{title5:ff80305}">5</p>
-                        <p @click="[none5 = !none5 , ff80305 = !ff80305]"  class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="{title5:ff80305}">ارسال نوتیفیکیشن فردی و گروهی</p>
-                    </div>
-
-                    <div class="flex flex-col gap-y-4 mt-7 mr-20 pb-8 border-b border-[#E5E5E5] w-[500px] transition-all" :class="{ability5:none5}">
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان خرید با امتیاز های باشگاه</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">خرید مستقیم با کارت بانکی</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-x-9 group cursor-pointer">
-                        <p @click="none6 = !none6" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="{title6:ff80306}">6</p>
-                        <p @click="[none6 = !none6 , ff80306 = !ff80306]"  class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="{title6:ff80306}">راحت خرید کنید Hands - Free</p>
-                    </div>
-
-                    <div class="flex flex-col gap-y-4 mt-7 mr-20 pb-8 border-b border-[#E5E5E5] w-[500px] transition-all" :class="{ability6:none6}">
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان خرید با امتیاز های باشگاه</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">خرید مستقیم با کارت بانکی</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-x-9 group cursor-pointer">
-                        <p @click="none7 = !none7" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="{title7:ff80307}">7</p>
-                        <p @click="[none7 = !none7 , ff80307 = !ff80307]"  class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="{title7:ff80307}">مقیاس پذیر</p>
-                    </div>
-
-                    <div class="flex flex-col gap-y-4 mt-7 mr-20 pb-8 border-b border-[#E5E5E5] w-[500px] transition-all" :class="{ability7:none7}">
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان خرید با امتیاز های باشگاه</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">خرید مستقیم با کارت بانکی</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
-                        </div>
-                    </div>
-
-                    <div class="flex items-center gap-x-9 group cursor-pointer">
-                        <p @click="none8 = !none8" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="{title8:ff80308}">8</p>
-                        <p @click="[none8 = !none8 , ff80308 = !ff80308]"  class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="{title8:ff80308}">تجربه کاربری متفاوت</p>
+                    <div class="flex items-center xl:gap-x-9 gap-x-6 group cursor-pointer">
+                        <p @click="[ability8 = !ability8 , isActive8 = !isActive8]" class="text-[#ACACAC] group-hover:text-[#FF8030] text-center bg-[#F2F2F2] p-2 px-4 rounded-full" :class="isActive8 ? 'text-[#FF8030]' : ''">8</p>
+                        <p @click="[ability8 = !ability8 , isActive8 = !isActive8]"  class="text-[#4D4D4D] font-YekanM text-xl group-hover:text-[#FF8030] transition-all" :class="isActive8 ? 'text-[#FF8030]' : ''">تجربه کاربری متفاوت</p>
                     </div>
                     
-                    <div class="flex flex-col gap-y-4 mt-7 mr-20 pb-8 border-b border-[#E5E5E5] w-[500px] transition-all" :class="{ability8:none8}">
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان خرید با امتیاز های باشگاه</p>
+                    <transition name="translateY2">
+                        <div v-show="ability8" class="flex flex-col gap-y-4 xl:mt-7 mt-2 mr-16 xl:pb-8 pb-5 border-b border-[#E5E5E5] xl:w-[500px] w-full transition-all">
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان خرید با امتیاز های باشگاه</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">خرید مستقیم با کارت بانکی</p>
+                            </div>
+                            <div class="flex items-center gap-x-6">
+                                <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
+                                </svg>
+                                <p class="font-YekanM text-[#767676] xl:text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
+                            </div>
                         </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">خرید مستقیم با کارت بانکی</p>
-                        </div>
-                        <div class="flex items-center gap-x-6">
-                            <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <circle cx="2.5" cy="2.5" r="2.5" fill="#A596FF"/>
-                            </svg>
-                            <p class="font-YekanM text-[#767676] text-lg">امکان تخفیف ویژه اعضای باشگاه مشتریان</p>
-                        </div>
-                    </div>
+                    </transition>
                 </div>
             </div>
         </div>
 
-        <div class="flex justify-center mt-60" dir="rtl">
+        <div class="flex flex-col xl:flex-row justify-center xl:mt-60 mt-10 px-8 xl:px-0" dir="rtl">
             <div>
-                <p class="font-YekanB xl:text-4xl text-2xl xl:text-[#000] text-[#4D4D4D] mt-24">مزایای اپلیکیشن</p>
+                <p class="font-YekanB xl:text-4xl text-2xl xl:text-[#000] text-[#4D4D4D] xl:mt-24">مزایای اپلیکیشن</p>
                 <div class="flex flex-col gap-y-2 mt-6 px-3">
                     <div class="flex items-center gap-x-7">
                         <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -505,12 +529,12 @@
                 </div>
             </div>
 
-            <div>
+            <div class="my-12 xl:my-0">
                 <img src="../assets/Group 235.png" alt="image">
             </div>
 
             <div class="flex flex-col justify-end">
-                <p class="font-YekanB xl:text-4xl text-2xl xl:text-[#000] text-[#4D4D4D] mt-24">پنل مدیریتی <br> اپلیکیشن</p>
+                <p class="font-YekanB xl:text-4xl text-2xl xl:text-[#000] text-[#4D4D4D] xl:mt-24">پنل مدیریتی <br class="hidden xl:block"> اپلیکیشن</p>
                 <div class="flex flex-col gap-y-2 mt-6 px-3">
                     <div class="flex items-center gap-x-7">
                         <svg width="5" height="5" viewBox="0 0 5 5" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -540,15 +564,15 @@
             </div>
         </div>
 
-        <div class="absolute left-[43%] mt-32">
+        <div class="absolute left-[43%] mt-32 hidden xl:block">
             <svg width="43" height="43" viewBox="0 0 43 43" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36.4048 36.2245C28.3425 44.3848 15.1342 44.4076 6.90329 36.2755C-1.32761 28.1433 -1.46424 14.9357 6.59811 6.77548C14.6605 -1.38479 27.8687 -1.40761 36.0996 6.72452C44.3305 14.8567 44.4672 28.0643 36.4048 36.2245ZM14.9088 14.9864C11.3423 18.5962 11.4027 24.4388 15.0438 28.0361C18.6848 31.6335 24.5277 31.6234 28.0942 28.0136C31.6607 24.4038 31.6002 18.5612 27.9592 14.9639C24.3181 11.3665 18.4753 11.3766 14.9088 14.9864Z" fill="#F2F2F2"/>
             </svg>
         </div>
 
-        <div class="pl-44 mt-52">
-            <div class="bg-[#2F58D1] w-full pb-12 relative rounded-tl-[140px] z-20">
-                <div class="absolute left-2 top-2">
+        <div class="xl:pl-44 xl:mt-52 mt-24">
+            <div class="bg-[#2F58D1] w-full xl:pb-12 pb-8 relative xl:rounded-tl-[140px] z-20">
+                <div class="absolute left-2 top-2 hidden xl:block">
                     <svg width="259" height="259" viewBox="0 0 259 259" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="129.639" cy="129.639" r="129.149" transform="rotate(45.4105 129.639 129.639)" fill="url(#paint0_linear_1_2371)"/>
                         <defs>
@@ -561,7 +585,7 @@
                 </div>
 
                 <div class="flex items-end justify-end">
-                    <div class="flex flex-col justify-end w-1/3 pr-44 pt-60" dir="rtl">
+                    <div class="flex flex-col justify-end xl:w-1/3 w-full xl:pr-44 pr-8 xl:pt-60 pt-24" dir="rtl">
                         <p class="font-semibold text-[42px] text-white">XRM</p>
                         <p class="font-YekanB text-white text-[42px] ">باشگاه مشتریان</p>
                         <ul class="font-YekanM text-[#E5E5E5] text-xl pt-5 space-y-2">
@@ -569,17 +593,17 @@
                             <li>مدیریت الگوه های رفتار مشتری</li>
                             <li>حفظ و وفادار سازی مشتری</li>
                         </ul>
-                        <div class="flex items-end justify-end w-full">
-                            <button type="button" class="bg-[#FF8030] rounded-xl text-white p-4 font-YekanM w-1/2 mt-28 cursor-pointer hover:bg-[#ff6d1f] transition-all">مشاهده دموی پنل</button>
+                        <div class="flex xl:items-end justify-end w-full pl-8 xl:pl-0">
+                            <button type="button" class="bg-[#FF8030] rounded-xl text-white p-4 font-YekanM w-1/2 xl:mt-28 mt-14 cursor-pointer hover:bg-[#ff6d1f] transition-all">مشاهده دموی پنل</button>
                         </div>
                     </div>
                 </div>
 
-                <div class="absolute -bottom-20 -left-20">
+                <div class="xl:absolute xl:-bottom-20 xl:-left-20 static mx-8 xl:mx-0 mt-6 xl:mt-0">
                     <img src="../assets/ass.png" alt="image" width="900">
                 </div>
 
-                <div class="absolute top-12 right-1/3">
+                <div class="absolute top-12 right-1/3 hidden xl:block">
                     <svg width="102" height="101" viewBox="0 0 102 101" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="50.8417" cy="50.5974" r="50.3672" transform="rotate(-78.2218 50.8417 50.5974)" fill="url(#paint0_linear_1_2372)"/>
                         <defs>
@@ -591,7 +615,7 @@
                     </svg>
                 </div>
 
-                <div class="absolute top-32 right-20 -z-10">
+                <div class="absolute top-32 right-20 -z-10 hidden xl:block">
                     <svg width="450" height="450" viewBox="0 0 357 357" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="178.622" cy="178.622" r="177.928" transform="rotate(45.4105 178.622 178.622)" fill="url(#paint0_linear_1_2370)"/>
                         <defs>
@@ -603,7 +627,7 @@
                     </svg>
                 </div>
 
-                <div class="absolute top-20 left-96 -z-10">
+                <div class="absolute top-20 left-96 -z-10 hidden xl:block">
                     <svg width="195" height="195" viewBox="0 0 195 195" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="96.8698" cy="96.8698" r="96.8698" transform="matrix(0.204123 -0.978945 -0.978945 -0.204123 172.66 212.207)" fill="url(#paint0_linear_1_2374)"/>
                         <defs>
@@ -615,7 +639,7 @@
                     </svg>
                 </div>
 
-                <div class="absolute bottom-20 right-32">
+                <div class="absolute bottom-20 right-32 hidden xl:block">
                     <svg width="45" height="45" viewBox="0 0 45 45" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="22.5723" cy="22.5722" r="21.7413" transform="rotate(141.109 22.5723 22.5722)" fill="url(#paint0_linear_1_2376)"/>
                         <defs>
@@ -629,19 +653,19 @@
             </div>
         </div>
 
-        <div class="absolute right-1/4 mt-24">
+        <div class="absolute right-1/4 mt-24 hidden xl:block">
             <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M11.7427 1.3295L7.73077 5.33179L3.72861 1.31997C2.18535 -0.227022 -0.213865 2.16641 1.3294 3.7134L5.33156 7.72523L1.31959 11.7275C-0.227057 13.2704 2.16629 15.6696 3.71294 14.1267L7.72491 10.1244L11.7271 14.1362C13.2703 15.6832 15.6695 13.2897 14.1263 11.7427L10.1241 7.73092L14.1361 3.72863C15.6829 2.18551 13.2896 -0.213623 11.7427 1.3295Z" fill="#E5E5E5"/>
             </svg>
         </div>
 
-        <p class="font-YekanB xl:text-4xl text-2xl xl:text-[#000] text-[#4D4D4D] text-right pr-44 mt-60">سرویس های ویژه</p>
+        <p class="font-YekanB xl:text-4xl text-3xl xl:text-[#000] text-[#4D4D4D] text-right xl:pr-44 pr-8 xl:mt-60 mt-24">سرویس های ویژه</p>
 
-        <div class="flex flex-col items-center justify-center px-[360px]">
-            <div class="flex items-center justify-center border-b-2 border-[#E5E5E5] w-4/5 pr-16">
-                <div class="border-r-2 border-[#E5E5E5] pb-12 h-96 flex items-end justify-end">
-                    <div class="mr-44">
-                        <svg width="218" height="225" viewBox="0 0 218 225" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <div class="flex flex-col items-center justify-center xl:px-[360px]">
+            <div class="flex flex-col xl:flex-row items-center justify-center xl:border-b-2 xl:border-[#E5E5E5] xl:w-4/5 w-full xl:pr-16">
+                <div class="xl:border-r-2 xl:border-[#E5E5E5] xl:pb-12 xl:h-96 flex items-end justify-end">
+                    <div class="xl:mr-44 mr-28">
+                        <svg width="226" height="228" viewBox="0 0 218 225" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M107.5 200C107.5 208.284 114.248 215.107 122.451 213.955C131.427 212.695 140.228 210.301 148.638 206.817C161.681 201.415 173.532 193.496 183.514 183.514C193.496 173.532 201.415 161.681 206.817 148.638C210.301 140.228 212.695 131.427 213.955 122.451C215.107 114.248 208.284 107.5 200 107.5L122.5 107.5C114.216 107.5 107.5 114.216 107.5 122.5L107.5 200Z" fill="#FF8030" fill-opacity="0.59"/>
                             <path d="M189 159C172.977 159 160 165.563 160 173.667C160 181.77 172.977 188.333 189 188.333C205.022 188.333 218 181.77 218 173.667C218 165.563 205.022 159 189 159ZM160 181V192C160 200.103 172.977 206.667 189 206.667C205.022 206.667 218 200.103 218 192V181C218 189.103 205.022 195.667 189 195.667C172.977 195.667 160 189.103 160 181ZM160 199.333V210.333C160 218.437 172.977 225 189 225C205.022 225 218 218.437 218 210.333V199.333C218 207.437 205.022 214 189 214C172.977 214 160 207.437 160 199.333Z" fill="#4C4C4C"/>
                             <path d="M168.378 142.33L138.682 172L135 168.318L164.67 138.622L168.378 142.33ZM180.162 134.729L181.714 133.177L179.636 131.099L181.32 129.415L177.585 125.68L175.901 127.364L173.823 125.286L172.271 126.838C167.695 123.103 162.539 120.104 157.016 118L154.832 122.708C159.435 125.128 163.67 128.048 167.616 131.493L166.301 132.809L174.191 140.699L175.507 139.384C178.952 143.33 181.872 147.565 184.292 152.168L189 149.984C186.896 144.461 183.897 139.305 180.162 134.729Z" fill="#4C4C4C"/>
@@ -650,23 +674,23 @@
                     </div>
                 </div>
 
-                <div class="pb-12 h-96 flex items-end justify-end">
-                    <div class="ml-20">
+                <div class="xl:pb-12 xl:h-96 flex items-end justify-end">
+                    <div class="xl:ml-20 mr-28 xl:mr-0">
                         <svg width="226" height="228" viewBox="0 0 226 228" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M107.5 200C107.5 208.284 114.248 215.107 122.451 213.955C131.427 212.695 140.228 210.301 148.638 206.817C161.681 201.415 173.532 193.496 183.514 183.514C193.496 173.532 201.415 161.681 206.817 148.638C210.301 140.228 212.695 131.427 213.955 122.451C215.107 114.248 208.284 107.5 200 107.5L122.5 107.5C114.216 107.5 107.5 114.216 107.5 122.5L107.5 200Z" fill="#FF8030" fill-opacity="0.59"/>
                             <path d="M204.125 219.25H147.25C142.609 219.25 138.158 217.406 134.876 214.124C131.594 210.842 129.75 206.391 129.75 201.75C129.75 197.109 131.594 192.658 134.876 189.376C138.158 186.094 142.609 184.25 147.25 184.25H150.356C153.244 174.144 162.562 166.75 173.5 166.75C179.882 166.75 186.002 169.285 190.515 173.798C195.027 178.31 197.562 184.431 197.562 190.813V193H204.125C207.606 193 210.944 194.383 213.406 196.844C215.867 199.306 217.25 202.644 217.25 206.125C217.25 209.606 215.867 212.944 213.406 215.406C210.944 217.867 207.606 219.25 204.125 219.25ZM205.656 184.381C204.178 176.942 200.164 170.246 194.3 165.435C188.436 160.624 181.085 157.996 173.5 158C160.856 158 149.875 165.175 144.406 175.631C137.972 176.336 132.025 179.392 127.706 184.212C123.386 189.032 120.998 195.278 121 201.75C121 208.712 123.766 215.389 128.688 220.312C133.611 225.234 140.288 228 147.25 228H204.125C206.998 228 209.842 227.434 212.496 226.335C215.15 225.236 217.562 223.624 219.593 221.593C221.624 219.562 223.236 217.15 224.335 214.496C225.434 211.842 226 208.998 226 206.125C226 194.575 217.031 185.213 205.656 184.381Z" fill="#4C4C4C"/>
                             <path d="M128 138.903L131.455 142.376C140.039 133.747 153.961 133.747 162.545 142.376L166 138.903C155.515 128.366 138.502 128.366 128 138.903ZM141.818 152.792L147 158L152.182 152.792C151.502 152.107 150.694 151.563 149.805 151.192C148.916 150.821 147.963 150.63 147 150.63C146.037 150.63 145.084 150.821 144.195 151.192C143.306 151.563 142.498 152.107 141.818 152.792ZM134.909 145.848L138.364 149.32C140.655 147.019 143.761 145.726 147 145.726C150.239 145.726 153.345 147.019 155.636 149.32L159.091 145.848C152.424 139.146 141.594 139.146 134.909 145.848Z" fill="#4C4C4C"/>
                             <path d="M156.664 190.744V187.224H160.184V190.744H156.664ZM156.696 211V194.68H160.152V211H156.696ZM169.972 211.256C167.817 211.256 166.281 210.947 165.364 210.328C164.446 209.688 163.87 208.653 163.636 207.224C163.401 205.773 163.284 203.363 163.284 199.992C163.284 196.621 163.401 194.221 163.636 192.792C163.87 191.341 164.446 190.307 165.364 189.688C166.281 189.048 167.817 188.728 169.972 188.728C172.126 188.728 173.662 189.048 174.58 189.688C175.497 190.307 176.073 191.341 176.308 192.792C176.564 194.243 176.692 196.643 176.692 199.992C176.692 203.341 176.564 205.741 176.308 207.192C176.073 208.643 175.497 209.688 174.58 210.328C173.662 210.947 172.126 211.256 169.972 211.256ZM169.972 207.96C171.017 207.96 171.732 207.832 172.116 207.576C172.5 207.299 172.745 206.659 172.852 205.656C172.98 204.632 173.044 202.744 173.044 199.992C173.044 197.24 172.98 195.363 172.852 194.36C172.745 193.336 172.5 192.696 172.116 192.44C171.732 192.163 171.017 192.024 169.972 192.024C168.926 192.024 168.212 192.163 167.828 192.44C167.465 192.696 167.22 193.325 167.092 194.328C166.985 195.331 166.932 197.219 166.932 199.992C166.932 202.765 166.985 204.653 167.092 205.656C167.22 206.659 167.465 207.299 167.828 207.576C168.212 207.832 168.926 207.96 169.972 207.96ZM182.925 211V192.376H178.509V188.984H190.957V192.376H186.573V211H182.925Z" fill="#4C4C4C"/>
                         </svg>
-                        <p class="text-[#4D4D4D] font-YekanB text-lg pt-12 -mr-1" dir="rtl">اینترنت اشیاء &nbsp;<b>iOT</b></p>
+                        <p class="text-[#4D4D4D] font-YekanB text-lg pt-12 pl-24 xl:pl-0 text-center" dir="rtl">اینترنت اشیاء &nbsp;<b>iOT</b></p>
                     </div>
                 </div>
             </div>
 
-            <div class="flex items-center justify-center w-4/5 pr-16">
-                <div class="border-r-2 border-[#E5E5E5] h-96">
-                    <div class="mr-40 pr-[2px] -mt-11">
-                        <svg width="221" height="240" viewBox="0 0 221 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="flex flex-col xl:flex-row items-center justify-center xl:w-4/5 w-full xl:pr-16">
+                <div class="xl:border-r-2 xl:border-[#E5E5E5] xl:h-96">
+                    <div class="xl:mr-40 xl:pr-[2px] xl:-mt-11 mr-28">
+                        <svg width="230" height="232" viewBox="0 0 221 240" fill="none" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                             <path d="M107.5 200C107.5 208.284 114.248 215.107 122.451 213.955C131.427 212.695 140.228 210.301 148.638 206.817C161.681 201.415 173.532 193.496 183.514 183.514C193.496 173.532 201.415 161.681 206.817 148.638C210.301 140.228 212.695 131.427 213.955 122.451C215.107 114.248 208.284 107.5 200 107.5L122.5 107.5C114.216 107.5 107.5 114.216 107.5 122.5L107.5 200Z" fill="#FF8030" fill-opacity="0.59"/>
                             <rect x="135" y="137" width="86" height="103" fill="url(#pattern0)"/>
                             <defs>
@@ -680,23 +704,23 @@
                     </div>
                 </div>
                 
-                <div class="h-96">
-                    <div class="ml-20 -mt-11">
+                <div class="xl:h-96">
+                    <div class="xl:ml-20 xl:-mt-11 mr-28 xl:mr-0">
                         <svg width="215" height="265" viewBox="0 0 215 265" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M166.744 251L165.688 246.008H160.056L159.032 251H155.352L160.28 228.984H165.56L170.488 251H166.744ZM162.968 232.6H162.776L160.728 242.744H164.984L162.968 232.6ZM181.884 251L179.516 242.968H176.38V251H172.732V228.984H179.836C181.372 228.984 182.524 229.251 183.292 229.784C184.081 230.317 184.604 231.075 184.86 232.056C185.137 233.037 185.276 234.339 185.276 235.96C185.276 237.539 185.116 238.851 184.796 239.896C184.497 240.941 183.878 241.709 182.94 242.2L185.724 251H181.884ZM178.972 239.672C179.782 239.672 180.369 239.576 180.732 239.384C181.094 239.171 181.329 238.819 181.436 238.328C181.564 237.816 181.628 237.027 181.628 235.96C181.628 234.893 181.564 234.115 181.436 233.624C181.329 233.133 181.094 232.792 180.732 232.6C180.369 232.387 179.782 232.28 178.972 232.28H176.38V239.672H178.972Z" fill="#4C4C4C"/>
                             <path d="M193.876 241.372V236.584H189.088V233.236H193.876V228.448H197.224V233.236H202.012V236.584H197.224V241.372H193.876Z" fill="#4C4C4C"/>
                             <path d="M107.5 200C107.5 208.284 114.248 215.107 122.451 213.955C131.427 212.695 140.228 210.301 148.638 206.817C161.681 201.415 173.532 193.496 183.514 183.514C193.496 173.532 201.415 161.681 206.817 148.638C210.301 140.228 212.695 131.427 213.955 122.451C215.107 114.248 208.284 107.5 200 107.5L122.5 107.5C114.216 107.5 107.5 114.216 107.5 122.5L107.5 200Z" fill="#FF8030" fill-opacity="0.59"/>
                             <path d="M204 188.175C204 189.752 203.125 191.121 201.792 191.827L168.875 210.253C168.208 210.751 167.375 211 166.5 211C165.625 211 164.792 210.751 164.125 210.253L131.208 191.827C130.54 191.477 129.981 190.952 129.592 190.308C129.203 189.664 128.998 188.927 129 188.175V150.825C129 149.248 129.875 147.878 131.208 147.173L164.125 128.747C164.792 128.249 165.625 128 166.5 128C167.375 128 168.208 128.249 168.875 128.747L201.792 147.173C203.125 147.878 204 149.248 204 150.825V188.175ZM166.5 136.923L141.667 150.825L166.5 164.728L191.333 150.825L166.5 136.923ZM137.333 185.727L162.333 199.754V171.907L137.333 157.922V185.727ZM195.667 185.727V157.922L170.667 171.907V199.754L195.667 185.727Z" fill="#4C4C4C"/>
                         </svg>
-                        <p class="text-[#4D4D4D] font-YekanB text-lg pt-7 -mr-24" dir="rtl">واقعیت افزوده &nbsp;&nbsp;<b>Agumented Reality</b></p>
+                        <p class="text-[#4D4D4D] font-YekanB text-lg pt-7 -mr-20" dir="rtl">واقعیت افزوده &nbsp;&nbsp;<b>Agumented Reality</b></p>
                     </div>
                 </div>
             </div>
         </div>
 
-        <p class="font-YekanB xl:text-4xl text-2xl xl:text-[#000] text-[#4D4D4D] text-right pr-44 mt-20">قابلیت توسعه در پلتفرم های</p>
-
-        <div class="flex justify-between px-72 w-full mt-28" dir="rtl">
+        <p class="font-YekanB xl:text-4xl text-3xl xl:text-[#000] text-[#4D4D4D] text-right xl:pr-44 pr-8 xl:mt-20 mt-24 mb-14 leading-normal">قابلیت توسعه در <br class="block xl:hidden"> پلتفرم های</p>
+        
+        <div class="flex flex-col xl:flex-row gap-y-14 xl:gap-y-0 xl:justify-between xl:px-72 xl:w-full xl:mt-28" dir="rtl">
             <div class="flex flex-col items-center justify-center space-y-4">
                 <div class="bg-[#F2F2F2] rounded-full w-[85px] h-[85px] flex items-center justify-center">
                     <img src="../assets/Vector (3).png" class="w-8" alt="Vector">
@@ -740,39 +764,39 @@
             </div>
         </div>
 
-        <p class="font-YekanB xl:text-4xl text-2xl xl:text-[#000] text-[#4D4D4D] text-right pr-44 mt-48 xl:leading-snug">نظر مدیران مراکز خرید <br> درباره خدمات اپلیکیشن نارنج</p>
-        <p class="font-YekanM xl:text-xl text-[#4D4D4D] text-right pr-44 mt-5 xl:leading-loose" dir="rtl">ببینید مشتریان ما در مورد روشی که خدمات توسعه اپلیکیشن نارنج به آنها <br> در بهره گیری از فناوری های پیشرفته کمک می کند می گویند.</p>
+        <p class="font-YekanB xl:text-4xl text-3xl xl:text-[#000] text-[#4D4D4D] text-right xl:px-44 px-8 xl:mt-48 mt-16 xl:leading-snug leading-normal">نظر مدیران مراکز خرید <br> درباره خدمات اپلیکیشن نارنج</p>
+        <p class="font-YekanM xl:text-xl text-lg text-[#4D4D4D] text-right xl:px-44 px-8 mt-5 xl:leading-loose leading-loose" dir="rtl">ببینید مشتریان ما در مورد روشی که خدمات توسعه اپلیکیشن نارنج به آنها <br class="hidden xl:block"> در بهره گیری از فناوری های پیشرفته کمک می کند می گویند.</p>
 
-        <div class="px-44 mt-20">
+        <div class="xl:px-44 px-8 xl:mt-20 mt-14">
             <swiper :options="swiperOptions2" dir="rtl">
                 <swiper-slide>
                     <div class="p-5">
-                        <div class="bg-white rounded-lg shadow-md p-16">
-                            <div class="flex items-start justify-start gap-x-7">
-                                <div class="border-b-[3px] border-[#FF8030] pb-6">
+                        <div class="bg-white rounded-lg shadow-md xl:p-16 p-8">
+                            <div class="flex xl:items-start items-center justify-start xl:gap-x-7 gap-x-3">
+                                <div class="xl:border-b-[3px] xl:border-[#FF8030] xl:pb-6">
                                     <div class="relative overflow-hidden w-16 h-16 rounded-full">
                                         <img src="../assets/image 64.png" class="absolute object-cover object-center w-16 h-16" alt="profile">
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-y-2" dir="rtl">
-                                    <p class="font-YekanB text-2xl">شهرام حدادی ابیانه</p>
-                                    <p class="font-YekanM text-lg text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
+                                <div class="flex flex-col xl:gap-y-2 gap-y-1" dir="rtl">
+                                    <p class="font-YekanB xl:text-2xl text-lg">شهرام حدادی ابیانه</p>
+                                    <p class="font-YekanM xl:text-lg text-sm text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
                                 </div>
                             </div>
-                            <div class="flex gap-x-10 items-center justify-between">
-                                <div class="w-1/2">
-                                    <p class="text-[#4C4C4C] font-YekanM text-lg leading-relaxed pt-3">
+                            <div class="flex flex-col xl:flex-row gap-x-10 gap-y-5 items-center justify-between">
+                                <div class="xl:w-1/2 w-full">
+                                    <p class="text-[#4C4C4C] font-YekanM xl:text-lg leading-relaxed xl:pt-3 pt-6">
                                         آرزوی بهترین ها برای این گروه منسجم ... با کیفیت و در زمان تعیین شده آماده شود. گروه بوده همیشه تلاش کرده تا تمامی کارها که تمام خدمات دیجیتال شرکت در اختیار این تیم نارنج در طول سال هایی
                                     </p>
                                 </div>
-                                <div class="relative w-1/2">
-                                    <div class="relative overflow-hidden w-full h-52 rounded-xl flex items-center justify-center">
-                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full h-52 z-10" alt="profile">
-                                        <div class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
+                                <div class="relative xl:w-1/2 w-full">
+                                    <div class="relative overflow-hidden w-full xl:h-52 h-32 rounded-xl flex items-center justify-center">
+                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full xl:h-52 h-32 z-10" alt="profile">
+                                        <button @click="openModal2" class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
                                             <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 1.17272C0 0.973437 0.0462501 0.778009 0.133751 0.603154C0.421252 0.0374444 1.07126 -0.166983 1.58751 0.148015L14.4501 7.97537C14.6251 8.08209 14.7688 8.24023 14.8651 8.4318C15.1526 8.99751 14.9651 9.71107 14.4501 10.0248L1.58751 17.8521C1.43063 17.9484 1.25144 17.9995 1.06876 18C0.478753 18 0 17.4754 0 16.8287V1.17272Z" fill="white"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -782,32 +806,32 @@
 
                 <swiper-slide>
                     <div class="p-5">
-                        <div class="bg-white rounded-lg shadow-md p-16">
-                            <div class="flex items-start justify-start gap-x-7">
-                                <div class="border-b-[3px] border-[#FF8030] pb-6">
+                        <div class="bg-white rounded-lg shadow-md xl:p-16 p-8">
+                            <div class="flex xl:items-start items-center justify-start xl:gap-x-7 gap-x-3">
+                                <div class="xl:border-b-[3px] xl:border-[#FF8030] xl:pb-6">
                                     <div class="relative overflow-hidden w-16 h-16 rounded-full">
                                         <img src="../assets/image 64.png" class="absolute object-cover object-center w-16 h-16" alt="profile">
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-y-2" dir="rtl">
-                                    <p class="font-YekanB text-2xl">شهرام حدادی ابیانه</p>
-                                    <p class="font-YekanM text-lg text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
+                                <div class="flex flex-col xl:gap-y-2 gap-y-1" dir="rtl">
+                                    <p class="font-YekanB xl:text-2xl text-lg">شهرام حدادی ابیانه</p>
+                                    <p class="font-YekanM xl:text-lg text-sm text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
                                 </div>
                             </div>
-                            <div class="flex gap-x-10 items-center justify-between">
-                                <div class="w-1/2">
-                                    <p class="text-[#4C4C4C] font-YekanM text-lg leading-relaxed pt-3">
+                            <div class="flex flex-col xl:flex-row gap-x-10 gap-y-5 items-center justify-between">
+                                <div class="xl:w-1/2 w-full">
+                                    <p class="text-[#4C4C4C] font-YekanM xl:text-lg leading-relaxed xl:pt-3 pt-6">
                                         آرزوی بهترین ها برای این گروه منسجم ... با کیفیت و در زمان تعیین شده آماده شود. گروه بوده همیشه تلاش کرده تا تمامی کارها که تمام خدمات دیجیتال شرکت در اختیار این تیم نارنج در طول سال هایی
                                     </p>
                                 </div>
-                                <div class="relative w-1/2">
-                                    <div class="relative overflow-hidden w-full h-52 rounded-xl flex items-center justify-center">
-                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full h-52 z-10" alt="profile">
-                                        <div class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
+                                <div class="relative xl:w-1/2 w-full">
+                                    <div class="relative overflow-hidden w-full xl:h-52 h-32 rounded-xl flex items-center justify-center">
+                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full xl:h-52 h-32 z-10" alt="profile">
+                                        <button @click="openModal2" class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
                                             <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 1.17272C0 0.973437 0.0462501 0.778009 0.133751 0.603154C0.421252 0.0374444 1.07126 -0.166983 1.58751 0.148015L14.4501 7.97537C14.6251 8.08209 14.7688 8.24023 14.8651 8.4318C15.1526 8.99751 14.9651 9.71107 14.4501 10.0248L1.58751 17.8521C1.43063 17.9484 1.25144 17.9995 1.06876 18C0.478753 18 0 17.4754 0 16.8287V1.17272Z" fill="white"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -817,32 +841,32 @@
 
                 <swiper-slide>
                     <div class="p-5">
-                        <div class="bg-white rounded-lg shadow-md p-16">
-                            <div class="flex items-start justify-start gap-x-7">
-                                <div class="border-b-[3px] border-[#FF8030] pb-6">
+                        <div class="bg-white rounded-lg shadow-md xl:p-16 p-8">
+                            <div class="flex xl:items-start items-center justify-start xl:gap-x-7 gap-x-3">
+                                <div class="xl:border-b-[3px] xl:border-[#FF8030] xl:pb-6">
                                     <div class="relative overflow-hidden w-16 h-16 rounded-full">
                                         <img src="../assets/image 64.png" class="absolute object-cover object-center w-16 h-16" alt="profile">
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-y-2" dir="rtl">
-                                    <p class="font-YekanB text-2xl">شهرام حدادی ابیانه</p>
-                                    <p class="font-YekanM text-lg text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
+                                <div class="flex flex-col xl:gap-y-2 gap-y-1" dir="rtl">
+                                    <p class="font-YekanB xl:text-2xl text-lg">شهرام حدادی ابیانه</p>
+                                    <p class="font-YekanM xl:text-lg text-sm text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
                                 </div>
                             </div>
-                            <div class="flex gap-x-10 items-center justify-between">
-                                <div class="w-1/2">
-                                    <p class="text-[#4C4C4C] font-YekanM text-lg leading-relaxed pt-3">
+                            <div class="flex flex-col xl:flex-row gap-x-10 gap-y-5 items-center justify-between">
+                                <div class="xl:w-1/2 w-full">
+                                    <p class="text-[#4C4C4C] font-YekanM xl:text-lg leading-relaxed xl:pt-3 pt-6">
                                         آرزوی بهترین ها برای این گروه منسجم ... با کیفیت و در زمان تعیین شده آماده شود. گروه بوده همیشه تلاش کرده تا تمامی کارها که تمام خدمات دیجیتال شرکت در اختیار این تیم نارنج در طول سال هایی
                                     </p>
                                 </div>
-                                <div class="relative w-1/2">
-                                    <div class="relative overflow-hidden w-full h-52 rounded-xl flex items-center justify-center">
-                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full h-52 z-10" alt="profile">
-                                        <div class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
+                                <div class="relative xl:w-1/2 w-full">
+                                    <div class="relative overflow-hidden w-full xl:h-52 h-32 rounded-xl flex items-center justify-center">
+                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full xl:h-52 h-32 z-10" alt="profile">
+                                        <button @click="openModal2" class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
                                             <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 1.17272C0 0.973437 0.0462501 0.778009 0.133751 0.603154C0.421252 0.0374444 1.07126 -0.166983 1.58751 0.148015L14.4501 7.97537C14.6251 8.08209 14.7688 8.24023 14.8651 8.4318C15.1526 8.99751 14.9651 9.71107 14.4501 10.0248L1.58751 17.8521C1.43063 17.9484 1.25144 17.9995 1.06876 18C0.478753 18 0 17.4754 0 16.8287V1.17272Z" fill="white"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -852,32 +876,32 @@
 
                 <swiper-slide>
                     <div class="p-5">
-                        <div class="bg-white rounded-lg shadow-md p-16">
-                            <div class="flex items-start justify-start gap-x-7">
-                                <div class="border-b-[3px] border-[#FF8030] pb-6">
+                        <div class="bg-white rounded-lg shadow-md xl:p-16 p-8">
+                            <div class="flex xl:items-start items-center justify-start xl:gap-x-7 gap-x-3">
+                                <div class="xl:border-b-[3px] xl:border-[#FF8030] xl:pb-6">
                                     <div class="relative overflow-hidden w-16 h-16 rounded-full">
                                         <img src="../assets/image 64.png" class="absolute object-cover object-center w-16 h-16" alt="profile">
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-y-2" dir="rtl">
-                                    <p class="font-YekanB text-2xl">شهرام حدادی ابیانه</p>
-                                    <p class="font-YekanM text-lg text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
+                                <div class="flex flex-col xl:gap-y-2 gap-y-1" dir="rtl">
+                                    <p class="font-YekanB xl:text-2xl text-lg">شهرام حدادی ابیانه</p>
+                                    <p class="font-YekanM xl:text-lg text-sm text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
                                 </div>
                             </div>
-                            <div class="flex gap-x-10 items-center justify-between">
-                                <div class="w-1/2">
-                                    <p class="text-[#4C4C4C] font-YekanM text-lg leading-relaxed pt-3">
+                            <div class="flex flex-col xl:flex-row gap-x-10 gap-y-5 items-center justify-between">
+                                <div class="xl:w-1/2 w-full">
+                                    <p class="text-[#4C4C4C] font-YekanM xl:text-lg leading-relaxed xl:pt-3 pt-6">
                                         آرزوی بهترین ها برای این گروه منسجم ... با کیفیت و در زمان تعیین شده آماده شود. گروه بوده همیشه تلاش کرده تا تمامی کارها که تمام خدمات دیجیتال شرکت در اختیار این تیم نارنج در طول سال هایی
                                     </p>
                                 </div>
-                                <div class="relative w-1/2">
-                                    <div class="relative overflow-hidden w-full h-52 rounded-xl flex items-center justify-center">
-                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full h-52 z-10" alt="profile">
-                                        <div class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
+                                <div class="relative xl:w-1/2 w-full">
+                                    <div class="relative overflow-hidden w-full xl:h-52 h-32 rounded-xl flex items-center justify-center">
+                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full xl:h-52 h-32 z-10" alt="profile">
+                                        <button @click="openModal2" class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
                                             <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 1.17272C0 0.973437 0.0462501 0.778009 0.133751 0.603154C0.421252 0.0374444 1.07126 -0.166983 1.58751 0.148015L14.4501 7.97537C14.6251 8.08209 14.7688 8.24023 14.8651 8.4318C15.1526 8.99751 14.9651 9.71107 14.4501 10.0248L1.58751 17.8521C1.43063 17.9484 1.25144 17.9995 1.06876 18C0.478753 18 0 17.4754 0 16.8287V1.17272Z" fill="white"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -887,32 +911,32 @@
 
                 <swiper-slide>
                     <div class="p-5">
-                        <div class="bg-white rounded-lg shadow-md p-16">
-                            <div class="flex items-start justify-start gap-x-7">
-                                <div class="border-b-[3px] border-[#FF8030] pb-6">
+                        <div class="bg-white rounded-lg shadow-md xl:p-16 p-8">
+                            <div class="flex xl:items-start items-center justify-start xl:gap-x-7 gap-x-3">
+                                <div class="xl:border-b-[3px] xl:border-[#FF8030] xl:pb-6">
                                     <div class="relative overflow-hidden w-16 h-16 rounded-full">
                                         <img src="../assets/image 64.png" class="absolute object-cover object-center w-16 h-16" alt="profile">
                                     </div>
                                 </div>
-                                <div class="flex flex-col gap-y-2" dir="rtl">
-                                    <p class="font-YekanB text-2xl">شهرام حدادی ابیانه</p>
-                                    <p class="font-YekanM text-lg text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
+                                <div class="flex flex-col xl:gap-y-2 gap-y-1" dir="rtl">
+                                    <p class="font-YekanB xl:text-2xl text-lg">شهرام حدادی ابیانه</p>
+                                    <p class="font-YekanM xl:text-lg text-sm text-[#767676]">مدیر عامل شرکت بنای آرمانی</p>
                                 </div>
                             </div>
-                            <div class="flex gap-x-10 items-center justify-between">
-                                <div class="w-1/2">
-                                    <p class="text-[#4C4C4C] font-YekanM text-lg leading-relaxed pt-3">
+                            <div class="flex flex-col xl:flex-row gap-x-10 gap-y-5 items-center justify-between">
+                                <div class="xl:w-1/2 w-full">
+                                    <p class="text-[#4C4C4C] font-YekanM xl:text-lg leading-relaxed xl:pt-3 pt-6">
                                         آرزوی بهترین ها برای این گروه منسجم ... با کیفیت و در زمان تعیین شده آماده شود. گروه بوده همیشه تلاش کرده تا تمامی کارها که تمام خدمات دیجیتال شرکت در اختیار این تیم نارنج در طول سال هایی
                                     </p>
                                 </div>
-                                <div class="relative w-1/2">
-                                    <div class="relative overflow-hidden w-full h-52 rounded-xl flex items-center justify-center">
-                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full h-52 z-10" alt="profile">
-                                        <div class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
+                                <div class="relative xl:w-1/2 w-full">
+                                    <div class="relative overflow-hidden w-full xl:h-52 h-32 rounded-xl flex items-center justify-center">
+                                        <img src="../assets/image 68.png" class="absolute object-cover object-center w-full xl:h-52 h-32 z-10" alt="profile">
+                                        <button @click="openModal2" class="bg-[#FF8030] rounded-full w-14 h-14 flex items-center justify-center absolute z-40">
                                             <svg width="15" height="18" viewBox="0 0 15 18" fill="none" xmlns="http://www.w3.org/2000/svg">
                                                 <path d="M0 1.17272C0 0.973437 0.0462501 0.778009 0.133751 0.603154C0.421252 0.0374444 1.07126 -0.166983 1.58751 0.148015L14.4501 7.97537C14.6251 8.08209 14.7688 8.24023 14.8651 8.4318C15.1526 8.99751 14.9651 9.71107 14.4501 10.0248L1.58751 17.8521C1.43063 17.9484 1.25144 17.9995 1.06876 18C0.478753 18 0 17.4754 0 16.8287V1.17272Z" fill="white"/>
                                             </svg>
-                                        </div>
+                                        </button>
                                     </div>
                                 </div>
                             </div>
@@ -921,6 +945,22 @@
                 </swiper-slide>
             </swiper>
         </div>
+
+        <div class="flex pl-5 mt-2 xl:hidden" dir="ltr">
+            <div class="swiper-pagination" dir="rtl"></div>
+        </div>
+
+        <transition name="translateY">
+            <div v-show="inModalOpen2" @click="closeModal2" class="fixed top-0 z-50 w-full h-screen bg-black bg-opacity-[0.5] flex items-center justify-center">
+                <button type="button" @click="closeModal2" class="text-white bg-[#FF6300] rounded-lg p-5 px-6 absolute xl:top-24 xl:right-96 top-44 right-8 text-xl">&#10005;</button>
+                <div>
+                    <video id="videoElement2" class="w-full" controls>
+                        <source src="../assets/video/047f812ca27807257a076707913a5fc938923532-480p.mp4" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+            </div>
+        </transition>
 
         <DivBlue></DivBlue>
         <Footer></Footer>
@@ -949,6 +989,7 @@
                 lastPosition: 0,
                 background: false,
                 inModalOpen: false,
+                inModalOpen2: false,
                 swiperOptions : {
                     slidesPerView: 1,
                     navigation: {
@@ -964,27 +1005,34 @@
                             slidesPerView:1.5,
                         },
                         150: {
-                            slidesPerView: 1,
-                            spaceBetween: 20
+                            slidesPerView: 1
                         }
+                    },
+                    pagination: {
+                        el: '.swiper-pagination',
+                        type: 'bullets',
+                        clickable: true
                     }
                 },
-                none: true,
-                none2: true,
-                none3: true,
-                none4: true,
-                none5: true,
-                none6: true,
-                none7: true,
-                none8: true,
-                ff8030: false,
-                ff80302: false,
-                ff80303: false,
-                ff80304: false,
-                ff80305: false,
-                ff80306: false,
-                ff80307: false,
-                ff80308: false,
+                swiperOptions3 : {
+                    slidesPerView:2.3
+                },
+                ability: false,
+                ability2: false,
+                ability3: false,
+                ability4: false,
+                ability5: false,
+                ability6: false,
+                ability7: false,
+                ability8: false,
+                isActive: false,
+                isActive2: false,
+                isActive3: false,
+                isActive4: false,
+                isActive5: false,
+                isActive6: false,
+                isActive7: false,
+                isActive8: false,
             }
         },
         methods: {
@@ -1005,12 +1053,24 @@
                 this.background = window.scrollY > 10;
             },
             openModal() {
-                this.inModalOpen = !this.inModalOpen
+                this.inModalOpen = true
+                document.body.classList.add('over');
+            },
+            openModal2() {
+                this.inModalOpen2 = true
+                document.body.classList.add('over');
             },
             closeModal() {
                 let video = document.getElementById('videoElement')
                 video.pause()
-                this.inModalOpen = !this.inModalOpen
+                this.inModalOpen = false
+                document.body.classList.remove('over');
+            },
+            closeModal2() {
+                let video = document.getElementById('videoElement2')
+                video.pause()
+                this.inModalOpen2 = false
+                document.body.classList.remove('over');
             }
         },
         created() {
@@ -1026,18 +1086,48 @@
     body{
         overflow-x: hidden !important;
     }
-    .translateX-enter{
+    .over {
+        overflow-y: hidden;
+    }
+    .translateY-enter{
         transform:translateY(-200px);
+        opacity: 0;
+    }
+    .translateY-enter-active,.translateY-leave-active{
+        transform-origin: top left 0;
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 500ms;
+    }
+    .translateY-leave-to{
+        transform: translateY(-200px);
+        opacity: 0;
+    }
+    .translateX-enter{
+        transform:translateX(200px);
         opacity: 0;
     }
     .translateX-enter-active,.translateX-leave-active{
         transform-origin: top left 0;
         transition-property: all;
         transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
-        transition-duration: 500ms;
+        transition-duration: 600ms;
     }
     .translateX-leave-to{
-        transform: translateY(-200px);
+        transform: translateX(200px);
+        opacity: 0;
+    }
+    .translateY2-enter{
+        transform:translateY(-10px);
+        opacity: 0;
+    }
+    .translateY2-enter-active,.translateY2-leave-active{
+        transition-property: all;
+        transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
+        transition-duration: 50ms;
+    }
+    .translateY2-leave-to{
+        transform: translateY(-10px);
         opacity: 0;
     }
     .swiper-button-next:after, .swiper-container-rtl .swiper-button-prev:after {
@@ -1078,52 +1168,15 @@
         background-color: transparent !important;
         color: black !important;
     }
-    .ability {
-        display: none !important;
+    .swiper-pagination-bullet {
+        width: 12px !important;
+        height: 12px !important;
+        margin: 7px !important;
+        background: #888 !important;
+        opacity: 1 !important;
     }
-    .ability2 {
-        display: none !important;
-    }
-    .ability3 {
-        display: none !important;
-    }
-    .ability4 {
-        display: none !important;
-    }
-    .ability5 {
-        display: none !important;
-    }
-    .ability6 {
-        display: none !important;
-    }
-    .ability7 {
-        display: none !important;
-    }
-    .ability8 {
-        display: none !important;
-    }
-    .title {
-        color: #ff8030 !important;
-    }
-    .title2 {
-        color: #ff8030 !important;
-    }
-    .title3 {
-        color: #ff8030 !important;
-    }
-    .title4 {
-        color: #ff8030 !important;
-    }
-    .title5 {
-        color: #ff8030 !important;
-    }
-    .title6 {
-        color: #ff8030 !important;
-    }
-    .title7 {
-        color: #ff8030 !important;
-    }
-    .title8 {
-        color: #ff8030 !important;
+    .swiper-pagination-bullet-active {
+        opacity: 1;
+        background: #FF8030 !important;
     }
 </style>

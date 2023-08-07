@@ -53,7 +53,7 @@
                                             </div>
                                         </router-link>
                                     </li>
-                                    <li @click="none = !none" class="pr-11 font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all cursor-pointer">
+                                    <li @click="isOpen = !isOpen" class="pr-11 font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all cursor-pointer">
                                         <div class="flex gap-x-4">
                                             <div>
                                                 <svg width="20" height="20" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -65,25 +65,27 @@
                                             </div>
                                         </div>
                                     </li>
-                                    <li class="bg-[#F8F8F8] px-28 py-10" :class="{list:none}">
-                                        <ul class="space-y-5">
-                                            <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
-                                                طراحی سایت
-                                            </li>
-                                            <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
-                                                طراحی اپلیکیشن
-                                            </li>
-                                            <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
-                                                باشگاه مشتریان
-                                            </li>
-                                            <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
-                                                مدیریت ارتباط با مشتری
-                                            </li>
-                                            <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
-                                                راه اندازی استارت اپ
-                                            </li>
-                                        </ul>
-                                    </li> 
+                                    <transition name="translateX">
+                                        <li v-show="isOpen" class="bg-[#F8F8F8] px-28 py-10">
+                                            <ul class="space-y-5">
+                                                <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+                                                    طراحی سایت
+                                                </li>
+                                                <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+                                                    طراحی اپلیکیشن
+                                                </li>
+                                                <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+                                                    باشگاه مشتریان
+                                                </li>
+                                                <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+                                                    مدیریت ارتباط با مشتری
+                                                </li>
+                                                <li class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+                                                    راه اندازی استارت اپ
+                                                </li>
+                                            </ul>
+                                        </li>
+                                    </transition> 
                                     <li class="pr-11">
                                         <router-link to="/" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
                                             <div class="flex gap-x-4">
@@ -184,7 +186,8 @@
                 scrolled: false,
                 lastPosition: 0,
                 background: false,
-                menu: false
+                menu: false,
+                isOpen: false
             }
         },
         watch: {
@@ -328,9 +331,6 @@
 <style>
     .over {
         overflow-y: hidden;
-    }
-    .list {
-        display: none;
     }
     .menubar {
         background-color: black !important;
