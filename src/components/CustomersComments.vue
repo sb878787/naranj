@@ -2,7 +2,6 @@
     <div>
         <div class="pr-0 xl:pr-24 mt-6">
             <div dir="rtl" class="xl:relative xl:z-20 z-0 static w-full p-14 px-8 xl:pr-14 pl-0 xl:py-16 rounded-r-0 xl:rounded-r-xl bg-[#C9C9C9] xl:bg-[#2E58D1]">
-                
                 <div class="absolute left-0 hidden xl:block">
                     <svg width="171" height="204" viewBox="0 0 171 204" fill="none" xmlns="http://www.w3.org/2000/svg">
                         <circle cx="68.7378" cy="102.172" r="101.772" transform="rotate(-45.0585 68.7378 102.172)" fill="url(#paint0_linear_1_3999)"/>

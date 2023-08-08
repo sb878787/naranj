@@ -1,5 +1,11 @@
 <template>
-    <div class="flex flex-col">
+    <div class="flex flex-col relative">
+        <div class="absolute left-28 -z-50 hidden xl:block">
+            <svg width="420" height="538" viewBox="0 0 420 538" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path d="M419.234 33.3708C352.407 -2.13919 274.21 -9.64768 201.846 12.4971C129.483 34.6419 68.8802 84.626 33.3702 151.453C-2.1398 218.281 -9.64829 296.477 12.4965 368.841C34.6413 441.204 84.6253 501.807 151.453 537.317L216.947 414.062C182.808 395.922 157.275 364.964 145.962 327.998C134.65 291.031 138.485 251.085 156.625 216.947C174.765 182.809 205.724 157.275 242.69 145.963C279.656 134.65 319.602 138.486 353.74 156.626L419.234 33.3708Z" fill="#F2F2F2"/>
+            </svg>
+        </div>
+
         <div class="p-8 mx-80 mr-60 mt-32 hidden xl:block" dir="rtl">
             <div class="flex justify-between space-x-4">
 
