@@ -1172,7 +1172,7 @@
         width: 12px !important;
         height: 12px !important;
         margin: 7px !important;
-        background: #888 !important;
+        background: #e4e4e4 !important;
         opacity: 1 !important;
     }
     .swiper-pagination-bullet-active {

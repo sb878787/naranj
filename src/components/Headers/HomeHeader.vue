@@ -5,19 +5,20 @@
                 {'headroom--unpinned': scrolled},
                 background ? 'blue-theme' : ''
             ]"
-            class="headroom fixed pt-12 text-lg font-YekanM font-semibold z-50 px-44 w-full hidden xl:block transition-all"
+            class="headroom text-white p-12 w-full fixed text-lg font-YekanM font-semibold z-50 px-40 hidden xl:block transition-all"
             dir="rtl"
         >
             <div class="flex justify-between items-center">
+
                 <div>
-                    <router-link class="pl-9" to="/">صفحه نخست </router-link>
-                    <router-link class="pl-9" to="/about">درباره ما </router-link>
-                    <router-link class="pl-9" to="/">خدمات نارنج </router-link>
-                    <router-link class="pl-9" to="/">وبلاگ نارنجی شو </router-link>
-                    <router-link class="pl-9" to="/">فرصت های شغلی </router-link>
-                    <router-link to="/contact">تماس با ما </router-link>
+                    <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/about">درباره ما </router-link>
+                    <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/">خدمات نارنج </router-link>
+                    <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/">وبلاگ نارنجی شو </router-link>
+                    <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/">فرصت های شغلی </router-link>
+                    <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/contact">تماس با ما </router-link>
+                    <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/">پنل کاربری</router-link>
                 </div>
-                
+
                 <div dir="ltr">
                     <router-link to="/">
                         <svg width="55" height="55" viewBox="0 0 631 631" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -27,6 +28,7 @@
                         </svg>
                     </router-link>
                 </div>
+
             </div>
         </header>
     </div>
@@ -39,7 +41,7 @@
                 limitPosition: 1,
                 scrolled: false,
                 lastPosition: 0,
-                background: false
+                background: false,
             }
         },
         methods: {
@@ -84,6 +86,12 @@
         background-color: white;
         color: black !important;
         box-shadow: 0px 2px 2px #C9C9C9;
+    }
+    @media (min-width: 1280px) { 
+        .blue-theme {
+        padding-top: 20px !important;
+        padding-bottom: 20px !important;
+        }
     }
     .text-color:hover {
         background-color: transparent !important;

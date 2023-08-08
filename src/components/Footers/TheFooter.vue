@@ -1,6 +1,7 @@
 <template>
     <div dir="rtl" class="mb-12 xl:mt-32 mt-20">
         <div class="xl:px-44 px-8" dir="rtl">
+
             <div class="block xl:hidden relative">
                 <div class="absolute left-0 -top-5">
                     <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -8,48 +9,62 @@
                     </svg>
                 </div>
             </div>
+
             <svg width="40" height="40" viewBox="0 0 40 40" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M36 0H4C1.8 0 0 1.8 0 4V40L8 32H36C38.2 32 40 30.2 40 28V4C40 1.8 38.2 0 36 0ZM36 28H8L4 32V4H36V28Z" fill="#4D4D4D"/>
             </svg>
+
             <p class="font-YekanB text-2xl text-[#4D4D4D] pt-4 xl:leading-relaxed leading-tight block xl:hidden mb-16">پذیرای صدای گرم شما هستیم. <br> برای ارتباط و مشاوره ، با ما <br> در تماس باشید:</p>
+            
             <div class="flex justify-between items-center">
                 <div class="flex-1">
                     <p class="font-YekanB text-3xl text-[#4D4D4D] pt-4 leading-relaxed hidden xl:block">پذیرای صدای گرم شما هستیم. <br> برای ارتباط و مشاوره ، با ما در تماس باشید:</p>
                 </div>
+
                 <div class="flex-1">
-                    <div class="xl:flex xl:items-center hidden">
-                        <input class="font-YekanM placeholder-[#767676] text-[#767676] text-xl h-20 pr-6 bg-[#F8F8F8] rounded-r-md outline-0 w-full" name="email" type="email" placeholder="لطفا ایمیل خود را وارد کنید ..." />
-                        <button @click="onClickTop" class="bg-[#F8F8F8] hover:bg-[#f0f0f0] rounded-l-md h-20 outline-0 px-9 transition-all group">
-                            <svg class="w-4 h-4 group-hover:-translate-x-1 transition-all" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 8H1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 15L1 8L8 1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
+                    <form action="/" @submit.prevent="onSubmit">
+                        <div class="xl:flex xl:items-center hidden">
+                            <input v-model="email" class="font-YekanM placeholder-[#767676] text-[#767676] text-xl h-20 pr-6 bg-[#F8F8F8] rounded-r-md outline-0 w-full" name="email" type="email" placeholder="لطفا ایمیل خود را وارد کنید ..." />
+                            
+                            <button @click="onClickTop" :disabled="isDisabled" class="bg-[#F8F8F8] hover:bg-[#f0f0f0] rounded-l-md h-20 outline-0 px-9 transition-all group cursor-pointer">
+                                <svg class="w-4 h-4 group-hover:-translate-x-1 transition-all" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 8H1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 15L1 8L8 1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
                 </div>
             </div>
+
             <div class="xl:flex xl:flex-row flex flex-col-reverse mt-2" dir="rtl">
                 <div class="flex-1">
-                    <div class="flex items-center xl:hidden">
-                        <input class="font-YekanM placeholder-[#767676] text-[#767676] xl:text-xl text-md h-20 pr-6 bg-[#F8F8F8] rounded-r-md outline-0 w-full" name="email" type="email" placeholder="لطفا ایمیل خود را وارد کنید ..." />
-                        <button class="bg-[#F8F8F8] rounded-l-md h-20 outline-0 px-9">
-                            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                <path d="M15 8H1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                <path d="M8 15L1 8L8 1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                            </svg>
-                        </button>
-                    </div>
+                    <form action="/" @submit.prevent="onSubmit">
+                        <div class="flex items-center xl:hidden">
+                            <input v-model="email" class="font-YekanM placeholder-[#767676] text-[#767676] xl:text-xl text-md h-20 pr-6 bg-[#F8F8F8] rounded-r-md outline-0 w-full" name="email" type="email" placeholder="لطفا ایمیل خود را وارد کنید ..." />
+                            
+                            <button @click="onClickTop" :disabled="isDisabled" class="bg-[#F8F8F8] hover:bg-[#f0f0f0] rounded-l-md h-20 outline-0 px-9 transition-all group cursor-pointer">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 8H1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 15L1 8L8 1" stroke="#FF6300" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                            </button>
+                        </div>
+                    </form>
                 </div>
+
                 <div class="flex-1 mb-12 xl:mb-0 relative xl:static">
                     <div class="flex xl:items-center items-end justify-end xl:justify-start gap-x-4">
                         <div class="xl:flex xl:flex-row flex flex-col xl:items-center items-end">
                             <p class="font-YekanM xl:text-2xl text-xl font-semibold text-[#4D4D4D] text-right xl:ml-8 xl:mr-6 mr-0 ml-0" dir="ltr">۰۵۱ - ۳۸۳۳۵۹۰۰</p>
                             <p class="font-YekanM xl:text-2xl text-xl font-semibold text-[#4D4D4D]" dir="ltr">+۹۸ - ۰۹۳۶ ۳۲۲ ۰۷۱۵</p>
                         </div>
+
                         <svg width="32" height="32" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M20.4144 16.779C20.0663 16.6052 18.3536 15.7675 18.0348 15.6509C17.7148 15.5354 17.4827 15.4782 17.2494 15.8259C17.0185 16.1724 16.3503 16.9529 16.1475 17.1839C15.9447 17.416 15.7407 17.444 15.3926 17.2714C15.0444 17.0964 13.9214 16.7312 12.5909 15.5505C11.5559 14.6312 10.856 13.496 10.6532 13.1484C10.4504 12.8019 10.6321 12.614 10.8056 12.4414C10.9627 12.2862 11.155 12.0365 11.3285 11.8347C11.5031 11.6317 11.5606 11.487 11.6778 11.2549C11.7938 11.0239 11.7364 10.822 11.6485 10.6482C11.5606 10.4744 10.8642 8.76753 10.5747 8.07337C10.291 7.39787 10.0038 7.49004 9.79048 7.47837C9.56787 7.46954 9.34509 7.46565 9.12231 7.4667C8.89021 7.4667 8.51275 7.55304 8.1939 7.9007C7.87505 8.2472 6.97478 9.08603 6.97478 10.7929C6.97478 12.4985 8.22321 14.147 8.3967 14.3792C8.57136 14.6102 10.8537 18.1125 14.3481 19.614C15.1792 19.971 15.8275 20.1845 16.3339 20.3432C17.1685 20.608 17.9281 20.5707 18.5271 20.4808C19.1965 20.3817 20.5879 19.642 20.8786 18.8323C21.1693 18.0227 21.1693 17.3285 21.0814 17.1839C20.9947 17.0392 20.7626 16.9529 20.4132 16.779H20.4144ZM14.0586 25.4158H14.0539C11.9788 25.416 9.94179 24.8607 8.15639 23.8082L7.73321 23.5585L3.34789 24.7042L4.51778 20.4482L4.24231 20.0118C3.08231 18.1735 2.46865 16.046 2.47224 13.8752C2.47341 7.51687 7.67226 2.34388 14.0633 2.34388C17.158 2.34388 20.0674 3.54554 22.2548 5.72487C23.3341 6.79426 24.1895 8.06605 24.7716 9.46665C25.3537 10.8672 25.6509 12.3688 25.6461 13.8845C25.6426 20.2428 20.4449 25.4158 14.0586 25.4158ZM23.9206 4.06937C22.629 2.77545 21.0922 1.7495 19.3994 1.05098C17.7065 0.352455 15.8912 -0.00475561 14.0586 4.78071e-05C6.3746 4.78071e-05 0.12074 6.2242 0.117223 13.874C0.117223 16.3194 0.758434 18.7063 1.97873 20.8098L0 28L7.39092 26.0703C9.43482 27.1786 11.7252 27.7594 14.0527 27.7597H14.0586C21.7414 27.7597 27.9964 21.5355 27.9999 13.8845C28.0056 12.0613 27.648 10.2551 26.9478 8.57041C26.2476 6.88566 25.2187 5.35582 23.9206 4.06937Z" fill="#CFCFCF"/>
                         </svg>
                     </div>
+
                     <div class="block xl:hidden absolute -right-8 -top-9">
                         <svg width="20" height="39" viewBox="0 0 20 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M39 19.5C39 30.2696 30.2696 39 19.5 39C8.73045 39 0 30.2696 0 19.5C0 8.73045 8.73045 0 19.5 0C30.2696 0 39 8.73045 39 19.5ZM10.4665 19.5C10.4665 24.489 14.511 28.5335 19.5 28.5335C24.489 28.5335 28.5335 24.489 28.5335 19.5C28.5335 14.511 24.489 10.4665 19.5 10.4665C14.511 10.4665 10.4665 14.511 10.4665 19.5Z" fill="#FF8030" fill-opacity="0.59"/>
@@ -57,8 +72,10 @@
                     </div>
                 </div>
             </div>
+
             <div class="flex flex-col-reverse xl:flex-row xl:justify-between justify-normal xl:items-center items-baseline xl:mt-12 mt-8">
                 <p class="text-[#767676] font-YekanM xl:text-lg text-md xl:mt-0 mt-7">تمامی حقوق مادی و معنوی برای گروه طراحی و فن آوری نارنج محفوظ است.</p>
+                
                 <div class="flex items-center sm:gap-12 gap-6 self-end" dir="ltr">
                     <div>
                         <router-link to="/">
@@ -69,21 +86,25 @@
                           </svg>
                         </router-link>
                     </div>
+
                     <div class="group cursor-pointer">
                         <svg class="xl:w-[21px] xl:h-[30px] w-[16px] h-[25px]" viewBox="0 0 11 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M9.00963 3.32002H11V0.14003C10.0363 0.0453769 9.06802 -0.00135428 8.09913 2.98641e-05C5.21944 2.98641e-05 3.25024 1.66003 3.25024 4.70002V7.32002H0V10.88H3.25024V20H7.14629V10.88H10.3859L10.873 7.32002H7.14629V5.05002C7.14629 4.00002 7.44273 3.32002 9.00963 3.32002Z" class="fill-[#383838] group-hover:fill-[#1f7bf2] transition-all"/>
                         </svg>
                     </div>
+
                     <div class="group hover:bg-gradient-to-r hover:from-[#f9ce34] hover:via-[#ee2a7b] hover:to-[#6228d7] cursor-pointer rounded-md p-[2px]">
                         <svg class="xl:w-[30px] xl:h-[31px] w-[25px] h-[26px]" viewBox="0 0 23 24" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.5 2.16225C14.5706 2.16225 14.9343 2.17444 16.1469 2.23209C17.2681 2.28553 17.8771 2.481 18.2824 2.64534C18.8191 2.86303 19.2022 3.12309 19.6046 3.543C20.0071 3.96291 20.2563 4.36266 20.4649 4.92272C20.6224 5.34562 20.8097 5.98106 20.8609 7.15097C20.9162 8.41641 20.9278 8.79591 20.9278 12C20.9278 15.2042 20.9162 15.5837 20.8609 16.849C20.8097 18.019 20.6224 18.6544 20.4649 19.0773C20.2563 19.6373 20.007 20.0372 19.6046 20.4571C19.2022 20.877 18.8191 21.1371 18.2824 21.3547C17.8771 21.519 17.2681 21.7146 16.1469 21.7679C14.9345 21.8257 14.5708 21.8378 11.5 21.8378C8.42914 21.8378 8.06545 21.8257 6.85301 21.7679C5.73176 21.7145 5.12289 21.519 4.71761 21.3547C4.18088 21.1371 3.7977 20.877 3.39529 20.4571C2.99287 20.0371 2.74365 19.6373 2.53512 19.0773C2.37762 18.6545 2.19021 18.019 2.13909 16.849C2.08375 15.5837 2.07207 15.2042 2.07207 12C2.07207 8.79591 2.08375 8.41641 2.13909 7.15106C2.1903 5.98106 2.37762 5.34562 2.53512 4.92272C2.74365 4.36266 2.99287 3.96291 3.39529 3.543C3.79779 3.123 4.18088 2.86303 4.71761 2.64534C5.1228 2.481 5.73176 2.28553 6.85301 2.23209C8.06563 2.17444 8.42932 2.16225 11.5 2.16225ZM11.5 0C8.37676 0 7.98513 0.0137812 6.75859 0.0721875C5.53446 0.1305 4.69847 0.333375 3.96705 0.63C3.21075 0.936656 2.56944 1.347 1.93011 2.01412C1.29079 2.68125 0.897629 3.35044 0.60375 4.13953C0.319395 4.90284 0.125062 5.77519 0.0691797 7.05244C0.013207 8.33231 0 8.74097 0 12C0 15.259 0.013207 15.6677 0.0691797 16.9476C0.125062 18.2249 0.319395 19.0973 0.60375 19.8605C0.897539 20.6496 1.29079 21.3188 1.93011 21.986C2.56944 22.6531 3.21075 23.0633 3.96705 23.37C4.69856 23.6667 5.53446 23.8695 6.7585 23.9278C7.98513 23.9862 8.37676 24 11.5 24C14.6232 24 15.0149 23.9862 16.2414 23.9278C17.4654 23.8695 18.3014 23.6667 19.0329 23.37C19.7892 23.0634 20.4305 22.6531 21.0698 21.986C21.7091 21.3188 22.1024 20.6497 22.3962 19.8605C22.6805 19.0972 22.8749 18.2249 22.9308 16.9477C22.9868 15.6677 23 15.259 23 12C23 8.74097 22.9868 8.33231 22.9308 7.05244C22.8749 5.77519 22.6805 4.90284 22.3962 4.13962C22.1024 3.35044 21.7091 2.68125 21.0698 2.01412C20.4305 1.347 19.7892 0.936562 19.0329 0.63C18.3014 0.333375 17.4654 0.1305 16.2414 0.0721875C15.0149 0.0137812 14.6232 0 11.5 0ZM11.5 5.83781C8.23849 5.83781 5.59457 8.59688 5.59457 12C5.59457 15.4033 8.23849 18.1622 11.5 18.1622C14.7614 18.1622 17.4054 15.4033 17.4054 12C17.4054 8.59678 14.7614 5.83781 11.5 5.83781ZM11.5 16C9.38292 16 7.66664 14.2091 7.66664 12C7.66664 9.79087 9.38292 7.99997 11.5 7.99997C13.6171 7.99997 15.3334 9.79087 15.3334 12C15.3334 14.2091 13.6171 16 11.5 16ZM19.0187 5.59434C19.0187 6.38972 18.4009 7.03434 17.6387 7.03434C16.8765 7.03434 16.2587 6.38972 16.2587 5.59434C16.2587 4.79906 16.8765 4.15434 17.6387 4.15434C18.4009 4.15434 19.0187 4.79906 19.0187 5.59434Z" class="fill-[#383838] group-hover:fill-[#fff] transition-all"/>
                         </svg>
                     </div>
+
                     <div class="group cursor-pointer">
                         <svg class="xl:w-[30px] xl:h-[30px] w-[25px] h-[25px]" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M11.5 0C5.14681 0 0 5.14755 0 11.5C0 17.8525 5.14755 23 11.5 23C17.8532 23 23 17.8525 23 11.5C23 5.14755 17.8525 0 11.5 0ZM17.1484 7.87861L15.2609 16.7729C15.1214 17.4036 14.746 17.5564 14.2222 17.2596L11.3472 15.1407L9.96048 16.4762C9.80765 16.629 9.67781 16.7588 9.38103 16.7588L9.58506 13.8326L14.9129 9.01897C15.1451 8.81494 14.8617 8.69919 14.5553 8.90323L7.97061 13.0484L5.13271 12.1625C4.51616 11.9682 4.50206 11.546 5.26255 11.2492L16.35 6.97345C16.8649 6.78797 17.3145 7.09884 17.1476 7.87787L17.1484 7.87861Z" class="fill-[#383838] group-hover:fill-[#38ABE2] transition-all"/>
                         </svg>
                     </div>
+
                     <div class="group cursor-pointer">
                         <svg class="xl:w-[29px] xl:h-[32px] w-[24px] h-[27px]" viewBox="0 0 19 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M16.0807 16.1174H14.8438V15.4C14.8438 15.0174 15.0417 14.8261 15.4375 14.8261H15.487C15.8828 14.8261 16.0807 15.0174 16.0807 15.4V16.1174ZM11.3802 14.587C10.9844 14.587 10.7865 14.7464 10.7865 15.0652V18.4609C10.7865 18.7797 10.9844 18.9391 11.3802 18.9391C11.776 18.9391 11.974 18.7797 11.974 18.4609V15.0652C11.974 14.7464 11.776 14.587 11.3802 14.587ZM19 12.6739V19.1783C19 19.9754 18.6949 20.6449 18.0846 21.187C17.4744 21.729 16.7405 22 15.8828 22H3.11719C2.25955 22 1.52561 21.729 0.915365 21.187C0.305122 20.6449 0 19.9754 0 19.1783V12.6739C0 11.9087 0.305122 11.2471 0.915365 10.6891C1.52561 10.1312 2.25955 9.85217 3.11719 9.85217H15.8828C16.7405 9.85217 17.4744 10.1312 18.0846 10.6891C18.6949 11.2471 19 11.9087 19 12.6739ZM3.95833 19.8957V13.0565H5.54167V12.0522L1.33594 12.0043V13.0087H2.6224V19.8957H3.95833ZM8.70833 14.0609H7.3724V18.6043C7.30642 18.7638 7.19097 18.8674 7.02604 18.9152C6.86111 18.963 6.72917 18.8754 6.63021 18.6522V17.7435L6.58073 14.0609H5.29427V18.8435C5.36024 19.3855 5.47569 19.7043 5.64062 19.8C5.9375 19.9913 6.30859 19.9993 6.75391 19.8239C7.19922 19.6486 7.50434 19.4174 7.66927 19.1304V19.8957H8.70833V14.0609ZM12.9141 18.2696V15.2087C12.9141 14.6029 12.7161 14.1884 12.3203 13.9652C11.9245 13.742 11.4297 13.8536 10.8359 14.3V12.0522H9.5V19.8478H10.5885L10.6875 19.3217C11.3802 19.8957 11.9327 20.0551 12.3451 19.8C12.7574 19.5449 12.947 19.0348 12.9141 18.2696ZM17.0703 17.8391H16.0807V18.5087C16.0807 18.8594 15.8993 19.0348 15.5365 19.0348H15.3385C14.9757 19.0348 14.7943 18.8594 14.7943 18.5087V17.1217H17.0703V16.3087C17.0703 15.4797 17.0538 14.9536 17.0208 14.7304C16.9219 14.2203 16.5673 13.9014 15.957 13.7739C15.3468 13.6464 14.8438 13.7261 14.4479 14.013C14.184 14.2362 14.0026 14.4754 13.9036 14.7304C13.8047 15.0493 13.7552 15.4797 13.7552 16.0217V17.8391C13.7552 19.0188 14.217 19.7043 15.1406 19.8957C15.9323 20.0551 16.5095 19.8 16.8724 19.1304C17.1033 18.7797 17.1693 18.3493 17.0703 17.8391ZM11.974 7.98696C12.0399 8.14638 12.1554 8.27391 12.3203 8.36957C12.4523 8.46522 12.6337 8.51304 12.8646 8.51304C13.0625 8.51304 13.2274 8.46522 13.3594 8.36957C13.4913 8.27391 13.6068 8.13043 13.7057 7.93913V8.41739H15.1901V2.34348H14.0026V7.07826C14.0026 7.3971 13.8377 7.55652 13.5078 7.55652C13.2109 7.55652 13.0625 7.3971 13.0625 7.07826V2.34348H11.8255V6.45652C11.8255 7.03043 11.842 7.38116 11.875 7.5087C11.875 7.63623 11.908 7.79565 11.974 7.98696ZM7.52083 4.5913C7.52083 4.01739 7.57031 3.55507 7.66927 3.20435C7.76823 2.91739 7.94965 2.66232 8.21354 2.43913C8.47743 2.24783 8.80729 2.15217 9.20312 2.15217C9.56597 2.15217 9.86285 2.21594 10.0938 2.34348C10.3247 2.43913 10.5061 2.59855 10.638 2.82174C10.77 2.98116 10.8689 3.18841 10.9349 3.44348C10.9679 3.6029 10.9844 3.93768 10.9844 4.44783V5.97826C10.9844 6.61594 10.9679 7.03043 10.9349 7.22174C10.9019 7.44493 10.803 7.68406 10.638 7.93913C10.5391 8.09855 10.3576 8.27391 10.0938 8.46522C9.82986 8.56087 9.56597 8.6087 9.30208 8.6087C8.97222 8.6087 8.67535 8.56087 8.41146 8.46522C8.18056 8.36957 7.99913 8.22609 7.86719 8.03478C7.73524 7.77971 7.65278 7.55652 7.61979 7.36522C7.55382 7.04638 7.52083 6.64783 7.52083 6.16957V4.5913ZM8.65885 6.98261C8.65885 7.14203 8.71658 7.28551 8.83203 7.41304C8.94748 7.54058 9.08767 7.60435 9.2526 7.60435C9.64844 7.60435 9.84635 7.3971 9.84635 6.98261V3.77826C9.84635 3.36377 9.64844 3.15652 9.2526 3.15652C8.85677 3.15652 8.65885 3.36377 8.65885 3.77826V6.98261ZM4.60156 8.6087H5.98698V3.96957L7.61979 0H6.13542L5.24479 2.96522L4.35417 0H2.86979L4.60156 3.96957V8.6087Z" class="fill-[#383838] group-hover:fill-[#FF0808] transition-all"/>
@@ -94,53 +115,61 @@
         </div>
 
         <notificationGroup group="top">
-        <div class="fixed z-50 inset-0 flex px-4 py-6 pointer-events-none p-6 items-start justify-start">
-          <div class="max-w-sm w-full">
-            <notification v-slot="{notifications}">
-              <div
-                class="flex max-w-sm w-full mx-auto bg-white shadow-md rounded-lg overflow-hidden mt-4"
-                v-for="notification in notifications"
-                :key="notification.id"
-              >
-                <div class="flex justify-center items-center w-12 bg-green-500">
-                  <svg
-                    class="h-6 w-6 fill-current text-white"
-                    viewBox="0 0 40 40"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z"
-                    ></path>
-                  </svg>
-                </div>
+            <div class="fixed z-50 inset-0 flex px-4 py-6 pointer-events-none p-6 items-start justify-start">
+                <div class="max-w-sm w-full">
+                    <notification v-slot="{notifications}">
 
-                <div class="-mx-3 py-2 px-4">
-                  <div class="mx-3">
-                    <span class="text-green-500 font-YekanB text-2xl font-semibold">{{notification.title}}</span>
-                    <p class="text-gray-600 font-YekanM text-md">{{notification.text}}</p>
-                  </div>
+                        <div
+                            class="flex max-w-sm w-full mx-auto bg-white shadow-md rounded-lg overflow-hidden mt-4"
+                            v-for="notification in notifications"
+                            :key="notification.id"
+                        >
+                            <div class="flex justify-center items-center w-12 bg-green-500">
+                                <svg class="h-6 w-6 fill-current text-white" viewBox="0 0 40 40" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M20 3.33331C10.8 3.33331 3.33337 10.8 3.33337 20C3.33337 29.2 10.8 36.6666 20 36.6666C29.2 36.6666 36.6667 29.2 36.6667 20C36.6667 10.8 29.2 3.33331 20 3.33331ZM16.6667 28.3333L8.33337 20L10.6834 17.65L16.6667 23.6166L29.3167 10.9666L31.6667 13.3333L16.6667 28.3333Z"></path>
+                                </svg>
+                            </div>
+
+                            <div class="-mx-3 py-2 px-4">
+                                <div class="mx-3">
+                                    <span class="text-green-500 font-YekanB text-2xl font-semibold">{{notification.title}}</span>
+
+                                    <p class="text-gray-600 font-YekanM text-md">{{notification.text}}</p>
+                                </div>
+                            </div>
+                        </div>
+
+                    </notification>
                 </div>
-              </div>
-            </notification>
-          </div>
-        </div>
-      </notificationGroup>
+            </div>
+        </notificationGroup>
     </div>
 </template>
 
 <script>
-import router from '@/router';
-
-  export default {
-    methods: {
-        onClickTop() {
-            this.$notify({
-                group: "top",
-                title: "تبریک",
-                text: "ایمیل شما با موفقیت ارسال شد!"
-            }, 4000);
+    export default {
+        data() {
+            return {
+                email : ""
+            }
+        },
+        methods: {
+            onClickTop() {
+                this.$notify(
+                    {
+                        group: "top",
+                        title: "تبریک",
+                        text: "ایمیل شما با موفقیت ارسال شد!"
+                    }, 
+                    4000
+                );
+                this.email = ""
+            }
+        },
+        computed: {
+            isDisabled() {
+                return !/^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/.test(this.email)
+            }
         }
-    },
-    components: { router }
-}
+    }
 </script>
