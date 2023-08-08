@@ -47,7 +47,7 @@
             </div>
         </transition>
 
-        <SocialPages class="hidden xl:block"></SocialPages>
+        <SocialBlack class="hidden xl:block"></SocialBlack>
 
         <div dir="rtl" class="xl:absolute xl:top-[25%] xl:right-0 xl:px-44 static px-8 mt-8 xl:mt-0">
             <p class="font-YekanM text-[#FF6300] xl:text-xl text-lg">نرم افزار کاربردی ریتیل</p>
@@ -968,18 +968,18 @@
 </template>
 
 <script>
-    import Header from "@/components/HeaderView.vue";
-    import Footer from "@/components/FooterView.vue";
-    import SocialPages from "@/components/SocialPages.vue";
+    import Header from "@/components/Headers/TheHeader.vue";
+    import Footer from "@/components/Footers/TheFooter.vue";
+    import SocialBlack from "@/components/Social/TheSocialBlack.vue";
     import DivBlue from "@/components/DivBlue.vue";
-    import ResponsiveHeader from "@/components/ResponsiveHeader.vue";
+    import ResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
 
     export default {
         components: {
             Footer,
             ResponsiveHeader,
             Header,
-            SocialPages,
+            SocialBlack,
             DivBlue
         },
         data() {

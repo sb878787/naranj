@@ -6,7 +6,7 @@
             <ResponsiveHeader></ResponsiveHeader>
             <p dir="ltr" class="text-white font-light text-5xl ml-8 pb-8 absolute bottom-0 z-40 block xl:hidden">Every new <br> idea is <br> just a <br> mashup</p>
         </div>
-        <SocialPages class="hidden xl:block"></SocialPages>
+        <SocialBlack class="hidden xl:block"></SocialBlack>
         <div class="absolute left-[45%] top-56 hidden xl:block">
             <svg width="58" height="58" viewBox="0 0 58 58" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <path d="M54.7007 40.1982C48.2855 54.539 31.4593 60.964 17.1184 54.5487C2.77759 48.1334 -3.64736 31.3073 2.76791 16.9664C9.18318 2.62556 26.0093 -3.79939 40.3502 2.61588C54.691 9.03115 61.116 25.8573 54.7007 40.1982ZM15.0285 22.4511C11.6423 30.0206 15.0336 38.902 22.6031 42.2881C30.1726 45.6743 39.054 42.283 42.4402 34.7135C45.8263 27.144 42.4351 18.2626 34.8655 14.8764C27.296 11.4903 18.4146 14.8815 15.0285 22.4511Z" fill="#4C4DFF" fill-opacity="0.61"/>
@@ -179,11 +179,11 @@
 </template>
 
 <script>
-    import Footer from "@/components/FooterView.vue";
-    import Header from "@/components/HeaderView.vue";
-    import SocialPages from "@/components/SocialPages.vue";
+    import Footer from "@/components/Footers/TheFooter.vue";
+    import Header from "@/components/Headers/TheHeader.vue";
+    import SocialBlack from "@/components/Social/TheSocialBlack.vue";
     import DivBlue from "@/components/DivBlue.vue";
-    import ResponsiveHeader from "@/components/ResponsiveHeader.vue";
+    import ResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
     import img from "@/assets/Group 228.png";
     import img2 from "@/assets/Rectangle 83.png";
     import logo from "@/assets/Group 229.png";
@@ -192,7 +192,7 @@
         components: {
             Footer,
             Header,
-            SocialPages,
+            SocialBlack,
             DivBlue,
             ResponsiveHeader
         },

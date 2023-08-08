@@ -6,7 +6,7 @@
             <ResponsiveHeader></ResponsiveHeader>
             <p dir="ltr" class="text-white font-light text-5xl ml-8 pb-8 absolute bottom-0 z-40 block xl:hidden">Every new <br> idea is <br> just a <br> mashup</p>
         </div>
-        <SocialPages2 class="hidden xl:block"></SocialPages2>
+        <SocialWhite class="hidden xl:block"></SocialWhite>
         <div dir="rtl" class="xl:absolute xl:top-[25%] xl:right-0 xl:px-44 static px-8 mt-8 xl:mt-0">
             <p class="font-YekanM text-[#FF6300] xl:text-xl text-lg">برای شروع از ما راهنمایی بخواهید...</p>
             <p class="font-YekanB xl:text-4xl text-2xl xl:pt-5 pt-3 leading-tight xl:text-[#000] text-[#4D4D4D]">ما می توانیم با توجه به بودجه <br class="hidden xl:block"> و اهداف سازمان شما ، نزدیک ترین <br class="hidden xl:block"> مسیر را برای کسب و کار هوشمند <br class="hidden xl:block"> شما تدوین نماییم.</p>
@@ -141,17 +141,17 @@
 </template>
 
 <script>
-    import Footer from "@/components/FooterView.vue";
-    import Header from "@/components/HeaderView.vue";
-    import ResponsiveHeader from "@/components/ResponsiveHeader.vue";
-    import SocialPages2 from "@/components/SocialPages2.vue";
+    import Footer from "@/components/Footers/TheFooter.vue";
+    import Header from "@/components/Headers/TheHeader.vue";
+    import ResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
+    import SocialWhite from "@/components/Social/TheSocialWhite.vue";
 
     export default {
         components: {
             Footer,
             ResponsiveHeader,
             Header,
-            SocialPages2
+            SocialWhite
         },
         data() {
             return {

@@ -541,9 +541,9 @@
 </template>
 
 <script>
-  import Footer from "@/components/HomeFooter.vue";
-  import Footer2 from "@/components/FooterView.vue";
-  import ResponsiveHeader from "@/components/ResponsiveHeader.vue";
+  import Footer from "@/components/Footers/TheHomeFooter.vue";
+  import Footer2 from "@/components/Footers/TheFooter.vue";
+  import ResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
   import ProfileUser from '@/assets/Man3.jpg';
   import logoSlider from '@/assets/logo-slider.png';
   

@@ -8,7 +8,7 @@
         </div>
         <div>
             <img src="../assets/Rectangle 94.png" alt="logo" class="absolute hidden xl:block left-0 top-0 h-[800px] w-[550px]" />
-            <SocialPages2 class="hidden xl:block"></SocialPages2>
+            <SocialWhite class="hidden xl:block"></SocialWhite>
             <div class="absolute left-[28%] -z-50 top-[35%] hidden xl:block">
                 <svg width="57" height="114" viewBox="0 0 57 114" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M-3.93352e-06 0.431468C7.42869 0.431468 14.7846 1.89466 21.6479 4.73749C28.5111 7.58033 34.7471 11.7471 40 17C45.2529 22.2529 49.4197 28.489 52.2625 35.3522C55.1054 42.2154 56.5686 49.5713 56.5686 57C56.5686 64.4287 55.1054 71.7847 52.2625 78.6479C49.4197 85.5111 45.2529 91.7472 40 97.0001C34.7471 102.253 28.5111 106.42 21.6479 109.263C14.7846 112.105 7.42869 113.569 -1.01186e-06 113.569L-5.73198e-07 89.045C4.2082 89.045 8.37519 88.2161 12.2631 86.6057C16.1509 84.9953 19.6835 82.6349 22.6592 79.6592C25.6348 76.6836 27.9952 73.151 29.6056 69.2631C31.2161 65.3752 32.0449 61.2082 32.0449 57C32.0449 52.7918 31.2161 48.6248 29.6056 44.737C27.9952 40.8491 25.6348 37.3165 22.6592 34.3409C19.6835 31.3652 16.1509 29.0048 12.2631 27.3944C8.37519 25.784 4.2082 24.9551 -2.22826e-06 24.9551L-3.93352e-06 0.431468Z" fill="#F2F2F2"/>
@@ -483,11 +483,11 @@
 </template>
 
 <script>
-    import Header from "@/components/HeaderView.vue";
-    import Footer from "@/components/FooterView.vue";
-    import SocialPages2 from "@/components/SocialPages2.vue";
+    import Header from "@/components/Headers/TheHeader.vue";
+    import Footer from "@/components/Footers/TheFooter.vue";
+    import SocialWhite from "@/components/Social/TheSocialWhite.vue";
     import DivBlue from "@/components/DivBlue.vue";
-    import ResponsiveHeader from "@/components/ResponsiveHeader.vue";
+    import ResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
     import android from '@/assets/Group 231.png';
     import ios from '@/assets/Group 232.png';
     import cross from '@/assets/Group 225.png';
@@ -497,7 +497,7 @@
         components: {
             Header,
             Footer,
-            SocialPages2,
+            SocialWhite,
             DivBlue,
             ResponsiveHeader
         },

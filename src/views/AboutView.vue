@@ -11,7 +11,7 @@
       <ResponsiveHeader></ResponsiveHeader>
       <p dir="ltr" class="text-white font-light text-5xl ml-8 pb-8 absolute bottom-0 z-40 block xl:hidden">Every new <br> idea is <br> just a <br> mashup</p>
     </div>
-    <SocialPages class="hidden xl:block"></SocialPages>
+    <SocialBlack class="hidden xl:block"></SocialBlack>
     <div class="flex xl:pt-52 pt-4" dir="rtl">
       <div>
         <p class="text-[#FF6300] font-YekanM xl:text-xl text-lg xl:pr-44 pr-8 pt-5">سلام! ما نارنجی هستیم.</p>
@@ -241,10 +241,10 @@
 </template>
 
 <script>
-    import Footer from "@/components/FooterView.vue";
-    import Header from "@/components/HeaderView.vue";
-    import SocialPages from "@/components/SocialPages.vue";
-    import ResponsiveHeader from "@/components/ResponsiveHeader.vue";
+    import Footer from "@/components/Footers/TheFooter.vue";
+    import Header from "@/components/Headers/TheHeader.vue";
+    import SocialBlack from "@/components/Social/TheSocialBlack.vue";
+    import ResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
     import Man1 from "@/assets/Man1.jpg";
     import Man2 from "@/assets/Man2.jpg";
     import Man3 from "@/assets/Man3.jpg";
@@ -256,7 +256,7 @@
       components: {
         Footer,
         Header,
-        SocialPages,
+        SocialBlack,
         ResponsiveHeader
       },
       data() {
