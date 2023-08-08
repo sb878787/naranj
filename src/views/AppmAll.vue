@@ -39,7 +39,7 @@
             <div v-show="inModalOpen" @click="closeModal" class="fixed top-0 z-50 w-full h-screen bg-black bg-opacity-[0.5] flex items-center justify-center">
                 <button type="button" @click="closeModal" class="text-white bg-[#FF6300] rounded-lg p-5 px-6 absolute xl:top-24 xl:right-96 top-44 right-8 text-xl">&#10005;</button>
                 <div>
-                    <video id="videoElement" controls>
+                    <video id="videoElement" width="100%" controls>
                         <source src="../assets/video/047f812ca27807257a076707913a5fc938923532-480p.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
@@ -954,7 +954,7 @@
             <div v-show="inModalOpen2" @click="closeModal2" class="fixed top-0 z-50 w-full h-screen bg-black bg-opacity-[0.5] flex items-center justify-center">
                 <button type="button" @click="closeModal2" class="text-white bg-[#FF6300] rounded-lg p-5 px-6 absolute xl:top-24 xl:right-96 top-44 right-8 text-xl">&#10005;</button>
                 <div>
-                    <video id="videoElement2" class="w-full" controls>
+                    <video id="videoElement2" width="100%" controls>
                         <source src="../assets/video/047f812ca27807257a076707913a5fc938923532-480p.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
