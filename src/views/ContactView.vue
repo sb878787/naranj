@@ -74,36 +74,7 @@
             ContactSupport
         },
         data() {
-            return {
-                limitPosition: 1,
-                scrolled: false,
-                lastPosition: 0,
-                background: false
-            }
-        },
-        methods: {
-            handleScroll() {
-                if (this.lastPosition < window.scrollY && this.limitPosition < window.scrollY) {
-                    this.scrolled = true;
-                    this.background = true;
-                    // move up!
-                } 
-                
-                if (this.lastPosition > window.scrollY) {
-                    this.scrolled = false;
-                    // move down
-                }
-                
-                this.lastPosition = window.scrollY;
-                // this.scrolled = window.scrollY > 250;
-                this.background = window.scrollY > 10;
-            }
-        },
-        created() {
-            window.addEventListener("scroll", this.handleScroll);
-        },
-        destroyed() {
-            window.removeEventListener("scroll", this.handleScroll);
+            return {}
         }
     }
 </script>
