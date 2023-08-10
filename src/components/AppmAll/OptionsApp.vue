@@ -452,7 +452,6 @@
 </script>
 
 <style>
-    
     .translateY2-enter{
         transform:translateY(-10px);
         opacity: 0;

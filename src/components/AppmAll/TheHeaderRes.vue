@@ -49,7 +49,7 @@
 </template>
 
 <script>
-    import TheResponsiveHeader from "../Headers/TheResponsiveHeader.vue";
+    import TheResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
 
     export default {
         components: {

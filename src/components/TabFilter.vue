@@ -43,10 +43,15 @@
                     </svg>
                     همه کار ها
                 </label>
+
                 <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Site" /> طراحی سایت</label>
+                
                 <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="App" /> طراحی اپلیکیشن</label>
+                
                 <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Graphics" /> طراحی گرافیک</label>
+                
                 <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Digital" /> بازاریابی دیجیتال</label>
+                
                 <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
             </div>
         </div>
