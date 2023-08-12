@@ -2,6 +2,7 @@
     <div>
         <nav>
             <TheHeader />
+            <TheResponsiveHeader />
         </nav>
 
         <main>
@@ -15,13 +16,15 @@
 </template>
 
 <script>
-    import TheHeader from "@/components/Headers/TheHeader.vue";
     import TheFooter from "@/components/Footers/TheFooter.vue";
+    import TheHeader from "@/components/Headers/TheHeader.vue";
+    import TheResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
 
     export default {
-        component: {
+        components: {
             TheHeader,
-            TheFooter
+            TheFooter,
+            TheResponsiveHeader,
         }
     }
 </script>

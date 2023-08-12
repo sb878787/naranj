@@ -3,7 +3,6 @@
         <div class="contact">        
             <div class="relative overflow-hidden xl:w-[750px] h-screen w-full xl:rounded-br-[80%] rounded-br-0">
                 <img class="absolute object-cover -z-20 xl:w-[750px] h-screen w-full object-center" src="../assets/image 61.png" alt="logo"/>
-                <TheResponsiveHeader />
                 <p dir="ltr" class="text-white font-light text-5xl ml-8 pb-8 absolute bottom-0 z-40 block xl:hidden">Every new <br> idea is <br> just a <br> mashup</p>
             </div>
 
@@ -55,7 +54,6 @@
 </template>
 
 <script>
-    import TheResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
     import TheSocialWhite from "@/components/Social/TheSocialWhite.vue";
     import TakesProject from "@/components/TakesProject.vue";
     import ContactSupport from "@/components/ContactSupport.vue";
@@ -63,7 +61,6 @@
 
     export default {
         components: {
-            TheResponsiveHeader,
             TheSocialWhite,
             TakesProject,
             ContactSupport,
