@@ -21,8 +21,8 @@
                 </p>
             </div>
 
-            <div class="xl:flex-1 flex items-center justify-center my-2 xl:my-0">
-                <svg class="xl:w-[602px] xl:h-[562px] w-[300px] h-[240px] sm:w-[500px] sm:h-[440px]" viewBox="0 0 522 482" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <div class="xl:flex-1 flex items-center justify-center my-10 xl:my-0">
+                <svg class="xl:w-[602px] xl:h-[562px] w-[370px] h-[310px] sm:w-[500px] sm:h-[440px]" viewBox="0 0 522 482" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <circle cx="288" cy="346" r="136" fill="#E5E5E5"/>
                     <circle cx="131" cy="184" r="112" fill="#0A3BC9" fill-opacity="0.56"/>
                     <circle cx="424" cy="198" r="98" fill="#FF8030" fill-opacity="0.71"/>

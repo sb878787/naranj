@@ -36,23 +36,35 @@
         </swiper>
 
         <div class="border-b-2 border-[#F2F2F2] hidden xl:block">
-            <div class="flex flex-col xl:flex-row xl:justify-center xl:items-center justify-start items-start gap-x-11 px-8 xl:px-0 xl:mt-20 mt-14" dir="rtl">
-                <label class="font-YekanM text-lg text-[#4C4C4C] group flex space-x-4 items-stretch justify-stretch hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="All" />
-                    <svg width="17" height="17" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M0 1.55556V12.4444C0 13.3 0.7 14 1.55556 14H12.4444C13.3 14 14 13.3 14 12.4444V1.55556C14 0.7 13.3 0 12.4444 0H1.55556C0.7 0 0 0.7 0 1.55556ZM6.22222 12.4444H2.33333C1.90556 12.4444 1.55556 12.0944 1.55556 11.6667V7.77778H5.44444C5.87222 7.77778 6.22222 8.12778 6.22222 8.55556V12.4444ZM5.44444 6.22222H1.55556V2.33333C1.55556 1.90556 1.90556 1.55556 2.33333 1.55556H6.22222V5.44444C6.22222 5.87222 5.87222 6.22222 5.44444 6.22222ZM11.6667 12.4444H7.77778V8.55556C7.77778 8.12778 8.12778 7.77778 8.55556 7.77778H12.4444V11.6667C12.4444 12.0944 12.0944 12.4444 11.6667 12.4444ZM12.4444 6.22222H8.55556C8.12778 6.22222 7.77778 5.87222 7.77778 5.44444V1.55556H11.6667C12.0944 1.55556 12.4444 1.90556 12.4444 2.33333V6.22222Z" class="fill-[#767676] group-hover:fill-[#FF8030] duration-75"/>
-                    </svg>
-                    همه کار ها
-                </label>
+            <div class="flex flex-col xl:flex-row xl:justify-center xl:items-start justify-start items-start gap-x-11 px-8 xl:px-0 xl:mt-20 mt-14" dir="rtl">
+                <div @click="active = !active" class="font-YekanM group text-lg cursor-pointer hover:text-[#FF8030] border-b-4 border-transparent hover:border-[#FF8030] duration-75 pb-5 w-32" :class="active ? 'text-[#FF8030] border-[#FF8030]' : ''">
+                    <label class="flex space-x-4 items-stretch justify-stretch cursor-pointer"><input type="radio" class="invisible" v-model="selectedCategory" value="All" />
+                        <svg width="17" height="17" viewBox="0 0 14 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M0 1.55556V12.4444C0 13.3 0.7 14 1.55556 14H12.4444C13.3 14 14 13.3 14 12.4444V1.55556C14 0.7 13.3 0 12.4444 0H1.55556C0.7 0 0 0.7 0 1.55556ZM6.22222 12.4444H2.33333C1.90556 12.4444 1.55556 12.0944 1.55556 11.6667V7.77778H5.44444C5.87222 7.77778 6.22222 8.12778 6.22222 8.55556V12.4444ZM5.44444 6.22222H1.55556V2.33333C1.55556 1.90556 1.90556 1.55556 2.33333 1.55556H6.22222V5.44444C6.22222 5.87222 5.87222 6.22222 5.44444 6.22222ZM11.6667 12.4444H7.77778V8.55556C7.77778 8.12778 8.12778 7.77778 8.55556 7.77778H12.4444V11.6667C12.4444 12.0944 12.0944 12.4444 11.6667 12.4444ZM12.4444 6.22222H8.55556C8.12778 6.22222 7.77778 5.87222 7.77778 5.44444V1.55556H11.6667C12.0944 1.55556 12.4444 1.90556 12.4444 2.33333V6.22222Z" class="fill-[#767676] group-hover:fill-[#FF8030] duration-75" :class="active ? 'fill-[#FF8030]' : ''"/>
+                        </svg>
+                        همه کار ها
+                    </label>
+                </div>
 
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Site" /> طراحی سایت</label>
+                <div class="font-YekanM text-lg hover:text-[#FF8030] border-b-4 border-transparent hover:border-[#FF8030] duration-75 cursor-pointer pb-5 w-28">
+                    <label class="cursor-pointer"><input type="radio" class="invisible" v-model="selectedCategory" value="Site" /> طراحی سایت</label>
+                </div>
+
+                <div class="font-YekanM text-lg hover:text-[#FF8030] cursor-pointer border-b-4 border-transparent hover:border-[#FF8030] duration-75 pb-5 w-32">
+                    <label class="cursor-pointer"><input type="radio" class="invisible" v-model="selectedCategory" value="App" /> طراحی اپلیکیشن</label>
+                </div>
                 
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="App" /> طراحی اپلیکیشن</label>
+                <div class="font-YekanM text-lg hover:text-[#FF8030] cursor-pointer border-b-4 border-transparent hover:border-[#FF8030] duration-75 pb-5 w-28">
+                    <label class="cursor-pointer"><input type="radio" class="invisible" v-model="selectedCategory" value="Graphics" /> طراحی گرافیک</label>
+                </div>
                 
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Graphics" /> طراحی گرافیک</label>
+                <div class="font-YekanM text-lg hover:text-[#FF8030] cursor-pointer border-b-4 border-transparent hover:border-[#FF8030] duration-75 pb-5 w-32">
+                    <label class="cursor-pointer"><input type="radio" class="invisible" v-model="selectedCategory" value="Digital" /> بازاریابی دیجیتال</label>
+                </div>
                 
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-32 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="Digital" /> بازاریابی دیجیتال</label>
-                
-                <label class="font-YekanM text-lg text-[#4C4C4C] hover:text-[#FF8030] cursor-pointer hover:border-b-4 hover:border-[#FF8030] duration-75 pb-5 w-28 h-12"><input type="radio" class="invisible" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
+                <div class="font-YekanM text-lg hover:text-[#FF8030] cursor-pointer border-b-4 border-transparent hover:border-[#FF8030] duration-75 pb-5 w-28">
+                    <label class="cursor-pointer"><input type="radio" class="invisible" v-model="selectedCategory" value="software" /> نرم افزار نارنج</label>
+                </div>
             </div>
         </div>
 
@@ -190,7 +202,8 @@
                         }
                     },
                     loop: false
-                }
+                },
+                active: false
             }
         },
         computed: {

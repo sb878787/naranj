@@ -1,5 +1,5 @@
 <template>
-  <layout-default>
+  <layout name="default">
     <div class="about overflow-x-hidden">
       <div class="absolute left-[35%] top-32 hidden xl:block">
         <svg width="100" height="100" viewBox="0 0 100 100" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -103,22 +103,23 @@
       
       <AboutHonors />
     </div>
-  </layout-default>
+  </layout>
 </template>
 
 <script>
+  import Layout from "@/components/Layouts";
   import AboutService from "@/components/Services/AboutService.vue";
   import AboutPartners from "@/components/AboutPartners.vue";
   import AboutHonors from "@/components/AboutHonors.vue";
-  import LayoutDefault from "@/components/Layouts/LayoutDefault.vue";
   import TheSocialBlack from "@/components/Social/TheSocialBlack.vue";
 
   export default {
+    name: 'About',
     components: {
+      Layout,
       AboutService,
       AboutPartners,
       AboutHonors,
-      LayoutDefault,
       TheSocialBlack
     },
     data() {

@@ -1,5 +1,5 @@
 <template>
-    <layout-default>
+    <layout name="default">
         <div class="app-mall overflow-x-hidden">
             <TheHeaderRes />
 
@@ -106,10 +106,11 @@
 
             <DivBlue />
         </div>
-    </layout-default>
+    </layout>
 </template>
 
 <script>
+    import Layout from "@/components/Layouts";
     import TheSocialBlack from "@/components/Social/TheSocialBlack.vue";
     import DivBlue from "@/components/DivBlue.vue";
     import TheHeaderRes from "@/components/AppmAll/TheHeaderRes.vue";
@@ -119,10 +120,11 @@
     import SpecialServices from "@/components/AppmAll/SpecialServices.vue";
     import PlatformsApp from "@/components/AppmAll/PlatformsApp.vue";
     import CommentsAdmins from "@/components/AppmAll/CommentsAdmins.vue";
-    import LayoutDefault from "@/components/Layouts/LayoutDefault.vue";
 
     export default {
+        name: 'AppmAll',
         components: {
+            Layout,
             TheSocialBlack,
             DivBlue,
             TheHeaderRes,
@@ -131,8 +133,7 @@
             CustomerClub,
             SpecialServices,
             PlatformsApp,
-            CommentsAdmins,
-            LayoutDefault
+            CommentsAdmins
         },
         data() {
             return {}

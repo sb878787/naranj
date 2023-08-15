@@ -1,5 +1,5 @@
 <template>
-    <layout-default>
+    <layout name="default">
         <div class="application overflow-x-hidden">
             <div class="relative overflow-hidden w-full h-screen block xl:hidden">
                 <img class="absolute object-cover -z-20 w-full h-screen object-center" src="../assets/Rectangle 94.png" alt="logo"/>
@@ -54,27 +54,28 @@
 
             <DivBlue />            
         </div>
-    </layout-default>
+    </layout>
 </template>
 
 <script>
+    import Layout from "@/components/Layouts";
     import TheSocialWhite from "@/components/Social/TheSocialWhite.vue";
     import DivBlue from "@/components/DivBlue.vue";
     import OperatingSystems from "@/components/ApplicationPage/OperatingSystems.vue";
     import DesignPhone from "@/components/ApplicationPage/DesignPhone.vue";
     import DevelopmentProcess from "@/components/ApplicationPage/DevelopmentProcess.vue";
     import AppliedTechnologies from "@/components/ApplicationPage/AppliedTechnologies.vue";
-    import LayoutDefault from "@/components/Layouts/LayoutDefault.vue";
 
     export default {
+        name: 'Application',
         components: {
+            Layout,
             TheSocialWhite,
             DivBlue,
             OperatingSystems,
             DesignPhone,
             DevelopmentProcess,
-            AppliedTechnologies,
-            LayoutDefault
+            AppliedTechnologies
         },
         data() {
             return {}

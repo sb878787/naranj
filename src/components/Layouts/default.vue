@@ -21,6 +21,7 @@
     import TheResponsiveHeader from "@/components/Headers/TheResponsiveHeader.vue";
 
     export default {
+        name: "DefaultLayout",
         components: {
             TheHeader,
             TheFooter,

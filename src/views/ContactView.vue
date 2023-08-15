@@ -1,5 +1,5 @@
 <template>
-    <layout-default>
+    <layout name="default">
         <div class="contact">        
             <div class="relative overflow-hidden xl:w-[750px] h-screen w-full xl:rounded-br-[80%] rounded-br-0">
                 <img class="absolute object-cover -z-20 xl:w-[750px] h-screen w-full object-center" src="../assets/image 61.png" alt="logo"/>
@@ -50,21 +50,22 @@
 
             <ContactSupport />
         </div>
-    </layout-default>
+    </layout>
 </template>
 
 <script>
+    import Layout from "@/components/Layouts";
     import TheSocialWhite from "@/components/Social/TheSocialWhite.vue";
     import TakesProject from "@/components/TakesProject.vue";
     import ContactSupport from "@/components/ContactSupport.vue";
-    import LayoutDefault from "@/components/Layouts/LayoutDefault.vue";
 
     export default {
+        name: 'Contact',
         components: {
+            Layout,
             TheSocialWhite,
             TakesProject,
-            ContactSupport,
-            LayoutDefault
+            ContactSupport
         },
         data() {
             return {}

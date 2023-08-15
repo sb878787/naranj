@@ -1,5 +1,5 @@
 <template>
-    <layout-default>
+    <layout name="default">
         <div class="portfolio overflow-x-hidden">
             <div class="relative overflow-hidden w-full h-screen block xl:hidden">
                 <img class="absolute object-cover -z-20 w-full h-screen object-center" src="../assets/Rectangle 89.png" alt="logo"/>
@@ -42,21 +42,22 @@
             
             <DivBlue />
         </div>
-    </layout-default>
+    </layout>
 </template>
 
 <script>
+    import Layout from "@/components/Layouts";
     import TheSocialBlack from "@/components/Social/TheSocialBlack.vue";
     import DivBlue from "@/components/DivBlue.vue";
     import TabFilter from "@/components/TabFilter.vue";
-    import LayoutDefault from "@/components/Layouts/LayoutDefault.vue";
 
     export default {
+        name: 'Portfolio',
         components: {
+            Layout,
             TheSocialBlack,
             DivBlue,
-            TabFilter,
-            LayoutDefault
+            TabFilter
         },
         data() {
             return {}
