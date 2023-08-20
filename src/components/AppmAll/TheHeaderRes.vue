@@ -39,7 +39,7 @@
                 
                 <div>
                     <video id="videoElement" width="100%" controls>
-                        <source src="../../assets/video/047f812ca27807257a076707913a5fc938923532-480p.mp4" type="video/mp4">
+                        <source src="../../assets/video/1.mp4" type="video/mp4">
                         Your browser does not support the video tag.
                     </video>
                 </div>

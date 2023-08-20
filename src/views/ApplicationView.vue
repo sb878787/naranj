@@ -50,7 +50,7 @@
 
             <p class="font-YekanB text-right xl:px-44 px-8 xl:text-4xl text-2xl xl:mt-40 mt-8 xl:mb-28 mb-8">پوشش صنعتی خدمات نارنج</p>
 
-            <AppliedTechnologies />
+            <IndustrialCoating />
 
             <DivBlue />            
         </div>
@@ -65,6 +65,7 @@
     import DesignPhone from "@/components/ApplicationPage/DesignPhone.vue";
     import DevelopmentProcess from "@/components/ApplicationPage/DevelopmentProcess.vue";
     import AppliedTechnologies from "@/components/ApplicationPage/AppliedTechnologies.vue";
+    import IndustrialCoating from "@/components/ApplicationPage/IndustrialCoating.vue";
 
     export default {
         name: 'Application',
@@ -75,7 +76,8 @@
             OperatingSystems,
             DesignPhone,
             DevelopmentProcess,
-            AppliedTechnologies
+            AppliedTechnologies,
+            IndustrialCoating
         },
         data() {
             return {}
