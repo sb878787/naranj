@@ -4,24 +4,24 @@
             <img class="absolute object-cover -z-20 xl:w-[650px] xl:h-[92vh] h-screen w-full object-center" src="../../assets/image 67.png" alt="logo"/>
 
             <button type="button" @click="openModal">
-                <div class="absolute xl:bottom-36 xl:-right-[152px] bottom-80 right-12 z-30 hover:rotate-[360deg] transition-all duration-1000 origin-center">
-                    <svg width="304" height="325" viewBox="0 0 304 325" fill="none" xmlns="http://www.w3.org/2000/svg">
-                        <path d="M227.358 96.4803C207.096 76.4617 179.712 65.3119 151.229 65.4839L151.878 172.877L227.358 96.4803Z" fill="#7A74FC" fill-opacity="0.56"/>
-                        <circle cx="152.329" cy="171.329" r="76.4131" transform="rotate(24.101 152.329 171.329)" stroke="#F2F2F2"/>
-                        <g filter="url(#filter0_d_253_3)">
-                            <circle cx="152.329" cy="171.329" r="53.8357" transform="rotate(24.101 152.329 171.329)" fill="white"/>
-                            <circle cx="152.329" cy="171.329" r="53.8357" transform="rotate(24.101 152.329 171.329)" fill="white"/>
+                <div class="absolute xl:bottom-36 xl:-right-[152px] bottom-1/3 right-[11%] sm:bottom-[37%] sm:right-[30%] z-30 hover:rotate-[360deg] transition-all duration-1000 origin-center">
+                    <svg width="304" height="304" viewBox="0 0 304 304" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M227.397 75.4803C207.135 55.4617 179.751 44.3119 151.269 44.4839L151.917 151.877L227.397 75.4803Z" fill="#7A74FC" fill-opacity="0.56"/>
+                        <circle cx="152.801" cy="151.616" r="76.4131" transform="rotate(24.101 152.801 151.616)" stroke="#F2F2F2"/>
+                        <g filter="url(#filter0_d_253_2)">
+                            <circle cx="152.159" cy="152.126" r="53.8357" transform="rotate(24.101 152.159 152.126)" fill="white"/>
+                            <circle cx="152.159" cy="152.126" r="53.8357" transform="rotate(24.101 152.159 152.126)" fill="white"/>
                         </g>
-                        <path d="M145 160.564C145 160.298 145.062 160.037 145.178 159.804C145.562 159.05 146.428 158.777 147.117 159.197L164.267 169.634C164.5 169.776 164.692 169.987 164.82 170.242C165.203 170.997 164.953 171.948 164.267 172.366L147.117 182.803C146.908 182.931 146.669 182.999 146.425 183C145.638 183 145 182.301 145 181.438V160.564Z" fill="#FF8030"/>
+                        <path d="M142 141.564C142 141.298 142.062 141.037 142.178 140.804C142.562 140.05 143.428 139.777 144.117 140.197L161.267 150.634C161.5 150.776 161.692 150.987 161.82 151.242C162.203 151.997 161.953 152.948 161.267 153.366L144.117 163.803C143.908 163.931 143.669 163.999 143.425 164C142.638 164 142 163.301 142 162.438V141.564Z" fill="#FF8030"/>
                         <defs>
-                            <filter id="filter0_d_253_3" x="48.48" y="67.48" width="207.698" height="207.698" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                            <filter id="filter0_d_253_2" x="48.3101" y="48.2773" width="207.698" height="207.698" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
                                 <feFlood flood-opacity="0" result="BackgroundImageFix"/>
                                 <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
                                 <feOffset/>
                                 <feGaussianBlur stdDeviation="25"/>
                                 <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.07 0"/>
-                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_253_3"/>
-                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_253_3" result="shape"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_253_2"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_253_2" result="shape"/>
                             </filter>
                         </defs>
                     </svg>
@@ -34,14 +34,18 @@
         </div>
 
         <transition name="translateY">
-            <div v-show="inModalOpen" @click="closeModal" class="fixed top-0 z-50 w-full h-screen bg-black bg-opacity-[0.5] flex items-center justify-center">
-                <button type="button" @click="closeModal" class="text-white bg-[#FF6300] rounded-lg p-5 px-6 absolute xl:top-24 xl:right-96 top-44 right-8 text-xl">&#10005;</button>
-                
+            <div v-show="inModalOpen" class="fixed top-0 xl:pt-56 pt-80 z-50 w-full flex items-center justify-center">
+                <div class="absolute top-0 left-0 -z-20 w-full h-screen bg-black bg-opacity-[0.5]" @click.stop.prevent="closeModal"></div>
+
                 <div>
-                    <video id="videoElement" width="100%" controls>
-                        <source src="../../assets/video/1.mp4" type="video/mp4">
-                        Your browser does not support the video tag.
-                    </video>
+                    <button type="button" @click.stop.prevent="closeModal" class="text-white bg-[#FF6300] z-50 rounded-lg p-4 px-5 absolute xl:top-24 xl:right-96 top-44 right-8 text-xl">&#10005;</button>
+                
+                    <div>
+                        <video id="videoElement" class="w-full xl:w-[850px]" controls>
+                            <source src="../../assets/video/1.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </div>
                 </div>
             </div>
         </transition>
@@ -61,11 +65,13 @@
             }
         },
         methods: {
-            openModal() {
+            openModal(e) {
+                console.log(e.target);
                 this.inModalOpen = true
                 document.body.classList.add('over');
             },
-            closeModal() {
+            closeModal(e) {
+                console.log(e.target);
                 let video = document.getElementById('videoElement')
                 video.pause()
                 this.inModalOpen = false

@@ -53,8 +53,7 @@
         },
         methods: {
             playVideo() {
-                console.log("test1");
-                this.$emit("openModal" , "1");
+                this.$emit("openModal" , this.data.video);
             }
         },
         computed: {
