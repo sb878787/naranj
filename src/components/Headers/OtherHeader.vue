@@ -13,7 +13,7 @@
                     <router-link class="pl-9" to="/">صفحه نخست </router-link>
                     <router-link class="pl-9" to="/about">درباره ما </router-link>
                     <router-link class="pl-9" to="/">خدمات نارنج </router-link>
-                    <router-link class="pl-9" to="/">وبلاگ نارنجی شو </router-link>
+                    <router-link class="pl-9" to="/blog">وبلاگ نارنجی شو </router-link>
                     <router-link class="pl-9" to="/">فرصت های شغلی </router-link>
                     <router-link to="/contact">تماس با ما </router-link>
                 </div>

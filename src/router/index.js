@@ -6,6 +6,7 @@ import ContactView from '../views/ContactView.vue'
 import ApplicationView from '../views/ApplicationView.vue'
 import Portfolio from '../views/Portfolio.vue'
 import AppmAll from '../views/AppmAll.vue'
+import Blog from '../views/BlogView.vue'
 
 Vue.use(VueRouter)
 
@@ -39,6 +40,11 @@ const routes = [
     path: '/app-mall',
     name: 'app-mall',
     component: AppmAll
+  },
+  {
+    path: '/blog',
+    name: 'blog',
+    component: Blog
   }
 ]
 

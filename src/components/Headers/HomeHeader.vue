@@ -13,7 +13,7 @@
                 <div>
                     <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/about">درباره ما </router-link>
                     <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/">خدمات نارنج </router-link>
-                    <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/">وبلاگ نارنجی شو </router-link>
+                    <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/blog">وبلاگ نارنجی شو </router-link>
                     <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/">فرصت های شغلی </router-link>
                     <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/contact">تماس با ما </router-link>
                     <router-link :class="background ? 'text-color' : ''" class="hover:bg-white hover:text-silver p-3 px-7 rounded-full transition-all" to="/">پنل کاربری</router-link>

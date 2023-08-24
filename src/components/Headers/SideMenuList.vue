@@ -73,7 +73,7 @@
         </transition> 
 
         <li class="pr-11">
-            <router-link to="/" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
+            <router-link to="/blog" class="font-YekanM text-[#383838] text-sm font-black hover:text-[#FF6300] transition-all">
                 <div class="flex gap-x-4">
                     <div>
                         <svg width="23" height="23" viewBox="0 0 23 23" fill="none" xmlns="http://www.w3.org/2000/svg">

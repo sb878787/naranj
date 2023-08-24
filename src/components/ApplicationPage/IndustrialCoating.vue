@@ -1,176 +1,22 @@
 <template>
     <div>
         <swiper :options="swiperOptions2" dir="rtl" class="flex xl:hidden mr-11 mb-11">
-    	    <swiper-slide>
+    	    <swiper-slide v-for="event in events">
                 <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 25.png" class="h-16 w-20" alt="logo"/>
+                    <img :src="require(`../../assets/${event.ImageSrc}.png`)" class="h-16 w-20 object-contain" alt="logo"/>
 
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Healthcare</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 26.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Finance</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 27.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">IoT</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 28.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Fitness</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 29.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Game</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 30.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Logistics</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 31.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Retail</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 32.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Social</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 33.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Education</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 34.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">AR/ VR</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 35.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Wellness</p>
-                </div>
-	        </swiper-slide>
-
-            <swiper-slide>
-                <div class="flex flex-col justify-center items-center">
-                    <img src="../../assets/image 36.png" class="h-16 w-20" alt="logo"/>
-
-                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">Travel</p>
+                    <p class="font-semibold mt-7 border-2 border-[#EBEBEB] rounded-full p-2 w-32 text-md text-center text-[#4D4D4D]">{{ event.title }}</p>
                 </div>
 	        </swiper-slide>
   	    </swiper>
 
-        <div dir="rtl" class="xl:flex hidden px-60 justify-between items-center">
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 25.png" class="h-20 w-24" alt="logo"/>
+        <div class="flex flex-col">
+            <div dir="rtl" class="xl:flex hidden px-60 justify-between items-center flex-wrap gap-20">
+                <div v-for="DesktopEvent in DesktopEvents" class="flex flex-col justify-center items-center">
+                    <img :src="require(`../../assets/${DesktopEvent.ImageSrc}.png`)" class="h-20 w-24 object-contain" alt="logo"/>
 
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Healthcare</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 26.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Finance</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 27.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">IoT</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 28.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Fitness</p>
-            </div>
-            
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 29.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Game</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 30.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Logistics</p>
-            </div>
-        </div>
-
-        <div dir="rtl" class="xl:flex hidden px-60 justify-between items-center mt-28">
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 31.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Retail</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 32.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Social</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 33.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Education</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 34.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">AR/ VR</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 35.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Wellness</p>
-            </div>
-
-            <div class="flex flex-col justify-center items-center">
-                <img src="../../assets/image 36.png" class="h-20 w-24" alt="logo"/>
-
-                <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">Travel</p>
+                    <p class="font-semibold mt-10 border-2 border-[#EBEBEB] rounded-full p-2 w-36 text-lg text-center text-[#4D4D4D]">{{ DesktopEvent.title }}</p>
+                </div>
             </div>
         </div>
     </div>
@@ -190,7 +36,107 @@
                         }
                     },
                     loop: true
-                }
+                },
+                events: [
+                    {
+                        ImageSrc: 'image 25',
+                        title: 'Healthcare'
+                    },
+                    {
+                        ImageSrc: 'image 26',
+                        title: 'Finance'
+                    },
+                    {
+                        ImageSrc: 'image 27',
+                        title: 'IoT'
+                    },
+                    {
+                        ImageSrc: 'image 28',
+                        title: 'Fitness'
+                    },
+                    {
+                        ImageSrc: 'image 29',
+                        title: 'Game'
+                    },
+                    {
+                        ImageSrc: 'image 30',
+                        title: 'Logistics'
+                    },
+                    {
+                        ImageSrc: 'image 31',
+                        title: 'Retail'
+                    },
+                    {
+                        ImageSrc: 'image 32',
+                        title: 'Social'
+                    },
+                    {
+                        ImageSrc: 'image 33',
+                        title: 'Education'
+                    },
+                    {
+                        ImageSrc: 'image 34',
+                        title: 'AR/ VR'
+                    },
+                    {
+                        ImageSrc: 'image 35',
+                        title: 'Wellness'
+                    },
+                    {
+                        ImageSrc: 'image 36',
+                        title: 'Travel'
+                    }
+                ],
+                DesktopEvents: [
+                    {
+                        ImageSrc: 'image 25',
+                        title: 'Healthcare'
+                    },
+                    {
+                        ImageSrc: 'image 26',
+                        title: 'Finance'
+                    },
+                    {
+                        ImageSrc: 'image 27',
+                        title: 'IoT'
+                    },
+                    {
+                        ImageSrc: 'image 28',
+                        title: 'Fitness'
+                    },
+                    {
+                        ImageSrc: 'image 29',
+                        title: 'Game'
+                    },
+                    {
+                        ImageSrc: 'image 30',
+                        title: 'Logistics'
+                    },
+                    {
+                        ImageSrc: 'image 31',
+                        title: 'Retail'
+                    },
+                    {
+                        ImageSrc: 'image 32',
+                        title: 'Social'
+                    },
+                    {
+                        ImageSrc: 'image 33',
+                        title: 'Education'
+                    },
+                    {
+                        ImageSrc: 'image 34',
+                        title: 'AR/ VR'
+                    },
+                    {
+                        ImageSrc: 'image 35',
+                        title: 'Wellness'
+                    },
+                    {
+                        ImageSrc: 'image 36',
+                        title: 'Travel'
+                    },
+                ]
             }
         }
     }
