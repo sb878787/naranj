@@ -2,9 +2,9 @@
     <div class="mt-16">
         <p class="text-[#7A74FC] font-YekanB text-lg">{{ dataPosts.title }}</p>
                             
-        <p class="font-YekanB text-3xl w-9/12 mt-4 leading-10">{{ dataPosts.text }}</p>
+        <p class="font-YekanB text-3xl xl:w-9/12 w-10/12 mt-4 leading-10">{{ dataPosts.text }}</p>
     
-        <div class="flex mt-9 gap-8">
+        <div class="flex flex-col xl:flex-row mt-6 xl:mt-9 gap-x-8 gap-y-3">
             <div class="flex">
                 <svg width="20" height="22" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
                     <path d="M4 9H6V11H4V9ZM4 13H6V15H4V13ZM8 9H10V11H8V9ZM8 13H10V15H8V13ZM12 9H14V11H12V9ZM12 13H14V15H12V13Z" fill="#BBBBBB"/>
@@ -28,8 +28,8 @@
             </div>
         </div>
 
-        <div class="relative overflow-hidden w-full h-[450px] mt-8 rounded-xl">
-            <img :src="require(`../../assets/${dataPosts.ImagePostSrc}.png`)" class="absolute object-cover w-full h-[450px] object-center rounded-xl" alt="ImagePostBlog">
+        <div class="relative overflow-hidden xl:w-full xl:h-[400px] h-52 mt-6 xl:mt-8 rounded-xl">
+            <img :src="require(`../../assets/${dataPosts.ImagePostSrc}.png`)" class="absolute object-cover xl:w-full xl:h-[400px] h-52 object-center rounded-xl" alt="ImagePostBlog">
         </div>
     </div>
 </template>
