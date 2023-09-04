@@ -1,22 +1,31 @@
 <template>
     <layout name="default">
         <div class="overflow-hidden">
+            <div class="relative overflow-hidden w-full h-screen block xl:hidden">
+                <img class="absolute object-cover -z-20 w-full h-screen object-center" :src="require(`../../assets/${blogItem.ImagePostSrc}.png`)" alt="logo"/>
+                <p dir="ltr" class="text-white font-light text-5xl ml-8 pb-8 absolute bottom-0 z-40 block xl:hidden">Every new <br> idea is <br> just a <br> mashup</p>
+            </div>
+
             <TheSocialBlack />
 
             <div class="flex items-center gap-x-6 px-56 mt-40" dir="rtl">
-                <router-link to="/blog">
-                    <p class="font-YekanM text-[#4D4D4D] text-xl hover:underline">بلاگ</p>
-                </router-link>
+                <div class="flex items-center gap-x-6 group cursor-pointer">
+                    <router-link to="/blog">
+                        <p class="font-YekanM text-[#4D4D4D] text-xl group-hover:text-[#FF8030] group-hover:font-YekanB transition-all">بلاگ</p>
+                    </router-link>
 
-                <svg width="8" height="12" class="mb-1" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.77825 7.62075L1.83192 4.49578L4.77825 1.37081C4.84855 1.29625 4.90432 1.20773 4.94237 1.1103C4.98042 1.01288 5 0.908456 5 0.803004C5 0.697552 4.98042 0.593133 4.94237 0.495708C4.90432 0.398283 4.84855 0.30976 4.77825 0.235195C4.70795 0.160629 4.62448 0.10148 4.53263 0.0611252C4.44077 0.0207705 4.34232 -7.85678e-10 4.2429 0C4.14348 7.8568e-10 4.04502 0.0207705 3.95317 0.0611252C3.86131 0.10148 3.77785 0.160629 3.70755 0.235195L0.222071 3.932C0.151676 4.00651 0.0958264 4.09501 0.0577204 4.19245C0.0196145 4.28988 0 4.39433 0 4.49981C0 4.60529 0.0196145 4.70974 0.0577204 4.80717C0.0958264 4.9046 0.151676 4.99311 0.222071 5.06762L3.70755 8.76442C4.0037 9.07853 4.4821 9.07853 4.77825 8.76442C5.06681 8.45031 5.0744 7.93485 4.77825 7.62075Z" fill="#BBBBBB"/>
-                </svg>
+                    <svg width="8" height="12" class="mb-1" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.77825 7.62075L1.83192 4.49578L4.77825 1.37081C4.84855 1.29625 4.90432 1.20773 4.94237 1.1103C4.98042 1.01288 5 0.908456 5 0.803004C5 0.697552 4.98042 0.593133 4.94237 0.495708C4.90432 0.398283 4.84855 0.30976 4.77825 0.235195C4.70795 0.160629 4.62448 0.10148 4.53263 0.0611252C4.44077 0.0207705 4.34232 -7.85678e-10 4.2429 0C4.14348 7.8568e-10 4.04502 0.0207705 3.95317 0.0611252C3.86131 0.10148 3.77785 0.160629 3.70755 0.235195L0.222071 3.932C0.151676 4.00651 0.0958264 4.09501 0.0577204 4.19245C0.0196145 4.28988 0 4.39433 0 4.49981C0 4.60529 0.0196145 4.70974 0.0577204 4.80717C0.0958264 4.9046 0.151676 4.99311 0.222071 5.06762L3.70755 8.76442C4.0037 9.07853 4.4821 9.07853 4.77825 8.76442C5.06681 8.45031 5.0744 7.93485 4.77825 7.62075Z" class="fill-[#BBBBBB] group-hover:fill-[#FF8030] group-hover:rotate-180 origin-center transition-all"/>
+                    </svg>
+                </div>
 
-                <p class="font-YekanM text-[#4D4D4D] text-xl hover:underline cursor-pointer">{{ blogItem.title }}</p>
+                <div class="flex items-center gap-x-6 group cursor-pointer">
+                    <p class="font-YekanM text-[#4D4D4D] text-xl group-hover:text-[#FF8030] group-hover:font-YekanB transition-all">{{ blogItem.title }}</p>
 
-                <svg width="8" height="12" class="mb-1" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
-                    <path d="M4.77825 7.62075L1.83192 4.49578L4.77825 1.37081C4.84855 1.29625 4.90432 1.20773 4.94237 1.1103C4.98042 1.01288 5 0.908456 5 0.803004C5 0.697552 4.98042 0.593133 4.94237 0.495708C4.90432 0.398283 4.84855 0.30976 4.77825 0.235195C4.70795 0.160629 4.62448 0.10148 4.53263 0.0611252C4.44077 0.0207705 4.34232 -7.85678e-10 4.2429 0C4.14348 7.8568e-10 4.04502 0.0207705 3.95317 0.0611252C3.86131 0.10148 3.77785 0.160629 3.70755 0.235195L0.222071 3.932C0.151676 4.00651 0.0958264 4.09501 0.0577204 4.19245C0.0196145 4.28988 0 4.39433 0 4.49981C0 4.60529 0.0196145 4.70974 0.0577204 4.80717C0.0958264 4.9046 0.151676 4.99311 0.222071 5.06762L3.70755 8.76442C4.0037 9.07853 4.4821 9.07853 4.77825 8.76442C5.06681 8.45031 5.0744 7.93485 4.77825 7.62075Z" fill="#BBBBBB"/>
-                </svg>
+                    <svg width="8" height="12" class="mb-1" viewBox="0 0 5 9" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.77825 7.62075L1.83192 4.49578L4.77825 1.37081C4.84855 1.29625 4.90432 1.20773 4.94237 1.1103C4.98042 1.01288 5 0.908456 5 0.803004C5 0.697552 4.98042 0.593133 4.94237 0.495708C4.90432 0.398283 4.84855 0.30976 4.77825 0.235195C4.70795 0.160629 4.62448 0.10148 4.53263 0.0611252C4.44077 0.0207705 4.34232 -7.85678e-10 4.2429 0C4.14348 7.8568e-10 4.04502 0.0207705 3.95317 0.0611252C3.86131 0.10148 3.77785 0.160629 3.70755 0.235195L0.222071 3.932C0.151676 4.00651 0.0958264 4.09501 0.0577204 4.19245C0.0196145 4.28988 0 4.39433 0 4.49981C0 4.60529 0.0196145 4.70974 0.0577204 4.80717C0.0958264 4.9046 0.151676 4.99311 0.222071 5.06762L3.70755 8.76442C4.0037 9.07853 4.4821 9.07853 4.77825 8.76442C5.06681 8.45031 5.0744 7.93485 4.77825 7.62075Z" class="fill-[#BBBBBB] group-hover:fill-[#FF8030] group-hover:rotate-180 origin-center transition-all"/>
+                    </svg>
+                </div>
 
                 <p class="font-YekanM text-[#4D4D4D] opacity-50 text-xl w-72 truncate">{{ blogItem.text }}</p>
             </div>
@@ -93,8 +102,14 @@
                     </router-link>
 
                     <p class="text-[#7A74FC] font-YekanM mt-9">{{ BlogPost.title }}</p>
-                    <p class="font-YekanB text-2xl mt-4 w-3/4">{{ BlogPost.text }}</p>
-                    <p class="text-[#BBBBBB] font-YekanM mt-6">مشاهده کنید</p>
+
+                    <router-link :to="`/blog/datail/page/${BlogPost.id}`">
+                        <p @click="scrollToTop" class="font-YekanB text-2xl mt-4 w-3/4 hover:underline transition-all">{{ BlogPost.text }}</p>
+                    </router-link>
+
+                    <router-link :to="`/blog/datail/page/${BlogPost.id}`">
+                        <p @click="scrollToTop" class="text-[#BBBBBB] font-YekanM mt-6 hover:text-[#FF8030] transition-all">مشاهده کنید</p>
+                    </router-link>
                 </div>
             </div>
         </div>
