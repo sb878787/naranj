@@ -1,7 +1,7 @@
 <template>
     <div>
         <div class="w-full">
-            <form @submit.prevent="onSubmit" v-if="!formSubmitted">
+            <form @submit.prevent="onSubmit">
                 <input 
                     type="text"
                     name="name"
