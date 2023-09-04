@@ -1,8 +1,10 @@
 <template>
-    <div class="mt-16">
+    <div>
         <p class="text-[#7A74FC] font-YekanB text-lg">{{ dataPosts.title }}</p>
                             
-        <p class="font-YekanB text-3xl xl:w-9/12 w-10/12 mt-4 leading-10">{{ dataPosts.text }}</p>
+        <router-link :to="`/blog/datail/page/${dataPosts.id}`">
+            <p @click="scrollToTop" class="font-YekanB text-3xl xl:w-9/12 w-10/12 mt-4 leading-10 hover:underline transition-all">{{ dataPosts.text }}</p>
+        </router-link>
     
         <div class="flex flex-col xl:flex-row mt-6 xl:mt-9 gap-x-8 gap-y-3">
             <div class="flex">
@@ -28,9 +30,11 @@
             </div>
         </div>
 
-        <div class="relative overflow-hidden xl:w-full xl:h-[400px] h-52 mt-6 xl:mt-8 rounded-xl">
-            <img :src="require(`../../assets/${dataPosts.ImagePostSrc}.png`)" class="absolute object-cover xl:w-full xl:h-[400px] h-52 object-center rounded-xl" alt="ImagePostBlog">
-        </div>
+        <router-link :to="`/blog/datail/page/${dataPosts.id}`">
+            <div @click="scrollToTop" class="relative overflow-hidden xl:w-full xl:h-[400px] h-52 mt-6 xl:mt-8 rounded-xl">
+                <img :src="require(`../../assets/${dataPosts.ImagePostSrc}.png`)" class="absolute object-cover xl:w-full xl:h-[400px] h-52 object-center rounded-xl hover:scale-110 duration-300 transition-all" alt="ImagePostBlog">
+            </div>
+        </router-link>
     </div>
 </template>
 
@@ -43,6 +47,14 @@
         },
         data() {
             return {}
+        },
+        methods: { 
+            scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
         }
     }
 </script>

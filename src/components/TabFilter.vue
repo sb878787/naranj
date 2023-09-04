@@ -75,8 +75,8 @@
                     :key="index"
                     :class="[ `xl:col-span-4 col-span-12 acpect-[1/1.2]` , '[&:nth-of-type(3n-1)]:xl:translate-y-24' ]"
                 >
-                    <div class="relative w-full h-[532px] rounded-lg group">
-                        <img :src="event.img" class="absolute object-cover -z-20 w-full h-[532px] object-center rounded-lg transition-all grayscale group-hover:grayscale-0" :alt="event.alt"/>
+                    <div class="relative w-full h-[532px] rounded-lg group cursor-pointer overflow-hidden">
+                        <img :src="event.img" class="absolute object-cover -z-20 w-full h-[532px] object-center rounded-lg grayscale group-hover:grayscale-0 group-hover:scale-110 duration-200 transition-all" :alt="event.alt"/>
                         <img :src="event.logo" class="xl:mr-9 mr-2 pt-24" :alt="event.altLogo"/>
                         <p class="text-white font-YekanM text-3xl xl:mr-14 mr-7 mt-8">{{ event.title }}</p>
                         <p class="font-YekanL text-white text-lg xl:mr-14 mr-7 mt-2 w-3/4 sm:w-1/2">{{ event.text }}</p>

@@ -11,7 +11,7 @@
                 <transition name="translateX">
                     <nav v-show="isNavOpen" class="min-h-full relative">
                         <div class="sidemenu__wrapper">
-                            <div class="h-72 sm:h-96 py-5 overflow-y-scroll">
+                            <div class="h-[40vh] sm:h-96 py-5 overflow-y-scroll">
                                 <ul class="sidemenu__list">
                                     <SideMenuList />
                                 </ul>

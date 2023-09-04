@@ -63,7 +63,7 @@
 
                     <div class="flex flex-col xl:flex-row xl:justify-start xl:items-start justify-end items-end xl:pt-10 gap-x-7 gap-y-8 mt-12">
                         <div>
-                            <router-link class="font-YekanM text-white xl:text-xl txt-lg rounded-md bg-[#ACACAC] hover:opacity-80 xl:p-5 p-3 xl:px-9 px-8 transition-all" to="/about">مشاهده نمونه کارها</router-link>
+                            <router-link class="font-YekanM text-white xl:text-xl txt-lg rounded-md bg-[#ACACAC] hover:opacity-80 xl:p-5 p-3 xl:px-9 px-8 transition-all" to="/portfolio">مشاهده نمونه کارها</router-link>
                         </div>
 
                         <div>

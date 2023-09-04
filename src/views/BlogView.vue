@@ -12,7 +12,7 @@
 
             <div class="xl:mx-44 xl:ml-72 mt-11">
                 <div class="relative">
-                    <swiper :options="swiperOptions" class="w-full xl:rounded-xl" dir="rtl">
+                    <swiper :options="swiperOptions" @slideChange="timer" class="w-full xl:rounded-xl" dir="rtl">
                         <swiper-slide v-for="ImageBlogSlide in ImageBlogSlides">
                             <BlogSlider :data="ImageBlogSlide"/>
                         </swiper-slide>
@@ -21,7 +21,7 @@
                     <div class="absolute xl:bottom-10 xl:left-12 bottom-6 z-30 left-7 border-2 border-[#CFCFCF] border-opacity-[41%] rounded-full">
                         <figure class="chart" data-percent="100">
                             <svg width="50" height="50">
-                                <circle class="outer" cx="165" cy="25" r="22" transform="rotate(-90, 95, 95)" />
+                                <circle ref="outer" class="outer" cx="165" cy="25" r="22" transform="rotate(-90, 95, 95)" />
                             </svg>
                         </figure>
                     </div>
@@ -29,25 +29,41 @@
 
                 <div class="flex flex-col xl:flex-row w-full gap-x-16" dir="rtl">
                     <div class="flex flex-col xl:w-7/12 w-full mx-8 xl:mx-0">
-                        <PostsView v-for="BlogPost in BlogPosts" :dataPosts="BlogPost"/>
+                        <div class="mb-10 space-y-2 mt-12">
+                            <p class="font-YekanB xl:hidden text-xl text-[#FF6300]">مقالات نارنج</p>
+                            <p class="xl:hidden font-YekanM text-xl text-[#4D4D4D] w-10/12">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        </div>
 
-                        <!-- <div class="flex justify-between mt-10">
-                            <button 
-                                :disabled="pageNumber === 0" 
-                                @click="prevPage">
-                                Previous
+                        <div class="space-y-14">
+                            <PostsView v-for="BlogPost in firstFiveItems" :key="BlogPost.id" :dataPosts="BlogPost"/>
+                        </div>
+
+                        <div class="flex justify-between items-center w-[85.5%] xl:w-full mt-14">
+                            <button class="font-YekanM xl:text-lg xl:w-44 px-4 xl:px-0 text-[#767676] flex justify-center items-center gap-x-5 rounded-full border-2 border-[#767676] py-3 hover:bg-[#444444] hover:text-white hover:border-[#444444] group transition-all outline-none">
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M1 8H15" class="stroke-[#767676] group-hover:stroke-white xl:group-hover:translate-x-2 transition-all" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 15L15 8L8 1" class="stroke-[#767676] group-hover:stroke-white xl:group-hover:translate-x-2 transition-all" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
+                                صفحه قبل
                             </button>
 
-                            <button 
-                                :disabled="pageNumber >= pageCount -1" 
-                                @click="nextPage">
-                                Next
+                            <button class="font-YekanM text-lg xl:w-44 px-4 xl:px-0 text-[#FF6300] flex justify-center items-center gap-x-5 rounded-full border-2 border-[#FF8030] py-3 hover:bg-[#FF8030] hover:text-white group transition-all outline-none">
+                                صفحه بعد
+                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                    <path d="M15 8H1" class="stroke-[#FF6300] group-hover:stroke-white xl:group-hover:-translate-x-2 transition-all" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    <path d="M8 15L1 8L8 1" class="stroke-[#FF6300] group-hover:stroke-white xl:group-hover:-translate-x-2 transition-all" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>
                             </button>
-                        </div> -->
+                        </div>
                     </div>
 
-                    <div class="flex flex-col gap-y-10 xl:w-4/12 mt-28" dir="rtl">
-                        <OtherPosts v-for="(BlogOtherPost, index) in BlogOtherPosts" :indexOf="index" :dataOtherPost="BlogOtherPost"/>
+                    <div class="flex flex-col gap-y-10 xl:w-4/12 mt-14" dir="rtl">
+                        <div class="mx-8 space-y-2">
+                            <p class="font-YekanB xl:hidden text-xl text-[#FF6300]">مقالات مرتبط</p>
+                            <p class="xl:hidden font-YekanM text-xl text-[#4D4D4D]">لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ لورم ایپسوم متن ساختگی با تولید سادگی نامفهوم از صنعت چاپ</p>
+                        </div>
+
+                        <OtherPosts v-for="BlogPost in lastFiveItems" :key="BlogPost.id" :dataOtherPost="BlogPost"/>
 
                         <JoinBlog />
                     </div>
@@ -69,6 +85,8 @@
     import NewSletters from "@/components/BlogPage/NewSletters.vue";
     import TabFilter from "@/components/BlogPage/TabFilter.vue";
 
+    import { mapState } from "vuex";
+
     export default {
         name: 'Blog',
         components: {
@@ -87,9 +105,9 @@
                     slidesPerView: 1,
                     spaceBetween: 30,
                     autoplay: {
-                        delay: 7600,
-                        disableOnInteraction: true,
-                        pauseOnMouseEnter: true
+                        delay: 7900,
+                        disableOnInteraction: false,
+                        pauseOnMouseEnter: false
                     },
                     loop: true
                 },
@@ -118,50 +136,27 @@
                         writer: 'سید محمد علی صابری',
                         time: '15'
                     }
-                ],
-                BlogPosts: [
-                    {
-                        title: 'مراکز خرید',
-                        text: 'چگونه در قرنطینه خانگی دوام بیاوریم؟ فضانوردان ناسا پاسخ می دهند',
-                        time: '20',
-                        date: '25 اردیبهشت 1399',
-                        ImagePostSrc: 'imagePostBlog1'
-                    },
-                    {
-                        title: 'مراکز خرید',
-                        text: 'چگونه در قرنطینه خانگی دوام بیاوریم؟ فضانوردان ناسا پاسخ می دهند',
-                        time: '20',
-                        date: '25 اردیبهشت 1399',
-                        ImagePostSrc: 'imagePostBlog3'
-                    },
-                    {
-                        title: 'مراکز خرید',
-                        text: 'چگونه در قرنطینه خانگی دوام بیاوریم؟ فضانوردان ناسا پاسخ می دهند',
-                        time: '20',
-                        date: '25 اردیبهشت 1399',
-                        ImagePostSrc: 'imagePostBlog2'
-                    }
-                ],
-                BlogOtherPosts: [
-                    {
-                        ImageOtherPost: 'otherPosts3',
-                        title: 'علمی',
-                        text: 'چگونه در قرنطینه خانگی دوام بیاوریم؟ فضانوردان ناسا پاسخ می دهند',
-                        date: '25 اردیبهشت 1399'
-                    },
-                    {
-                        ImageOtherPost: 'otherPosts2',
-                        title: 'نوآوری',
-                        text: 'چگونه در قرنطینه خانگی دوام بیاوریم؟ فضانوردان ناسا پاسخ می دهند',
-                        date: '10 مرداد 1396'
-                    },
-                    {
-                        ImageOtherPost: 'otherPosts1',
-                        title: 'نوآوری',
-                        text: 'چگونه در قرنطینه خانگی دوام بیاوریم؟ فضانوردان ناسا پاسخ می دهند',
-                        date: '15 تیر 1387'
-                    }
                 ]
+            }
+        },
+        methods: {
+            timer() {
+                const testElements = document.getElementsByClassName("outer")[0];
+                this.$refs["outer"].classList.remove("outer");
+                setTimeout(() => {
+                    this.$refs["outer"].classList.add("outer");
+                }, 50);
+            }
+        },
+        computed: {
+            ...mapState([
+                'BlogPosts'
+            ]),
+            lastFiveItems() {
+                return this.BlogPosts.slice(-3)
+            },
+            firstFiveItems() {
+                return this.BlogPosts.slice(0,3)
             }
         }
     }
@@ -172,7 +167,7 @@
         fill: url(#image-4);
         stroke: #fff;
         stroke-width: 5;
-        stroke-dasharray: 218;
+        stroke-dasharray: 145;
         transition: stroke-dashoffset 1s;
         -webkit-animation-play-state: running;
     }
@@ -183,7 +178,7 @@
     }
     @keyframes show100 {
         from {
-            stroke-dashoffset: 217;
+            stroke-dashoffset: 144;
         }
         to {
             stroke-dashoffset: 0;

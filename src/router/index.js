@@ -7,6 +7,7 @@ import ApplicationView from '../views/ApplicationView.vue'
 import Portfolio from '../views/Portfolio.vue'
 import AppmAll from '../views/AppmAll.vue'
 import Blog from '../views/BlogView.vue'
+import BlogPage from '../views/BlogPages/BlogPage.vue'
 
 Vue.use(VueRouter)
 
@@ -45,6 +46,11 @@ const routes = [
     path: '/blog',
     name: 'blog',
     component: Blog
+  },
+  {
+    path: '/blog/datail/page/:id',
+    name: 'blog-page',
+    component: BlogPage
   }
 ]
 

@@ -50,7 +50,7 @@
             <div class="flex-1 relative">
                 <p class="font-YekanM xl:text-xl text-lg text-[#FF6300]">آنچه انجام می دهیم</p>
                 
-                <p class="font-YekanB xl:text-5xl text-2xl xl:pt-7 pt-2 text-[#4D4D4D] xl:text-black">همکاری مشترک برای کشف چیز هایی که <br class="hidden xl:block"> ما هنوز نمی دانیم ، اغلب بهترین راه برای <br class="hidden xl:block"> طراحی راهی جدید برای پیشبرد است.</p>
+                <p class="font-YekanB xl:text-5xl text-2xl xl:pt-7 pt-2 text-[#4D4D4D] xl:text-black xl:leading-tight">همکاری مشترک برای کشف چیز هایی که <br class="hidden xl:block"> ما هنوز نمی دانیم ، اغلب بهترین راه برای <br class="hidden xl:block"> طراحی راهی جدید برای پیشبرد است.</p>
                 
                 <p class="font-YekanM xl:text-xl text-[#383838] pt-5 xl:pt-10 xl:leading-8 leading-7">ما به مشتریان کمک می کنیم تا نیاز های انها و گزینه های دیدار با آنها را از طریق <br class="hidden xl:block"> مشارکت مشورتی که شفاف سازی شرایط گیج کننده است ، درک کنند.</p>
                 

@@ -113,11 +113,11 @@
             return {
                 swiperOptions : {
                     spaceBetween:50,
-                    slidesPerView:2.6,
+                    slidesPerView:2.5,
                     breakpoints: {
                         1366: {
                             spaceBetween:50,
-                            slidesPerView:2.6,
+                            slidesPerView:2.5,
                         },
                         150: {
                             slidesPerView: 1,

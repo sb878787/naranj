@@ -1,15 +1,17 @@
 <template>
     <div class="flex xl:flex-row flex-col mx-8 gap-7">
-        <div>
-            <div class="relative overflow-hidden xl:w-[270px] xl:h-[180px] w-10/12 h-44 rounded-xl">
-                <img :src="require(`../../assets/${dataOtherPost.ImageOtherPost}.png`)" class="absolute object-cover xl:w-[270px] xl:h-[180px] w-10/12 h-44 object-center rounded-xl" alt="ImagePostBlog">
+        <router-link :to="`/blog/datail/page/${dataOtherPost.id}`">
+            <div class="relative overflow-hidden xl:w-[270px] xl:h-[180px] w-full h-44 rounded-xl">
+                <img :src="require(`../../assets/${dataOtherPost.ImagePostSrc}.png`)" class="absolute object-cover xl:w-[270px] xl:h-[180px] w-full h-44 object-center rounded-xl hover:scale-110 duration-300 transition-all" alt="ImagePostBlog">
             </div>
-        </div>
+        </router-link>
 
         <div class="relative">
-            <p class="text-[#7A74FC] font-YekanB text-lg" :class="{'!text-[#FF8030]': indexOf === 1 || indexOf === 2}">{{ dataOtherPost.title }}</p>
+            <p class="text-[#7A74FC] font-YekanB text-lg">{{ dataOtherPost.title }}</p>
 
-            <p class="font-YekanB text-2xl mt-3 xl:w-[260px]">{{ dataOtherPost.text }}</p>
+            <router-link :to="`/blog/datail/page/${dataOtherPost.id}`">
+                <p @click="scrollToTop" class="font-YekanB text-2xl mt-3 xl:w-[260px] hover:underline transition-all">{{ dataOtherPost.text }}</p>
+            </router-link>
 
             <div class="flex gap-x-5 xl:absolute xl:bottom-0 mt-5 xl:mt-0">
                 <svg width="20" height="22" viewBox="0 0 18 20" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -28,13 +30,18 @@
         props: {
             dataOtherPost: {
                 type : Object
-            },
-            indexOf: {
-                type : Number
             }
         },
         data() {
             return {}
+        },
+        methods: { 
+            scrollToTop() {
+                window.scrollTo({
+                    top: 0,
+                    behavior: "smooth"
+                });
+            }
         }
     }
 </script>
