@@ -29,7 +29,8 @@
                     v-model="coment" 
                     class="mt-5 font-YekanM border-2 border-[#BBBBBB] rounded-md w-full text-[#C4C4C4] pt-4 pr-5 outline-none placeholder:text-[#C4C4C4] text-lg focus:border-[#FF8030] focus:text-[#FF8030] placeholder:focus:text-[#FF8030]"
                 ></textarea>
-                <button type="button" @click="onClickTop" :disabled="isDisabled" class="mt-5 bg-[#FF8030] font-YekanB text-white w-48 text-lg py-3 rounded hover:bg-[#ff6b30] transition-all cursor-pointer">ارسال</button>
+
+                <button type="button" @click="onClickTop" :disabled="isDisabled" class="mt-5 bg-[#FF8030] font-YekanB text-white xl:w-48 w-36 text-lg py-3 rounded hover:bg-[#ff6b30] transition-all cursor-pointer">ارسال</button>
             </form>
         </div>
 

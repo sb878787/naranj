@@ -1,5 +1,5 @@
 <template>
-    <div class="flex flex-col items-center px-7 gap-y-3 mt-20 absolute right-0">
+    <div class="xl:flex flex-col items-center xl:px-7 gap-y-3 mt-20 absolute xl:right-0 hidden">
         <div class="cursor-pointer">
             <svg width="45" height="45" viewBox="0 0 39 39" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <circle cx="19.5" cy="19.5" r="19.5" fill="#3A5897"/>
