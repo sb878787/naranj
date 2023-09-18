@@ -1,7 +1,7 @@
 <template>
     <div class="flex xl:flex-row flex-col mx-8 gap-7">
         <router-link :to="`/blog/datail/page/${dataOtherPost.id}`">
-            <div class="relative overflow-hidden xl:w-[270px] xl:h-[180px] w-full h-44 rounded-xl">
+            <div @click="scrollToTop" class="relative overflow-hidden xl:w-[270px] xl:h-[180px] w-full h-44 rounded-xl">
                 <img :src="require(`../../assets/${dataOtherPost.ImagePostSrc}.png`)" class="absolute object-cover xl:w-[270px] xl:h-[180px] w-full h-44 object-center rounded-xl hover:scale-110 duration-300 transition-all" alt="ImagePostBlog">
             </div>
         </router-link>

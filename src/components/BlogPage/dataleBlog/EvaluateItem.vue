@@ -1,5 +1,5 @@
 <template>
-    <div>
+    <div class="xl:w-[64%]">
         <p class="font-YekanB xl:text-3xl text-2xl xl:mt-20 mt-11">این مقاله را ارزیابی کنید!</p>
 
         <div class="w-full flex justify-center items-center xl:mt-12 mt-8 xl:gap-x-5 gap-x-3">

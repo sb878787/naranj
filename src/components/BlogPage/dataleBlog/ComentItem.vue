@@ -1,6 +1,6 @@
 <template>
     <div>
-        <div class="w-full">
+        <div class="xl:w-[64%]">
             <form @submit.prevent="onSubmit">
                 <input 
                     type="text"
@@ -17,7 +17,8 @@
                     class="w-full outline-none border-2 border-[#BBBBBB] rounded-md mt-5 p-3 pr-5 font-YekanM text-[#C4C4C4] placeholder:text-[#C4C4C4] text-lg focus:border-[#FF8030] focus:text-[#FF8030] placeholder:focus:text-[#FF8030]"
                 >
                 <input
-                    type="number"
+                    type="text"
+                    maxlength="11"
                     name="number"
                     placeholder="شماره موبایل خود را وارد کنید ..."
                     v-model="phone"

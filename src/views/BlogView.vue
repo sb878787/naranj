@@ -40,19 +40,23 @@
 
                         <div class="flex justify-between items-center w-[85.5%] xl:w-full mt-14">
                             <button class="font-YekanM xl:text-lg xl:w-44 px-4 xl:px-0 text-[#767676] flex justify-center items-center gap-x-5 rounded-full border-2 border-[#767676] py-3 hover:bg-[#444444] hover:text-white hover:border-[#444444] group transition-all outline-none">
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M1 8H15" class="stroke-[#767676] group-hover:stroke-white xl:group-hover:translate-x-2 transition-all" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8 15L15 8L8 1" class="stroke-[#767676] group-hover:stroke-white xl:group-hover:translate-x-2 transition-all" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <div class="xl:group-hover:translate-x-2 transition-all">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M1 8H15" class="stroke-[#767676] group-hover:stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8 15L15 8L8 1" class="stroke-[#767676] group-hover:stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
                                 صفحه قبل
                             </button>
 
                             <button class="font-YekanM text-lg xl:w-44 px-4 xl:px-0 text-[#FF6300] flex justify-center items-center gap-x-5 rounded-full border-2 border-[#FF8030] py-3 hover:bg-[#FF8030] hover:text-white group transition-all outline-none">
                                 صفحه بعد
-                                <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
-                                    <path d="M15 8H1" class="stroke-[#FF6300] group-hover:stroke-white xl:group-hover:-translate-x-2 transition-all" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                    <path d="M8 15L1 8L8 1" class="stroke-[#FF6300] group-hover:stroke-white xl:group-hover:-translate-x-2 transition-all" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
-                                </svg>
+                                <div class="xl:group-hover:-translate-x-2 transition-all">
+                                    <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M15 8H1" class="stroke-[#FF6300] group-hover:stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                        <path d="M8 15L1 8L8 1" class="stroke-[#FF6300] group-hover:stroke-white" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                    </svg>
+                                </div>
                             </button>
                         </div>
                     </div>
